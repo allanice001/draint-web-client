@@ -1,0 +1,115 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.label {
+  font-family: Mulish, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+
+  &__info {
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 0;
+  }
+
+  &.required {
+    &::after {
+      position: relative;
+      content: '*';
+      color: $error-color;
+      left: 5px;
+    }
+  }
+}
+
+.calendar_wrapper {
+  position: relative;
+
+  .button_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 33px;
+    right: 0;
+    padding: 15px 15px 8px 15px;
+
+    .calendar_button {
+      &:disabled {
+        cursor:  not-allowed;
+        svg {
+          path{
+            transition: 300ms;
+            fill: $disabled-color;
+          }
+        }
+
+        &:hover {
+          svg {
+            path{
+              fill: $disabled-color;
+            }
+          }
+        }
+      }
+      svg {
+        path{
+          transition: 300ms;
+          fill: $primary-color;
+        }
+      }
+      &:hover {
+        svg {
+          path{
+            fill: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.calendar_root {
+  width: 100% !important;
+  border: 1px solid #e7e7e7 !important;
+  border-radius: 5px !important;
+  margin-top: 13px!important;
+
+  &._disabled {
+    background-color: $disabled-input!important;
+  }
+
+  input {
+    font-family: Mulish, serif;
+    padding: 12px 10px 12px 17px;
+    line-height: 28px;
+    height: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: black;
+  }
+
+  button {
+    display: none;
+  }
+
+  div {
+    margin-left: 0;
+  }
+}
+
+.calendar_underline::after,
+.calendar_underline::before {
+  display: none !important;
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $error-color;
+  white-space: normal;
+}

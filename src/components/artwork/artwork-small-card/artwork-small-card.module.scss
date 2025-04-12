@@ -1,0 +1,146 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  margin-right: 20px;
+  min-width: 140px;
+  width: 140px;
+  border-bottom: 1px solid #e7e7e7;
+  justify-content: space-between;
+
+  @media screen and (max-width: $desktop) {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .image_wrapper {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 90px;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      opacity: 0.7;
+      background-color: #fff;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+  }
+
+  .artwork {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @media screen and (min-width: $tablet) {
+      height: 200px;
+    }
+    @media screen and (max-width: $desktop) {
+      height: 320px;
+    }
+    height: 126px;
+    object-fit: cover;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    padding-bottom: 5px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+
+    &__no_title {
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 10px;
+      font-size: 20px;
+      line-height: 22px;
+      &__no_title {
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .username {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primary-color;
+    display: block;
+    padding-bottom: 5px;
+    font-style: italic;
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 15px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    align-items: flex-end;
+
+    @include media-up($desktop) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .artist_img {
+      object-fit: cover;
+      border-radius: 50%;
+
+      &__no_img {
+        background-color: #c7c7c7;
+      }
+
+      @include media-up($tablet) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .price {
+      color: $primary-color;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 20px;
+
+      @include media-up($tablet) {
+        .price {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 10px 20px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  @media screen and (max-width: $tablet) {
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 30px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .content {
+    position: relative;
+    display: inline-flex;
+    margin: 15px 0;
+
+    @media screen and (max-width: $mobile) {
+    }
+  }
+
+  .icon_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -14px;
+  }
+
+  .info {
+    padding: 0 20px 0 20px;
+    text-align: center;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    @media screen and (min-width: $desktop) {
+      width: 28px;
+      height: 28px;
+    }
+
+    &.incoming {
+      margin-right: 9px;
+      transform: rotate(90deg);
+
+      @media screen and (min-width: $desktop) {
+        margin-right: 18px;
+      }
+    }
+
+    &.outcoming {
+      margin-right: 9px;
+
+      @media screen and (min-width: $desktop) {
+        margin-right: 18px;
+      }
+    }
+
+    &.accepted {
+      width: 10px;
+      height: 7px;
+
+      @media screen and (min-width: $desktop) {
+        width: 12px;
+        height: 9px;
+      }
+    }
+  }
+
+  .price {
+    font-weight: 800;
+    color: $primary-color;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    &__text {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $mobile) {
+      flex-direction: row;
+      &__text {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .buttons_wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+
+    .buttons {
+      margin-right: 15px;
+      margin-bottom: 0.5em;
+
+      @include media-up($desktop) {
+        margin-bottom: 0;
+      }
+
+      .button:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    .stretch {
+      height: 50px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      margin-left: 0;
+
+      .buttons {
+        margin-right: 0;
+      }
+
+      .stretch {
+        width: 100%;
+        height: 46px;
+      }
+    }
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 35px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    background-color: $primary-color;
+
+    &__verification {
+      display: inline-block;
+      min-width: 120px;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: capitalize;
+
+      &__accepted {
+        color: $primary-color;
+        background-color: lighten($color: $primary-color, $amount: 25);
+      }
+
+      &__canceled {
+        color: $error-color;
+        background-color: lighten($color: $error-color, $amount: 35);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &.accept {
+      background-color: $success-color;
+    }
+
+    &.decline {
+      background-color: $error-color;
+    }
+  }
+}

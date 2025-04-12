@@ -1,0 +1,21 @@
+@import 'src/styles/variables';
+
+.md {
+    width: 26px;
+    height: 26px;
+}
+
+.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.svg {
+    fill: var(--primary-color, $primary-color);
+    transition: fill .3s ease-in-out;
+    will-change: transition;
+
+    &.hover:hover path {
+        fill: var(--primary-color, $primary-color);
+    }
+}

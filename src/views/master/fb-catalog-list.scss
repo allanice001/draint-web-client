@@ -1,0 +1,186 @@
+#catalog-list-wrapper {
+
+  .catalog-content-wrapper {
+    .MuiTypography-body2 {
+      font-size: 14px;
+    }
+
+    .catalog-title-param {
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+
+  .MuiPaper-root {
+    margin: 10px 0 10px 0;
+  }
+
+  .MuiCardHeader-action {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .edit-catalog-button {
+    color: #058f10;
+    font-size: 12px;
+
+    &:hover {
+      background-color: rgba(5, 143, 16, 0.05);
+    }
+  }
+
+  .delete-catalog-button {
+    font-size: 12px;
+  }
+
+  .create-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    .create-csv-catalog-button {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  .action-styles {
+    padding: 0.5em;
+    display: flex;
+
+    & > *:not(:first-child) {
+      margin-left: 1em;
+    }
+  }
+
+  .catalog-img {
+    object-fit: contain;
+    width: auto;
+    height: 55px;
+  }
+
+  .MuiAvatar-root {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+
+.edit-modal-title {
+  .MuiTypography-h6 {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.70);
+  }
+}
+
+
+#catalog-modal-edit {
+  .modal-inputs {
+    .MuiFormLabel-filled {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .MuiFormControl-root {
+      margin-bottom: 10px;
+    }
+
+    .MuiFormLabel-root.Mui-focused {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .MuiInputBase-root.Mui-focused {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.70);
+    }
+
+    .MuiInputBase-root {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.70);
+    }
+
+    .MuiFormHelperText-root {
+      font-size: 9px;
+      line-height: 10px;
+    }
+
+    .MuiSelect-select:focus {
+      background-color: transparent;
+    }
+  }
+
+  .MuiDialogContent-root {
+    .catalog-img {
+      object-fit: contain;
+      width: auto;
+      height: 55px;
+    }
+
+    .MuiAvatar-root {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-radius: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cancel-button {
+    font-size: 10px;
+  }
+
+  .save-button {
+    color: #058f10;
+    font-size: 10px;
+
+    &:hover {
+      background-color: rgba(5, 143, 16, 0.05);
+    }
+  }
+}
+
+.catalog-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  word-break: break-all;
+  display: -webkit-box;
+
+  li {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  span {
+    margin-left: 8px;
+  }
+}
+
+.catalog-card {
+  height: auto;
+  flex: 1 0;
+  margin: 10px;
+  min-width: 40vmax;
+  max-width: 800px;
+}
+
+.catalog-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

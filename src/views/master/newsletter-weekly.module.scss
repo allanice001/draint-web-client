@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    .list {
+        display: flex;
+        flex-direction: column;
+        &__block {
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            padding: 5px;
+
+        }
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            &__block {
+                width: 50%;
+            }
+        }
+
+        .cards_wrapper {
+            background-color: #F5F7FA;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: scroll;
+            margin-top: 5px;
+        }
+        .list_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+          margin-bottom: 10px;
+        }
+    }
+    .form_block {
+        display: flex;
+        flex-direction: column;
+        &__form {
+            padding: 5px;
+            width: 100%;
+        }
+        &__preview {
+            padding: 5px;
+            width: 100%;
+        }
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__form {
+                width: 40%;
+            }
+            &__preview {
+                width: 60%;
+            }
+        }
+    }
+}
+
+.tabs{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: $font-Mulish;
+  color: $black-font;
+}
+.custom_card_wrapper {
+    width: 170px;
+    height: 300px;
+    margin: 5px;
+    .image_content_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 170px;
+        .image_content{
+            height: 160px;
+            width: 160px;
+            object-fit: cover;
+        }
+    }
+    .text_content_wrapper {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: start;
+    }
+}

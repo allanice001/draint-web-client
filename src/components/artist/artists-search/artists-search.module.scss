@@ -1,0 +1,94 @@
+@import '../../../styles/variables';
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+  }
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+  order: 1;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    border-bottom: 0;
+    order: 0;
+  }
+}
+
+.form {
+
+    & > * {
+      margin-bottom: 14px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      flex-basis: 370px;
+      flex-shrink: 0;
+      margin-right: 60px;
+    }
+  
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+  
+      @media screen and (min-width: $desktop) {
+        justify-content: center;
+        margin-top: 28px;
+      }
+    }
+  
+    .button {
+      min-width: auto !important;
+      max-width: 130px;
+  
+      @media screen and (max-width: $desktop - 1) {
+        flex: 1;
+      }
+  
+      @media screen and (min-width: $desktop) {
+        &__map {
+          display: none;
+        }
+      }
+  
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+  
+      @media screen and (min-width: $desktop) {
+        width: 130px;
+      }
+    }
+  
+  }
+
+.map {
+  margin-top: 40px;
+  
+  @media screen and (max-width: $desktop - 1) {
+    &:not(.show) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    height: 450px;
+    display: block;
+    margin-top: 0;
+    flex: 1;
+  }
+}

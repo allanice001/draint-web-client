@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.checklist {
+
+  margin-left: 0;
+  list-style: none;
+
+  li {
+
+    list-style: none;
+    text-align: left;
+    background-position: left center;
+    background-size: 0.8em;
+    padding-left: 1.5em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    background-image: url("./icons/ico-check-green.svg");
+
+    &:before {
+
+      display: none;
+
+    }
+  }
+
+  li.cross {
+
+    background-image: url("./icons/ico-cross-red.svg");
+
+  }
+
+  .empty-field {
+    height: 25px;
+  }
+}

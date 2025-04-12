@@ -1,0 +1,135 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  min-width: 24px;
+
+  &.box {
+    width: 100%;
+    padding: 13px 0 13px 19px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+  }
+
+  &.toggle__wrapper .label {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .label {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: inherit;
+    text-transform: unset;
+    color: $font-color !important;
+
+    &.disabled {
+      opacity: 0.4;
+    }
+
+    &.hovered:not(.disabled):hover {
+      color: $primary-color !important;
+    }
+  }
+
+  .toggle_button {
+    display: none;
+
+    svg {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      will-change: opacity;
+    }
+
+    &:checked ~ .check {
+      background-color: $primary-color;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:checked ~ .toggle {
+      background-color: $primary-color;
+
+      .circle {
+        transform: translateX(100%);
+      }
+    }
+
+    &__disabled {
+      display: none;
+
+      &:checked ~ .toggle {
+        background-color: #c7c7c7;
+
+        .circle {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+
+  .check {
+    flex-basis: 24px;
+    flex-shrink: 0;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    border-radius: 4px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    will-change: background-color;
+    cursor: pointer;
+
+    &.alone {
+      margin-right: 0;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 22px;
+    width: 40px;
+    padding: 2px;
+    margin-left: 10px;
+    background-color: #c7c7c7;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    will-change: background-color;
+
+    .circle {
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 0.2s ease-in-out;
+      will-change: transform;
+    }
+  }
+
+  .icon {
+    width: 13px;
+    height: 9px;
+  }
+}

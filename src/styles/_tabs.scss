@@ -1,0 +1,61 @@
+@import './variables';
+
+.root {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 30px;
+    padding: 0 !important;
+}
+
+.tabs__button {
+    min-width: auto !important;
+    font-size: 12px !important;
+    line-height: 28px;
+    text-transform: capitalize !important;
+    text-align: center;
+    font-family: $font-Muli !important;
+    color: rgba(63, 64, 65, 0.4);
+
+    &:not(:last-child) {
+        margin-right: 0;
+    }
+
+    &[aria-selected="true"] {
+        font-weight: bold;
+    }
+
+    @media screen and (min-width: 375px) {
+        font-size: 15px !important;
+    }
+
+    @media screen and (min-width: 410px) {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 18px !important;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 20px !important;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 6px 6px !important;
+    }
+
+}
+
+.indicator {
+    height: 4px !important;
+    background-image: linear-gradient(to right, #f7239c, #0544ea);
+}

@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.wrapper {
+  min-width: 46px;
+  height: 46px;
+
+  @include media-up($tablet) {
+    min-width: 160px;
+  }
+}
+
+.list {
+  min-width: 120px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.sortIcon {
+  display: none;
+
+  &.show {
+    @include media-down($tablet) {
+      display: inline;
+    }
+  }
+}
+
+.arrowIcon {
+  margin-left: 1.2rem;
+  margin-right: 0.6rem;
+}
+
+.option {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /master/
+Disallow: /account/
+Disallow: /gallery/
+Disallow: /orders/
+Disallow: /social-media/
+Disallow: /account-settings/
+Disallow: /sales-dashboard/
+Disallow: /shopping-cart/
+Disallow: /artist-invoice/
+Disallow: /user/
+
+User-Agent: Googlebot
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.css
+Allow: /*.js
+
+Sitemap: https://draint.art/sitemap.xml

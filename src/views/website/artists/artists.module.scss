@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.artists {
+    // border-top: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $desktop) {
+        border-top: 0;
+    }
+}

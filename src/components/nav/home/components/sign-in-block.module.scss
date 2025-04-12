@@ -1,0 +1,23 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 30px;
+    color: $font-color;
+    margin-top: auto;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+
+    .link {
+        width: 100px !important;
+        padding: 13px 16px !important;
+        margin: 0 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

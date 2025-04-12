@@ -1,0 +1,66 @@
+@import 'src/styles/variables';
+
+.footer {
+  padding: 50px 0 0 0;
+  border-top: 5px solid #F6F6F6;
+  background-color: #ffffff;
+  width: 100%;
+
+  .mail_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .nav_section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @media screen and (min-width: $gpixel) {
+      justify-content: space-evenly;
+    }
+  }
+
+  .payment_section {
+    margin-top: 50px;
+    background-color: #EDEDED;
+    width: 100%;
+
+    .payment_logo_icon {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+  }
+
+  .union_section {
+    background-color: #ffff;
+    padding: 25px 0 0 0;
+    width: 100%;
+
+    .union_content {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .rights_section {
+    background-color: #F6F6F6;
+    padding: 25px 0 0 0;
+    width: 100%;
+    display: flex;
+    .copywriter {
+      align-self: center;
+      font-size: 17px;
+      font-weight: 600;
+      color: #c7c7c7;
+      margin-bottom: 10px;
+    }
+  }
+}

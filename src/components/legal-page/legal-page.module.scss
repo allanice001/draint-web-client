@@ -1,0 +1,232 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0) 1.36%, #FAFAFA 36.13%);
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+
+  .aside {
+    padding-top: 45px;
+    border-right: 1px solid #e9dcdc;
+    flex-shrink: 0;
+
+    @include media-up($desktop) {
+      width: 100%;
+      max-width: 360px;
+      padding-right: 60px;
+    }
+
+    .list__container {
+      max-width: 300px;
+
+      .list {
+        line-height: 50px;
+        font-family: $font-Muli;
+
+        .arrow {
+          margin-left: -4px;
+          margin-right: 15px;
+        }
+
+        .selected__item {
+          font-weight: 900;
+          border-bottom: 1px solid #E7E7E7;
+        }
+
+        .list__item {
+          font-weight: 700;
+          border-bottom: 1px solid #E7E7E7;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 45px;
+      background-color: #fff;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        transform: translateX(100%);
+      }
+
+      .title {
+        max-width: 360px;
+        padding-left: 70px;
+        align-self: center;
+        font-size: 40px;
+        font-weight: 400;
+        font-family: $font-Sen;
+
+        @media screen and(max-width: 1024px) {
+          font-size: 30px;
+        }
+      }
+
+      .image {
+        height: 350px;
+        object-fit: contain;
+        padding-bottom: 43px;
+      }
+    }
+
+    .separator {
+      height: 50px;
+      transform: translateX(2px);
+    }
+
+    .description {
+      position: relative;
+      padding: 50px 0 71px 70px;
+      background-color: #fff;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        transform: translateX(100%);
+      }
+
+      .description__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 40px;
+      }
+
+      .description__content {
+        font-family: $font-Mulish;
+        font-weight: 600;
+        font-size: 14px;
+        position: relative;
+        height: 680px;
+        overflow-y: auto;
+        padding-right: 79px;
+        line-height: 22px;
+        background-color: #fff;
+
+        ul {
+          list-style-type: circle;
+          list-style-position: inside;
+          margin-left: 15px;
+          line-height: 24px;
+
+          li {
+            list-style: inside;
+          }
+        }
+
+        h1, h2 {
+          font-family: $font-Sen;
+          margin-bottom: 12px;
+          margin-top: 12px;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 40px;
+        }
+
+        p {
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background: #f3f3f3;
+        }
+
+        @include with-scroll();
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: #c2c2c2;
+        }
+
+        .blur__text {
+          position: sticky;
+          width: 100%;
+          height: 79px;
+          bottom: -1px;
+          left: 0;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        }
+      }
+    }
+  }
+}
+
+.container__mobile {
+  padding: 25px 0;
+  font-family: $font-Mulish;
+
+  .title {
+    font-family: $font-Sen;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+
+  .list__item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    padding: 17px 30px 13px 30px;
+    margin-bottom: 20px;
+
+    @media screen and(max-width: $iPhone6) {
+      padding: 17px 10px 13px 10px;
+    }
+
+    .item__title {
+      align-self: center;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 25px;
+
+      @media screen and(max-width: $iPhone6) {
+       max-width: 140px;
+      }
+    }
+
+    .image {
+      min-width: 130px;
+      height: 97px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.card {
+  position: relative;
+  max-width: 430px;
+  min-width: 300px;
+  width: 100%;
+  padding: 15px 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+
+  &__buttons {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+
+    .button {
+      margin-left: 10px;
+    }
+  }
+
+  h1 {
+    font-family: $font-Sen;
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+.icon {
+  width: 21px;
+}
+
+.card_content {
+  padding: 20px;
+}
+
+.card_points {
+  display: flex;
+  margin-top: 10px;
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.icon_points {
+  margin-right: 5px;
+}
+
+.card_message {
+  margin-top: 15px;
+  font-family: $font-Mulish;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.card_county {
+  margin-top: 25px;
+  font-family: $font-Mulish;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}

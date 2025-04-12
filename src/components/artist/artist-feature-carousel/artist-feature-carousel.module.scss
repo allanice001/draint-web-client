@@ -1,0 +1,410 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.title {
+  margin-bottom: 0;
+}
+
+.slider {
+  position: relative;
+
+  &--with-padding {
+    padding-top: 30px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &:hover:not(:disabled) path {
+      fill: $primary-color;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
+
+    &.prev {
+      left: 0;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+
+  &:first-child .item__wrapper {
+    @include media-up($desktop) {
+      margin-top: 60px;
+    }
+  }
+
+  @include media-up($desktop) {
+    margin-bottom: -4rem;
+  }
+}
+
+.item__wrapper {
+  position: relative;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .vertical & {
+    flex-direction: column;
+  }
+
+  &.single {
+    @include media-up($desktop) {
+      max-width: 1080px;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .laptop {
+        margin-right: 57px;
+        margin-left: 0;
+      }
+
+      .content {
+        transform: none;
+        max-width: 402px;
+      }
+    }
+  }
+
+  &.reverse {
+    @media screen and (min-width: $desktop) {
+      flex-direction: row-reverse;
+
+      .laptop {
+        margin-left: 42px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.laptop {
+  display: none;
+  position: relative;
+
+  &.mobile_show {
+    display: inline-block;
+    width: 280px;
+    height: 190px;
+    background-size: cover;
+    @media screen and (max-width: $iPhone6) {
+      margin-bottom: 15px;
+    }
+    .view {
+      max-width: 320px;
+      height: 118px;
+      transform: translate(38px, 13px);
+      &__feature {
+        height: 90px;
+      }
+    }
+    .shadow {
+      display: none;
+    }
+    @media screen and (min-width: $desktop) {
+      display: block;
+      flex-shrink: 0;
+      width: 585px;
+      height: 406px;
+      .view {
+        max-width: 429px;
+        height: 257px;
+        transform: translate(78px, 26px);
+        &__feature {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    flex-shrink: 0;
+    width: 585px;
+    height: 406px;
+  }
+
+  .view {
+    max-width: 429px;
+    height: 257px;
+    transform: translate(78px, 26px);
+    animation: fade-in 1s;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 429px;
+      height: 257px;
+      transform: translate(78px, 26px);
+    }
+
+    &__feature {
+      position: absolute;
+      opacity: 0;
+      animation: fade-in 1s 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: inherit;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: white;
+    background-color: $primary-color;
+    z-index: 1;
+
+    @include media-down($desktop) {
+      transform: translate(-6px, -2px) scale(0.8);
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(
+      271.55deg,
+      #ffffff 1.44%,
+      rgba(255, 255, 255, 0) 98.81%
+    );
+    opacity: 0.5;
+    z-index: 1;
+    transform: translate(292px, -35px);
+
+    .vertical & {
+      display: none;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 2s;
+  opacity: 1;
+  margin-bottom: 40px;
+
+  @include media-up($desktop) {
+    margin-bottom: 0;
+    padding-top: 50px;
+    transform: translateY(-30%);
+  }
+
+  &.reverse {
+    @media screen and (min-width: $desktop) {
+      align-items: flex-end;
+    }
+  }
+
+  @media screen and (max-width: $iPhone6) {
+    flex-basis: auto;
+    min-height: auto;
+    transform: translateY(0);
+  }
+
+  .vertical & {
+    min-height: 220px;
+    flex-basis: auto;
+    margin-top: 3rem;
+
+    @media screen and (min-width: $desktop) {
+      min-height: 210px;
+    }
+
+    &__backdrop {
+      min-height: 220px;
+      margin-top: 3rem;
+
+      @media screen and (min-width: $desktop) {
+        min-height: 210px;
+      }
+    }
+  }
+
+  &__backdrop {
+    min-height: 220px;
+
+    @media screen and (min-width: $desktop) {
+      min-height: auto;
+    }
+  }
+
+  .lead {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $primary-color;
+    text-align: center;
+
+    .vertical & {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+      &.reverse {
+        text-align: end;
+      }
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    font-family: $font-Sen;
+    text-align: center;
+
+    &.single {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    @media screen and (max-width: $iPhone6) {
+      font-size: 22px !important;
+      line-height: 32px !important;
+    }
+
+    &.reverse {
+      @media screen and (min-width: $desktop) {
+        text-align: end;
+      }
+    }
+
+    .vertical & {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 54px;
+      text-align: start;
+
+      .vertical & {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    text-align: center;
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
+
+    &.reverse {
+      @media screen and (min-width: $desktop) {
+        text-align: end;
+      }
+    }
+
+    .vertical & {
+      text-align: center;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+
+  &.vertical {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: $desktop) {
+    transform: translateY(-30px);
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &:hover:not(:disabled) path {
+      fill: $primary-color;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+    }
+
+    &.prev {
+      opacity: 0.4;
+      left: 0;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.next {
+      opacity: 0.4;
+      right: 0;
+    }
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.35);
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.active {
+      background-color: #c4c4c4;
+    }
+  }
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

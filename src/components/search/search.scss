@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.search {
+
+  position: relative;
+  height: 3.4em;
+
+  .textbox {
+
+    position: absolute;
+    z-index: 1;
+
+  }
+
+  .btn-search {
+
+    position: absolute;
+    right: 1.2em;
+    top: 50%;
+    z-index: 2;
+    width: 1.4em;
+    height: 1.4em;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    background-size: contain;
+    background-color: transparent;
+    background-position: center center;
+    background-image: url("./icons/ico-search.svg");
+
+    &:hover {
+
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+
+    }
+  }
+}

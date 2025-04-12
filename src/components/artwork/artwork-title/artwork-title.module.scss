@@ -1,0 +1,123 @@
+@import 'src/styles/variables';
+
+.count {
+  top: 45px!important;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: $font-Sen;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 0;
+  word-break: break-all;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+
+    @media screen and (min-width: $iPhone5) {
+      margin-bottom: 15px;
+    }
+
+    //&>div:last-child{
+    //    margin-left: 10px;
+    //}
+
+    .input {
+      font-size: 28px;
+      line-height: 34px;
+
+      &__price {
+        color: $primary-color;
+        //text-align: right;
+        font-weight: 800;
+      }
+
+      @media screen and (min-width: $desktop) {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+
+    .artist__info {
+      padding: 5px 0;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 23px;
+      word-break: break-all;
+
+      b {
+        font-weight: 800;
+        color: $primary-color;
+      }
+
+      @media screen and (min-width: $desktop) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.price_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .button__add {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .price {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 800;
+    color: $primary-color;
+    margin-bottom: 5px;
+    //text-align: right;
+    //@media screen and (min-width: $desktop) {
+    //    margin-left: auto;
+    //}
+  }
+
+  .rate_text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 800;
+    color: $primary-color;
+    //text-align: right;
+    //@media screen and (min-width: $desktop) {
+    //    margin-left: auto;
+    //}
+  }
+
+  .rate_text.blurred {
+    animation: blink 2s linear infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      color: $primary-rgba-color;
+    }
+    50% {
+      color: $primary-blurred-rgba-color;
+    }
+    100% {
+      color: $primary-rgba-color;
+    }
+  }
+}
+

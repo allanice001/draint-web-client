@@ -1,0 +1,158 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  .gallery-uploader-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+  }
+  .gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and(max-width: 320px) {
+      max-width: 300px;
+    }
+    .gallery-artwork-card {
+      width: calc(25% - 10px);
+      min-width: 300px;
+      margin: 5px;
+      .gallery-artworks-img-wrapper {
+        display: flex;
+        justify-content: center;               
+        .gallery-artworks-img {
+          height: 300px;
+          width: 100%;
+          object-fit: cover;
+        }                
+      }
+      .gallery-artwork-block {
+        .artwork-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          min-height: 26px;
+          .artwork-name {
+            font-size: 20px;
+            color: #707070;
+            margin-bottom: 3px;
+            font-weight: 600;
+            transition: 300ms;
+            @media screen and(max-width: 667px) {
+              font-size: 16px;
+            }
+          }                
+          .artwork-price {
+            font-size: 20px;
+            color: #707070;
+            margin-bottom: 3px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: row-reverse;
+            @media screen and(max-width: 667px) {
+              font-size: 16px;
+            }
+          }
+        }                
+        .info-status-no-sale {
+          // font-size: 18px;
+          color: lighten(#707070, 15%);
+          text-transform: uppercase;
+        }                
+        .info-status-sale {
+          // font-size: 18px;
+          color: #8CC57D;
+          text-transform: uppercase;
+        }                
+        .info-status-sold {
+          // font-size: 18px;
+          color: red;
+          text-transform: uppercase;
+        }
+        .artworks-country-name {
+          font-size: 14px;
+          color: #707070;
+          margin: 3px 0 0 3px;
+        }                
+        .empty-flag {
+          height: 24px;
+          width: 288px;
+        }                  
+      }
+      .artwork-status{
+        font-size: 18px;
+        text-transform: uppercase;
+        &.pending{
+          color: #f7af11;
+        }
+        &.verified {
+          color: #3f51b5;
+        }
+        &.unverified {
+          color: #f50057;
+        }
+      }
+      .artist-card-country {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3px;
+      }
+    }
+    .buttons-master{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+      button:last-child{
+        background-color: #ff9100;
+      }
+    }
+  }
+}  
+  
+    
+  
+    // .hovered {
+    //   color: #73b0f5 !important;
+  
+    //   &:hover {
+    //     color: #3f51b5 !important;
+    //   }
+    // }
+  
+    
+  
+    // .artist-card {
+    //   min-height: 160px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   align-items: stretch;
+    //   @media screen and(max-width: 667px) {
+    //     min-height: 130px;
+    //   }
+    // }
+  
+    // .artist-card-body {
+    //   font-size: 14px;
+    //   color: #707070;
+    //   margin-bottom: 3px;
+    //   font-weight: 600;
+    //   transition: 300ms;
+    //   @media screen and(max-width: 667px) {
+    //     font-size: 10px;
+    //     margin-bottom: 1px;
+    //   }
+    //   @media screen and(max-width: 320px) {
+    //     font-size: 11px;
+    //   }
+    // }
+  
+    
+  
+    
+  // }
+  
+  

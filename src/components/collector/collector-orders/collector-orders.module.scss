@@ -1,0 +1,87 @@
+@import 'src/styles/variables';
+
+.wrapper {
+
+    .title {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        text-align: left;
+        border-bottom: 1px solid #e7e7e7;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .list {
+
+        .order {
+            border-bottom: 1px solid #e7e7e7;
+
+            @media screen and (min-width: $desktop) {
+                border-bottom: none;
+            }
+
+            &:not(:last-child) {
+                @media screen and (min-width: $desktop) {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .shipping {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+
+            &>*:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .piece {
+        display: inline-flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        color: #c7c7c7;
+        &__label {
+            margin-right: 10px;
+        }
+        &__amount {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            color: $font-color;
+        }
+    }
+
+    .price {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 800;
+        color: $primary-color;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 28px;
+            line-height: 35px;
+
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (min-width: $desktop) {
+            margin-top: 15px;
+            align-items: center;
+        }
+    }
+}

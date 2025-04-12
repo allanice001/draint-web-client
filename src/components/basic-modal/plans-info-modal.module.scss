@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  color: $font-color;
+  overflow-y: auto;
+  @include with-scroll;
+}
+
+.content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+}
+
+.custom_width {
+  max-width: 800px!important;
+}
+
+

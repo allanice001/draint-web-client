@@ -1,0 +1,56 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.text_editor {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 20px 0;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .ql-toolbar {
+    border-radius: 4px 4px 0 0 !important;
+  }
+
+  .editor {
+    min-height: 100px;
+    border-radius: 0 0 4px 4px !important;
+
+    p {
+      font-size: 12px;
+    }
+
+    .ql-size-large {
+      font-size: 16px;
+    }
+  }
+}
+
+.bottom_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.newsletter_form {
+  flex-grow: 1;
+  min-width: 400px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button_wrapper {
+  width: 48%;
+}
+
+.hint_font {
+  font-size: 12px;
+}

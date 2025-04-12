@@ -1,0 +1,93 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px;
+  border-radius: 10px !important;
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1600px) {
+    width: calc(20% - 10px);
+  }
+  @media screen and (max-width: 1600px) {
+    width: calc(25% - 10px);
+  }
+  @media screen and (max-width: 1290px) {
+    width: calc(33% - 10px);
+  }
+  @media screen and (max-width: 1090px) {
+    width: calc(50% - 10px);
+  }
+  @media screen and (max-width: 545px) {
+    width: calc(100% - 10px);
+  }
+
+  .verification {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .button {
+    color: white;
+    background-color: black;
+
+    &.pending {
+      background-color: $pending-color;
+    }
+    &.verified {
+      background-color: $verified-color;
+    }
+    &.unverified {
+      background-color: $unverified-color;
+    }
+  }
+}
+
+.content {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleted_date {
+  color: $delete-color;
+  margin-bottom: 15px;
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(white, 0.7);
+  z-index: 2;
+  color: $delete-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #fff;
+}

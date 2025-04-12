@@ -1,0 +1,32 @@
+.checkbox-wrapper {
+  margin-top: 5px;
+  margin-left: 12px;
+
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+
+  .MuiIconButton-colorSecondary {
+    color: #8CC57D;
+  }
+
+  .MuiCheckbox-colorSecondary.Mui-checked {
+    color: #8CC57D;
+  }
+
+  .MuiCheckbox-colorSecondary.Mui-checked:hover {
+    background-color: rgba(140, 197, 125, 0.1);
+  }
+
+  .MuiTypography-body1 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #6b88a4;
+    letter-spacing: 1px;
+    font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+  }
+
+  .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+}

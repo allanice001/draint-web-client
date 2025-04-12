@@ -1,0 +1,48 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.table_wrapper {
+  margin-bottom: 30px!important;
+}
+
+.tCellHeader {
+  th:first-child {
+    width: 20% !important;
+  }
+
+  padding-left: 30px!important;
+  font-size: 16px!important;
+  color: rgba(63, 64, 65, 0.4)!important;
+  font-weight: 600!important;
+  font-family: "Muli", sans-serif!important;
+}
+
+.tCell {
+  td:first-child {
+    width: 20% !important;
+  }
+
+  padding-left: 30px!important;
+  font-size: 16px!important;
+  color: #3f4041!important;
+  font-weight: 500!important;
+  font-family: "Muli", sans-serif!important;
+}
+
+.tButtons {
+  button:first-child {
+    margin-right: 5px;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+
+  button {
+    min-width: 125px;
+  }
+}
+
+.pagination_wrapper {
+  margin-left: 30px;
+}
+

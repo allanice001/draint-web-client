@@ -1,0 +1,86 @@
+@import 'src/styles/variables';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 550px) {
+      padding-top: 10px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    &.active {
+      font-weight: bold;
+      background-color: $primary-color;
+      color: white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+
+    &.prev,
+    &.next {
+      border: 1px solid #e7e7e7;
+
+      path {
+        fill: $font-color;
+      }
+
+      &.prev {
+        transform: rotate(-180deg);
+      }
+
+      &:disabled {
+        opacity: 0.4;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: $primary-color;
+
+        path {
+          fill: white;
+        }
+      }
+
+      svg {
+        height: 12px;
+        width: 6px;
+      }
+
+    }
+  }
+
+  &__displaying {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    @media screen and (max-width: 550px) {
+      padding-top: 10px;
+    }
+
+    .select {
+      min-width: 60px;
+      margin-left: 12px;
+    }
+  }
+}

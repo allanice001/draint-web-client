@@ -1,0 +1,39 @@
+@import 'src/styles/variables';
+
+.button_wrapper {
+  display: flex;
+  padding: 15px 0;
+
+  .mr5 {
+    margin-right: 5px;
+
+    .button {
+      &__verified {
+        color: white;
+        background-color: #3e50b2;
+
+        &:hover {
+          background-color: darken(#3e50b2, 5%);
+        }
+      }
+
+      &__unverified {
+        color: white ;
+        background-color: #fd005a;
+
+        &:hover {
+          background-color: darken(#fd005a, 5%);
+        }
+      }
+
+      &__pending {
+        color: white;
+        background-color: #fbaf33;
+
+        &:hover {
+          background-color: darken(#fbaf33, 5%);
+        }
+      }
+    }
+  }
+}

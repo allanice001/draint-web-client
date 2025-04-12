@@ -1,0 +1,174 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.card {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e7e7e7;
+  flex-shrink: 0;
+  flex-grow: 1;
+
+  &:not(.fluid) {
+    min-height: 280px;
+  }
+
+  @include media-up(700px) {
+    width: 100%;
+    min-height: 280px;
+    max-width: 280px;
+  }
+
+  &.carousel {
+    @media screen and (min-width: $desktop) {
+      flex-basis: 280px;
+      flex-shrink: 1;
+    }
+  }
+
+  &.fluid:not(.carousel) {
+    .image {
+      width: 100%;
+      height: auto;
+
+      &__wrapper {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &.carousel {
+    @include media-up(700px) {
+      .image__wrapper {
+        flex-grow: 1;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      &.fluid .image__wrapper {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  z-index: 2;
+  object-fit: cover;
+
+  @include media-up(700px) {
+    max-width: 280px;
+    height: 280px;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-bottom: 23px;
+    flex: 1;
+    height: 280px;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 280px;
+    height: 280px;
+
+    &__wrapper {
+      margin-bottom: 15px;
+      min-height: 280px;
+    }
+  }
+}
+
+.title {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-Lato;
+  font-weight: bold;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.description {
+  width: 85%;
+  margin-right: 15px;
+}
+
+.artist {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 800;
+
+  &__name {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $font-Lato;
+    color: $primary-color;
+    text-decoration: none;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    margin-right: auto;
+    order: 0;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (min-width: $desktop) {
+      width: 36px;
+      height: 36px;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+  }
+}
+
+.price {
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-Lato;
+  font-weight: 900;
+  color: $primary-color;
+  order: 1;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+}

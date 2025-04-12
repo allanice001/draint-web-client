@@ -1,0 +1,66 @@
+@use "sass:math";
+@import '../../styles/variables';
+
+.steps {
+
+  .step {
+
+    display: inline-block;
+    line-height: $scale2;
+    padding: 0;
+
+    .number {
+
+      color: white;
+      font-weight: 700;
+      border-radius: 100%;
+      background-color: $c-blue;
+
+    }
+
+    @media (max-width: $mobile){
+
+      width: 100%;
+      text-align: left;
+      margin-bottom: $scale3;
+
+      &:last-child {
+
+        margin-bottom: 0;
+
+      }
+
+      .number {
+
+        float: left;
+        margin-right: $scale;
+        width: $scale2;
+        height: $scale2;
+        text-align: center;
+        font-size: $scale;
+        line-height: $scale2;
+
+      }
+    }
+
+    @media (min-width: $mobile + 1){
+
+      float: left;
+      width: 33%;
+      padding: 0 $scale;
+      text-align: center;
+      margin: 0 auto math.div($scale,2);
+
+      .number {
+
+        width: $scale2;
+        height: $scale2;
+        font-size: $scale2;
+        line-height: $scale2;
+        text-align: center;
+        margin: 0 auto math.div($scale,2);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.title_block {
+  text-align: center;
+  margin: 30px auto;
+
+  .title {
+    @include title-2;
+
+    padding-bottom: 5px;
+  }
+  .sub_title {
+    @include subtitle-2;
+  }
+}
+
+.joinButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 59px;
+
+  @include media-up($desktop) {
+    margin-bottom: 30px;
+  }
+
+  &__upgrade {
+    display: flex;
+    padding: 70px 0 70px 0;
+    justify-content: center;
+  }
+}
+
+.slide_block {
+  @media screen and (max-width: $iPhone6) {
+    > div {
+      padding-bottom: 65px;
+    }
+
+    > div:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: $iPhone6) {
+    padding: 5px;
+  }
+}
+
+.card {
+  width: 100%;
+  padding-top: 80px;
+
+  & > * {
+    margin: auto;
+    height: 100%;
+  }
+}

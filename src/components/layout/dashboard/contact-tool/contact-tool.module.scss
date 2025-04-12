@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.root {
+  padding-bottom: 80px;
+
+  @include media-up($desktop) {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}

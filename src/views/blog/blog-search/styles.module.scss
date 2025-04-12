@@ -1,0 +1,28 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+@mixin input-mobile {
+  @include media-down($mobile) {
+    margin: 2rem auto;
+  }
+}
+
+.searchWrapper {
+  display: flex;
+
+  @include media-down($mobile) {
+    display: block;
+  }
+}
+
+.input {
+  margin: 2rem 0 0 auto;
+
+  @include input-mobile;
+}
+
+.input:nth-of-type(2) {
+  margin-left: 2.5rem;
+
+  @include input-mobile;
+}

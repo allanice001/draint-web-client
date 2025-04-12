@@ -1,0 +1,114 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  @include with-scroll;
+
+  display: flex;
+  overflow-x: auto;
+  padding-top: 69px;
+  padding-bottom: 40px;
+  margin: 20px -20px 0;
+
+  @include media-up($desktop) {
+    justify-content: center;
+    padding-top: 72px;
+    margin: 0 -40px;
+  }
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.quote{
+  position: absolute;
+  margin-left: -150px;
+  margin-top: - 15px;
+ }
+
+.title_wrapper h3{
+  position: relative;
+}
+
+.card {
+  max-width: 370px;
+  min-width: 300px;
+  width: 100%;
+  padding: 30px 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1em;
+
+    .button {
+      margin: 15px;
+    }
+  }
+
+  &__img {
+    @include image-circle(120px);
+
+    position: relative;
+    margin-top: -85px;
+    box-shadow: 0 0 0 14px #f5f5f5;
+    margin-bottom: 25px;
+    display: inline-block;
+
+    @include media-up($desktop) {
+      @include image-circle(150px);
+
+      margin-top: -88px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -5px;
+    width: 100%;
+
+    font-family: $font-Sen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 34px;
+    min-height: 60px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__description {
+    font-family: $font-Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: auto;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}

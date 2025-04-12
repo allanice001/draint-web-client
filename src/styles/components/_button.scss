@@ -1,0 +1,32 @@
+@import '../variables';
+
+@mixin reset-button {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    font-family: $font-Muli;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-button {
+    @include reset-button;
+}
+
+.ui-button--primary {
+    background-color: $primary-color;
+    color: #fff;
+    min-height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 800;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &:disabled,
+    .disabled {
+        opacity: 0.5;
+    }
+}

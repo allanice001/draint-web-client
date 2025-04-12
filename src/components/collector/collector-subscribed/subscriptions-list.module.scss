@@ -1,0 +1,67 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .user_wrapper {
+    display: flex;
+    align-items: center;
+    width: 36%;
+  }
+
+  .subscription_image {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    background-color: $border-color;
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    margin-left: 43px;
+    font-family: $font-Sen;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #3F4041;
+
+    @include media-down($desktop) {
+      font-size: 24px;
+      margin-left: 20px;
+    }
+  }
+
+  .country {
+    font-size: 16px;
+
+    @include media-down($mobile) {
+      font-size: 14px;
+    }
+  }
+
+  .country_section {
+    width: 20%;
+
+    @include media-down($mobile) {
+      font-size: 14px;
+    }
+  }
+}
+
+.unsubscribe_button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  @include media-down($mobile) {
+    justify-content: center;
+  }
+}
+

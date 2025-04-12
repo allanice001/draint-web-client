@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+
+.form {
+  .row {
+    .column {
+      width: 100%;
+    }
+
+    &>* {
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+
+      .column {
+        width: 173px;
+      }
+
+      &>*:not(:last-child) {
+        margin-right: 23px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media screen and (min-width: $desktop) {
+      justify-content: center;
+      margin-top: 28px;
+    }
+  }
+
+  .button {
+    min-width: auto !important;
+    max-width: 130px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    @media screen and (max-width: $desktop - 1) {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &.map {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 130px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nav {
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+
+  @include with-scroll;
+}
+
+.item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    opacity: 0;
+    border-radius: 1em;
+    width: 3px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-color, $primary-color);
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+  }
+
+  svg path {
+    transition: fill 0.2s ease-in-out;
+    will-change: fill;
+  }
+
+  &:hover {
+    color: var(--primary-color, $primary-color);
+
+    svg path {
+      fill: var(--primary-color, $primary-color);
+    }
+  }
+
+  &.active {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+  }
+}

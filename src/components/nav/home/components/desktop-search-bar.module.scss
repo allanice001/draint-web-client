@@ -1,0 +1,100 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  width: 100%;
+  position: relative;
+
+  &__results {
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    max-height: 250px;
+    padding: 0 15px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 4;
+    overflow-y: auto;
+
+    @include with-scroll;
+
+    &.hide {
+      display: none;
+    }
+
+    .result {
+      padding: 10px 0;
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        border-bottom: 0.5px solid #E7E7E7;
+      }
+
+      &:last-child {
+        padding-top: 15px;
+        padding-bottom: 25px;
+      }
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+
+      .data {
+        font-family: $font-Lato;
+        font-size: 16px;
+      }
+
+      .type {
+        font-family: $font-Lato;
+        font-size: 12px;
+        line-height: 22px;
+        color: rgba(63, 64, 65, 0.4);
+      }
+    }
+  }
+
+  &__form {
+
+    .input {
+      height: 46px;
+
+      &:hover {
+        border-color: var(--primary-color, $primary-color);
+      }
+    }
+
+    .label {
+      display: none;
+    }
+
+    .icon {
+      path {
+        fill: $primary-color;
+      }
+
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+
+      &__spinner {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  }
+
+  .total {
+    padding: 20px 0 25px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-Lato;
+  }
+
+  .search__icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

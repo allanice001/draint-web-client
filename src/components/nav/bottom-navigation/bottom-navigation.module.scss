@@ -1,0 +1,70 @@
+@import 'src/styles/variables';
+
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: #fff;
+    color: #c7c7c7;
+    z-index: 4;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 70px;
+        padding: 0 20px;
+        background-color: #fff;
+        z-index: 3;
+    }
+
+    &__link,
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: bold;
+        color: inherit !important;
+        text-decoration: none;
+    }
+
+    &__link.active {
+        .nav__title {
+            color: $primary-color;
+        }
+
+        path {
+            fill: $primary-color;
+        }
+    }
+
+    &__title {
+        margin-top: 6px;
+    }
+}
+
+.shadow {
+    position: absolute;
+    top: 1px;
+    left: 36px;
+    right: 36px;
+    height: 50px;
+    background: #FFFFFF;
+    opacity: 0.7;
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}

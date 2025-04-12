@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.chart {
+  &__wrapper {
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: 0px 4px 20px #e7e7e7;
+  }
+  &__block {
+    margin: 4px;
+    padding: 10px 0;
+  }
+}

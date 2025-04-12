@@ -1,0 +1,29 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  position: relative;
+
+  .dropdown {
+    position: fixed;
+    bottom: -8px;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    padding: 10px 16px;
+    margin-top: 8px;
+    border-radius: 15px;
+    border-top: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    transition: opacity 0.2s ease-out;
+    will-change: opacity;
+    visibility: hidden;
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

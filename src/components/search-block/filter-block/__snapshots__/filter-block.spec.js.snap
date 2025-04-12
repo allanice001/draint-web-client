@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterBlock renders correctly 1`] = `
+<div
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+>
+  <form
+    className="form"
+    id="search-form"
+    onSubmit={[MockFunction]}
+  >
+    <div
+      className="header"
+      id="search-header"
+    >
+      <span />
+      <button
+        onClick={[MockFunction]}
+        type="button"
+      >
+        <svg
+          className="close"
+          fill="none"
+          height={14}
+          viewBox="0 0 22 22"
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.105 11l8.666-8.666a.781.781 0 00-1.105-1.105L11 9.895 2.334 1.23a.781.781 0 10-1.105 1.105L9.895 11 1.23 19.666a.781.781 0 101.105 1.105L11 12.105l8.666 8.666a.779.779 0 001.105 0 .781.781 0 000-1.105L12.105 11z"
+            fill="#3F4041"
+            stroke="#3F4041"
+            strokeWidth="0.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="filters"
+    />
+  </form>
+  <div
+    className="backdrop"
+    onClick={[MockFunction]}
+  />
+</div>
+`;

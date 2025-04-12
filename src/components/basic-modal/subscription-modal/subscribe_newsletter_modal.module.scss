@@ -1,0 +1,25 @@
+@import 'src/styles/variables';
+
+.email_wrapper {
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.content {
+  padding: 40px;
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.footer {
+  padding: 17px 40px;
+}
+
+.button {
+  width: 150px;
+  height: 46px;
+  float: right;
+}

@@ -1,0 +1,270 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.arrows {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    &:disabled {
+      color: rgba(255, 255, 255, 0.5);
+      cursor: default;
+    }
+
+    &:hover:not(:disabled) {
+      color: $primary-color;
+    }
+
+    &.right {
+      margin-right: 10%;
+    }
+
+    &.left {
+      margin-left: 10%;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dots_wrapper {
+  position: fixed;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  @media screen and (min-width: $desktop) {
+    justify-content: center;
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.5);
+      margin: 0 8px;
+      border-radius: 50%;
+
+      &.active {
+        background: #FFFFFF;
+      }
+    }
+  }
+
+  .arrow {
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: white;
+      }
+    }
+
+    &.left {
+      transform: rotate(180deg);
+    }
+
+    &.right {
+    }
+
+    &:disabled {
+      cursor: inherit;
+
+      svg {
+        path {
+          fill: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+}
+
+.paper {
+  width: 100%;
+  max-height: calc(100% - 40px) !important;
+  margin: 20px !important;
+  border-radius: 15px !important;
+  background-color: white;
+  box-shadow: none !important;
+
+  @media screen and (min-width: $desktop) {
+    max-height: calc(100% - 120px) !important;
+    max-width: 600px;
+    min-width: 560px;
+  }
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header_subscription {
+  position: relative;
+  width: 100%;
+  padding: 15px 0 10px 20px;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: $font-Sen;
+  min-height: 70px;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+    & > span {
+      font: $font-Mulish;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-height: 80px;
+    padding: 10px 40px 10px 40px;
+    font-size: 28px;
+    line-height: 34px;
+    align-items: center;
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: $font-Sen;
+
+  & > span {
+    padding-right: 30px;
+    display: inline-block;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 28px;
+    line-height: 34px;
+    align-items: center;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+
+  @media screen and (min-width: $desktop) {
+    top: 26px;
+    right: 40px;
+  }
+}
+
+.body {
+  padding: 28px 40px;
+  overflow-y: auto;
+  @include with-scroll;
+}
+
+.body_wrapper {
+  padding: 28px 40px;
+  overflow-y: auto;
+}
+
+.footer {
+  padding: 28px 15px;
+  border-top: 1px solid #e7e7e7;
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px 40px;
+  }
+}
+
+.footer_button {
+  padding: 20px;
+  border-top: 1px solid #e7e7e7;
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 10px;
+  }
+}
+
+.footer_button_wrapper {
+  padding: 20px;
+  border-top: 1px solid #e7e7e7;
+
+  @media screen and (min-width: $iPhone5) {
+    padding: 2px 2px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 10px;
+  }
+}
+
+.subscribe_button_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  button {
+    margin-top: 0;
+
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+
+  .back_button {
+    vertical-align: center;
+    font-weight: normal;
+
+    svg {
+      height: 13px;
+      margin-right: 24px;
+
+      @media screen and (max-width: $desktop) {
+        height: 11px;
+        margin-right: 18px;
+      }
+    }
+  }
+}

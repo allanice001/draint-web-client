@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 0;
+}
+
+.message {
+  margin: 0 auto;
+  padding: 4em;
+  color: gray;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title {
+  font-size: 5em;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.link {
+  color: $primary-color;
+}

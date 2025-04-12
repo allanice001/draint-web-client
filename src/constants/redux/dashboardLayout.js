@@ -1,0 +1,5 @@
+export const SET_DASHBOARD_LOADING = 'SET_DASHBOARD_LOADING';
+
+export const SET_USER_STATUS = 'SET_USER_STATUS';
+
+export const ADD_BLOG_TAB = 'ADD_BLOG_TAB';

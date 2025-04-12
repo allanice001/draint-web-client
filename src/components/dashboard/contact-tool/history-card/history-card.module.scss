@@ -1,0 +1,41 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.recipient {
+  font-size: 16px;
+  font-weight: 700;
+  color: $font-color;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.time {
+  font-size: 14px;
+  color: $description-color;
+  display: block;
+}
+
+.subject {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $font-color;
+  @include ellipsis(calc(100% - 40px));
+}
+
+.description {
+  font-size: 14px;
+  line-height: 22px;
+  color: $description-color;
+
+  @include ellipsis-rows(2);
+}

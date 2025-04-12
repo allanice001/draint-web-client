@@ -1,0 +1,139 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.required .label::after {
+  position: relative;
+  content: '*';
+  color: $error-color;
+  left: 5px;
+}
+
+.wrapper {
+  position: relative;
+
+  &.shadow::after {
+    display: inline-block;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    height: 14px;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    background-color: #c4c4c4;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: inherit;
+  font-weight: bold;
+  text-transform: unset;
+  color: inherit;
+}
+
+.input:focus,
+.input {
+  border-color: $primary-color;
+}
+
+.list {
+  position: absolute;
+  min-width: 100%;
+  padding: 10px 16px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border-top: 6px solid #fff;
+  border-bottom: 6px solid #fff;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+
+  max-height: 200px;
+  overflow-y: auto;
+
+  &:empty {
+    padding: 0;
+    border: 0;
+    box-shadow: 0;
+  }
+
+  @include with-scroll();
+
+  &__wrapper {
+    height: 0;
+    padding-left: 8px;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: hidden;
+
+    &.expanded {
+      height: auto;
+      padding-bottom: 20px;
+    }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+    font-family: $font-Lato;
+    font-size: 14px;
+    line-height: 18px;
+
+    &.checked {
+      font-weight: 700;
+    }
+
+    &__checkbox {
+      width: 100%;
+    }
+  }
+
+}
+
+.display {
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding: 15px 16px;
+  cursor: default;
+
+  &._disabled {
+    background-color: #eee;
+  }
+
+  &.show {
+    z-index: 1;
+  }
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $error-color;
+  white-space: normal;
+}
+
+.inputLabel {
+  display: none;
+}

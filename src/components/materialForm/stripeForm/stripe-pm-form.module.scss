@@ -1,0 +1,96 @@
+@import 'src/styles/variables';
+
+.stripe_pm_form_wrapper {
+  .payment_inputs_wrapper {
+    margin-bottom: 15px;
+  }
+
+  .stripe_elements {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $mobile) {
+      flex-direction: row;
+    }
+
+    .row {
+      width: 100%;
+      margin: 15px 0 0 0;
+      @media screen and (min-width: $mobile) {
+        width: 50%;
+        margin: 0 25px 0 0;
+      }
+
+      &_iban {
+        width: 100%;
+        margin: 0 0 0 0;
+      }
+
+      &_cvc {
+        width: 100%;
+        margin: 15px 0 0 0;
+        @media screen and (min-width: $mobile) {
+          width: 50%;
+          margin: 0 0 0 0;
+        }
+      }
+
+      &_number {
+        width: 100%;
+        @media screen and (min-width: $mobile) {
+          margin: 0 25px 0 0;
+        }
+      }
+    }
+
+    .title {
+      padding: 0 0 0 5px;
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    .stripe_input {
+      border: solid 1px #E7E7E7;
+      border-radius: 4px;
+      transition: 200ms;
+      height: 55px;
+      padding: 17px;
+      margin-top: 5px;
+
+      &_error {
+        border: solid 1px $error-color;
+      }
+    }
+
+    .acceptance {
+      margin-top: 10px;
+      text-align: justify;
+      font-size: 10px;
+      color: #aab7c3;
+      font-family: Open Sans, sans-serif;
+      letter-spacing: 0.025em;
+    }
+  }
+}
+
+
+.inputs_rows {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $mobile) {
+    flex-direction: row;
+  }
+
+  .row {
+    width: 100%;
+    margin: 0 0 0 0;
+
+    @media screen and (min-width: $mobile) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+      width: 50%;
+    }
+  }
+}

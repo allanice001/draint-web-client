@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+.stat {
+
+  position: relative;
+  float: left;
+  text-align: center;
+  min-height: $scale7;
+  padding: $scale2 $scale5;
+
+  .ico {
+
+    position: absolute;
+    top: 50%;
+    left: $scale2;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+  }
+
+  .value {
+
+    font-size: $scale2;
+    font-weight: 700;
+
+  }
+
+  .change {
+
+    position: absolute;
+    top: 50%;
+    right: $scale1;
+    font-size: 0.9em;
+    padding-top: 1em;
+    text-align: center;
+    background-size: 1em 1em;
+    background-position: top center;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+    &.up {
+      background-image: url("./icons/ico-up-green.svg");
+    }
+
+    &.down {
+      background-image: url("./icons/ico-down-red.svg");
+    }
+  }
+
+  .label {
+
+    font-size: 0.85em;
+    color: lighten($c-text, 10%);
+
+  }
+}

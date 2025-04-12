@@ -1,0 +1,104 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  padding-top: 80px;
+}
+
+.header {
+  padding: 0 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-color: #333440;
+  z-index: 4;
+
+  @media screen and(max-width: 640px) {
+    height: 60px;
+  }
+
+  .logo {
+    @media screen and(max-width: 640px) {
+      display: none;
+    }
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    @media screen and(max-width: 640px) {
+      display: none;
+    }
+  }
+
+  .menuButton {
+    display: none;
+
+    @media screen and(max-width: 640px) {
+      display: block;
+    }
+
+    button {
+      border: 1px solid gray;
+      border-radius: 10px;
+      height: 30px;
+      width: 40px;
+      color: gray;
+      background-color: #333440;
+
+      .MuiSvgIcon-root {
+        font-size: 20px !important;
+      }
+
+      &:hover {
+        border: 1px solid white;
+        color: white;
+      }
+
+      &:active {
+        background-color: #73b0f4;
+      }
+    }
+  }
+
+  .menuWrapper {
+    display: block;
+    min-width: 150px;
+    min-height: 30px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+
+  .sideNav {
+    width: 200px;
+
+    @media screen and(max-width: 640px) {
+      width: 0px !important;
+      margin-top: 0 !important;
+    }
+  }
+
+  .content {
+    width: calc(100% - 200px);
+    padding: 5px;
+
+    @media screen and(max-width: 640px) {
+      width: calc(100%);
+      padding: 0px;
+    }
+  }
+}

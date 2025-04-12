@@ -1,0 +1,208 @@
+@import '../../styles/variables';
+
+.profile-wrapper {
+  .artist-name {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #707070;
+    padding: 10px;
+    background-color: #FBFBFF;
+  }
+  .tabs-container {
+    width: 100%;
+  }
+  .children-container {
+    margin: 10px 5px;
+  }
+
+  .artist-actions {
+    display: flex;
+    justify-content: center;
+    .MuiTab-root {
+      font-size: 13px;
+      width: 50%;
+      @media only screen and (max-width: 823px) {
+        padding: 6px 15px;
+        font-size: 12px;
+        width: auto;
+      }
+      @media only screen and (max-width: 640px) {
+        padding: 6px 15px;
+        min-width: 10px;
+      }
+      @media only screen and (max-width: 414px) {
+        padding: 6px 15px;
+        font-size: 8px;
+        width: auto;
+      }
+      @media only screen and (max-width: 375px) {
+        padding: 6px 11px;
+        width: auto;
+      }
+      @media only screen and (max-width: 360px) {
+        padding: 6px 7px;
+        font-size: 9px;
+        width: auto;
+      }
+      @media only screen and (max-width: 320px) {
+        padding: 6px 3px;
+        font-size: 8px;
+        width: auto;
+      }
+    }
+    .MuiTabs-root {
+      width: 100%;
+    }
+    .MuiTabs-centered {
+      padding: 0 214px;
+      @media screen and (max-height: 1440px) {
+        justify-content: space-around;
+        padding: 0 0;
+      }
+      @media screen and (max-height: 568px) {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.MuiCard-root {
+
+  .MuiCardMedia-root {     
+    .artist-photo-wrapper {      
+      display: flex;
+      justify-content: center;      
+      @media only screen and (max-width: 1440px) {
+        width: 100%;
+        display: grid;
+      }
+      .artist-photo-placeholder {
+        min-height: 600px;
+        background: white;
+        @media screen and (max-width: 510px) {
+          min-height: 400px;
+        }
+      }
+    }
+  }
+
+  .MuiCardActions-root {
+    padding: 0 8px;
+  }
+}
+
+.artworks-profile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  //padding: 0 10px;
+
+  .card {
+    width: 830px;
+    min-height: 630px;
+    padding: 0;
+    margin: 5px;
+  }
+
+  .artworks-profile-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 3px;
+    @media only screen and (max-width: 568px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+
+    .art-profile-name {
+      margin-right: 5px;
+    }
+
+    .profile-info-status-no-sale {
+      color: lighten(#707070, 15%);
+      text-transform: uppercase;
+    }
+
+    .profile-info-status-sale {
+      color: #8CC57D;
+      text-transform: uppercase;
+    }
+
+    .profile-info-status-sold {
+      color: red;
+      text-transform: uppercase;
+    }
+  }
+
+  .artist-profile-name {
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 3px;
+  }
+
+  .artworks-profile-country-name {
+    font-size: 14px;
+    color: #707070;
+    margin-top: 3px;
+  }
+
+  .artworks-profile-img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .MuiButton-textPrimary {
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  .empty-flag {
+    height: 47px;
+    width: 288px;
+  }
+
+
+}
+
+.instagram-media-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem 0;
+
+  .instagram-wrapper {
+    width: 60%;
+    @media only screen and (max-width: 1440px) {
+      display: grid;
+      width: 100%;
+    }
+    .instagram-image {
+      width: 100%;
+    }
+  }
+
+  .instagram-media {
+    width: 300px;
+    min-height: 200px;
+    padding: 0;
+    margin: 5px;
+    .instagram-list-img{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+  }
+
+  .back-btn {
+    margin: 0 1.5rem 1.5rem 0;
+  }
+}

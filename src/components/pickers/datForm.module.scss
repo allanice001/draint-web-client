@@ -1,0 +1,20 @@
+.control {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  padding-left: 136px;
+  svg {
+    color: black !important;
+  }
+
+  &_disabled {
+    cursor: default;
+    svg {
+      color: #9f9f9f !important;
+    }
+  }
+}

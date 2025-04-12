@@ -1,0 +1,63 @@
+@import 'src/styles/variables';
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 185px;
+    padding: 13px 0;
+    border-radius: 35px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    background-color: $primary-color;
+
+    &__verification {
+        display: inline-block;
+        width: 120px;
+        padding: 13px 0;
+        border-radius: 35px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        @media screen and (min-width: $mobile) {
+            display: inline-block;
+            width: 140px;
+            padding: 13px 0;
+            border-radius: 35px;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        &__accepted,
+        &__completed {
+            color: $primary-color;
+            background-color: lighten($color: $primary-color, $amount: 25);
+        }
+
+        &__canceled {
+            color: $error-color;
+            background-color: lighten($color: $error-color, $amount: 35);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &.accept {
+        background-color: $success-color;
+    }
+
+    &.decline {
+        background-color: $error-color;
+    }
+}

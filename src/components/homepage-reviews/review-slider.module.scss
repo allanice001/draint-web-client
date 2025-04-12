@@ -1,0 +1,163 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  position: relative;
+  text-align: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-Sen;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: $primary-color;
+  min-width: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+
+  @include media-up($desktop) {
+    color: $font-color;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    order: 1;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+
+    @include media-up($desktop) {
+      background-color: darken(#fff, 5%);
+    }
+  }
+}
+
+.slides {
+  height: auto;
+  max-height: 430px;
+  min-height: 300px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include media-down($tablet) {
+    min-height: 410px;
+    width: 340px;
+  }
+
+}
+
+.slide {
+  display: flex;
+  text-align: left;
+
+  & > * {
+    flex-basis: unset;
+    min-height: 300px;
+    width: 430px;
+
+    @include media-down($desktop) {
+      width: 340px;
+      height: 300px;
+    }
+
+    @include media-down($tablet) {
+      min-height: 410px;
+      width: 340px;
+    }
+  }
+}
+
+.dots {
+  position: absolute;
+  left: 80%;
+  top: 80%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  & > * {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 12px;
+
+    @include media-up($tablet) {
+      margin-right: 18px;
+    }
+  }
+
+  @include media-down($tablet) {
+    top: 160%;
+    left: 50%;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  display: inline-flex;
+  background-color: rgba(196, 196, 196, 0.3);
+
+  border-radius: 50%;
+
+  &.active {
+    background-color: $disabled-color;
+  }
+
+  @include media-up($tablet) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  top: 150px;
+  left: -15%;
+  right: -15%;
+  z-index: 3;
+  width: 130%;
+  height: 40px;
+}
+
+.button {
+  color: $font-color;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+
+  &.disabled {
+    display: none;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  &.reverse {
+    transform: rotate(180deg);
+  }
+}
+

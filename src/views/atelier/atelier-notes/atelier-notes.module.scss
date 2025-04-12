@@ -1,0 +1,86 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.root {
+}
+
+.header {
+  position: relative;
+  text-align: right;
+  margin-bottom: 2rem;
+
+  @include media-up($desktop) {
+    margin-bottom: 5rem;
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-family: $font-Sen;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+}
+
+.row {
+  @include media-up($desktop) {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.dropzone,
+.image {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 4rem;
+
+  @include media-up($desktop) {
+    max-width: 590px;
+    order: 1;
+    margin-left: 80px;
+    margin-bottom: 0;
+  }
+}
+
+.image {
+  background-color: $border-color;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  @include media-up($desktop) {
+    max-width: 565px;
+  }
+}
+
+.button {
+  @include media-up($desktop) {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+}

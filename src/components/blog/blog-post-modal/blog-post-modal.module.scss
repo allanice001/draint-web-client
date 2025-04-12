@@ -1,0 +1,86 @@
+@import 'src/styles/variables';
+
+.edit_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .count {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(63, 64, 65, 0.3);
+  }
+
+  .help_container {
+    display: flex;
+    justify-content: space-between;
+
+    .contentError {
+      display: inline-block;
+      margin-right: auto;
+      font-size: 14px;
+      line-height: 18px;
+      color: #f44336;
+    }
+
+    .count {
+      display: inline-block;
+      margin-left: auto;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(63, 64, 65, 0.3);
+    }
+  }
+
+  .button {
+    &__featured_image {
+      padding: 18px !important;
+    }
+
+    &__legal {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .text_editor {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 2rem;
+    height: 350px;
+
+    .editor {
+      min-height: 100%;
+
+      .ql-editor {
+        border: none !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image {
+  height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.gallery {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.label {
+  margin-top: 15px;
+}

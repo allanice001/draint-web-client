@@ -1,0 +1,135 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+
+#newsletter{
+    font-family: $font-Sen;
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    z-index: 2;
+    svg {
+        margin: 10px;
+        font-size: 60px;
+        background-color: $primary-color;
+        color: white;
+        border: solid 2px $primary-color;
+        border-radius: 30px;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 0 0 5px $primary-color;
+    }
+    svg:hover{
+        box-shadow: 0 -3px 9px -2px grey;
+    }
+    @media screen and(max-width: $desktop) {
+        bottom: 10px;
+        right: 0;
+        svg {
+            font-size: 45px;
+            padding: 6px;
+        }
+    }
+    // @media screen and(max-width: 640px) {
+    //     bottom: 60px;
+    // }
+}
+
+.max-height{
+    height: 370px;
+}
+#newl-modal {
+    font-family: $font-Muli;
+    color: #73b0f4;
+    .newl-close{
+        position: absolute;
+        top: 8px;
+        right:10px;
+        font-size: 20px;
+        border: solid 1px;
+        color:#3f51b5;
+    }
+    .newl-close:hover{
+        cursor: pointer;
+    }
+    .MuiPaper-root {
+        opacity: 0.95;
+        width:400px;
+        .MuiFormControl-root{
+            display: flex;
+            position: relative;
+        }
+        #newl-text{
+            font-size: 12px;
+            color: red;
+            font-style: italic;
+        }
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+        input{
+            font-size: 16px;
+        }
+        label{
+            font-size: 12px;
+        }
+        span{
+            font-size: 12px;
+        }
+        #form-dialog-title{
+            font-family: $font-Sen;
+            font-weight: 600;
+            color: #806BFF;
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 0;
+        }
+        .MuiDialogActions-root{
+            display: flex;
+            justify-content: center;
+        }
+        .MuiDialogContent-root:first-child {
+            padding-top: 0px;
+        }
+        .MuiButtonBase-root{
+            border: solid 1px;
+            span{
+                font-size:14px;
+            }
+            :hover{
+                cursor: pointer;
+            }
+        }
+
+        line-height: 1.5625em;
+    }
+    #countriesMenu {
+        @include with-scroll;
+        max-height: 150px;
+        overflow-y: auto;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 200px;
+        background-color: white;
+        height: 140px;
+        li {
+            // background-color: rgba(0,0,0,0.2);
+            border:0;
+            span{
+                padding-left: 10px;
+            }
+            &:hover {
+                background-color:  #806BFF;
+                opacity: 0.7;
+                color: white;
+            }
+            &:last-child{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

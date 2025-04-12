@@ -1,0 +1,31 @@
+@import 'src/styles/variables';
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .button {
+    color: white;
+
+    &.pending {
+      background-color: $pending-color;
+    }
+    &.verified {
+      background-color: $verified-color;
+    }
+    &.unverified {
+      background-color: $unverified-color;
+    }
+
+    &:disabled {
+      color: #3f4041;
+    }
+  }
+
+  .settings {
+    color: white !important;
+    background-color: black;
+    padding: 5px;
+  }
+}

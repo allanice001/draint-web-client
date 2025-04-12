@@ -1,0 +1,130 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px;
+  border-radius: 10px !important;
+
+  @media screen and (min-width: 1600px) {
+    width: calc(20% - 10px);
+  }
+  @media screen and (max-width: 1600px) {
+    width: calc(25% - 10px);
+  }
+  @media screen and (max-width: 1290px) {
+    width: calc(33% - 10px);
+  }
+  @media screen and (max-width: 1090px) {
+    width: calc(50% - 10px);
+  }
+  @media screen and (max-width: 545px) {
+    width: calc(100% - 10px);
+  }
+
+  .role {
+    display: block;
+
+    .permission {
+      text-transform: capitalize;
+      color: $primary-color;
+    }
+  }
+
+  .email {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .draintProfile {
+    color: $primary-color;
+    display: inline-block;
+    margin-block: 8px;
+  }
+
+  .instagram {
+    color: gray;
+
+    a {
+      color: $primary-color;
+    }
+  }
+
+  .list {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .settings {
+    color: black !important;
+    background-color: #806bff57;
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 90%;
+  }
+
+  .verification {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 1.5rem 0;
+    font-weight: bold;
+    align-items: center;
+
+
+  }
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(white, 0.7);
+  z-index: 2;
+  color: $delete-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1120px;
+}
+
+.cardWrapper > div {
+  max-width: 325px;
+  margin: 2rem;
+}
+
+.modalFooter {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 525px;
+  word-break: break-word;
+}
+
+.rating_wrapper {
+  display: flex;
+
+  & > * {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+}

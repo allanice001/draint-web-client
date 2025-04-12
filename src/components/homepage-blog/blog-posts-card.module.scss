@@ -1,0 +1,160 @@
+@use "sass:math";
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .1), 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.post_title {
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  font-family: $font-Sen;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: $font-color;
+
+  @include media-down($desktop) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.card_content_wrapper {
+  position: relative;
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  flex: 1;
+  background: #fff;
+}
+
+.card_content {
+  padding: 24px;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.blog_content{
+    p {
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: $font-Mulish;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+}
+
+.date {
+  margin-bottom: 18px;
+
+  @include media-down($samsung) {
+    margin-bottom: 5px;
+  }
+}
+
+.author{
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  font-family: $font-Lato;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+  color: $outline-color;
+  font-weight: 400;
+
+  @include media-down($desktop) {
+    font-size: 14px;
+  }
+
+  @include media-down($samsung) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+time {
+  font-family: $font-Lato;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+  color: $outline-color;
+  font-weight: 400;
+
+  @include media-down($desktop) {
+    font-size: 14px;
+  }
+}
+
+.card_img {
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: math.div(250 , 377) * 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card_footer {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #F3F3F3;
+}
+
+.instagram {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.insta_link {
+  color: $disabled-color
+}
+
+.insta_link:hover {
+  color: $disabled-color
+}
+
+a:hover {
+  color: $primary-color;
+}
+
+.icon_author {
+  margin: 0 10px 0 0;
+}
+
+.icon_calendar {
+  margin: 0 10px 0 0;
+}
+
+.icon_instagram {
+  width: 22px;
+  height: 22px;
+  margin: 0 16px 0 0;
+}

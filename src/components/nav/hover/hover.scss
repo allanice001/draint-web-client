@@ -1,0 +1,143 @@
+@import '../../../styles/variables';
+
+.hover-nav {
+
+  // position: relative;
+  cursor: pointer;
+  width: $scale11;
+  z-index: 999999;
+
+  .hotspot {
+
+    // margin-top: $scale;
+    // padding-bottom: $scale;
+
+  }
+
+  nav {
+
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    border-radius: 2px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+
+    a, button {
+
+      display: block;
+      width: 100%;
+      padding: 1.4em 0.5em;
+      margin: 0;
+      color: white;
+      font-weight: 400;
+      opacity: 0.8;
+      font-size: 0.9em;
+      border-radius: 0;
+      background-color: transparent;
+      transition: 0.2s all ease-in-out !important;
+      border-bottom: 1px solid lighten($c-dark, 12%);
+
+      &:hover {
+
+        opacity: 1;
+        background-color: transparent;
+
+      }
+
+      &:last-child {
+
+        border-bottom: 0 !important;
+
+      }
+    }
+
+    &:after {
+
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      left: 1em;
+      pointer-events: none;
+      border: solid transparent;
+      border-bottom-color: white;
+      border-width: 8px;
+
+    }
+  }
+
+  &.align-left {
+
+    text-align: left;
+
+    nav:after {
+
+      right: auto;
+      left: 0.5em;
+
+    }
+  }
+
+  &.align-right {
+
+    text-align: right;
+
+    nav:after {
+
+      right: 0.5em;
+      left: auto;
+
+    }
+  }
+
+  &.dark {
+
+    nav {
+
+      background: $c-dark;
+
+      a, button {
+
+        color: lighten($c-text-light, 12%);
+        border-bottom: 1px solid lighten($c-dark, 10%);
+
+      }
+
+      &:after {
+
+        border-bottom-color: $c-dark;
+
+      }
+    }
+  }
+
+  &.light {
+
+    nav {
+
+      background: white;
+
+      a, button {
+
+        color: $c-text;
+        border-bottom: 1px solid darken(white, 6%);
+
+      }
+
+      &:after {
+
+        border-bottom-color: white;
+
+      }
+    }
+  }
+
+  .hotspot:hover + nav,
+  nav:hover {
+
+    display: block;
+
+  }
+}

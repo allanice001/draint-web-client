@@ -1,0 +1,228 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 5rem;
+    padding-bottom: 20px;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $desktop) {
+      border-bottom: none;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  .header {
+    @media screen and (min-width: $desktop) {
+      position: relative;
+    }
+
+    @media screen and (max-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        margin-top: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .select_wrapper {
+    display: flex;
+    padding: 10px 0;
+
+    @media screen and(min-width: $desktop) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0;
+    }
+  }
+
+  .watchlistElement {
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 54px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .sales_history_wrapper {
+
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      top: 170px;
+      left: 10%;
+    }
+  }
+
+  .btns_wrapper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 54px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $tablet) {
+      border-top: 0;
+      padding-top: 30px;
+    }
+
+    &__right {
+      padding-top: 50px;
+      display: flex;
+      justify-content: flex-end;
+
+      @media screen and (max-width: $tablet) {
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .details__actions {
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: space-around;
+
+    }
+  }
+
+  .button__add {
+    position: absolute;
+    bottom: 120px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 800;
+    font-family: $font-Muli;
+
+    @media screen and (min-width: $orient-laptop) {
+      font-size: 17px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-left: 110px;
+      width: auto;
+      position: static;
+    }
+
+    .icon {
+      width: 28px;
+      height: 26px;
+      margin-right: 10px;
+      fill: white;
+      z-index: 1;
+
+      @media screen and (min-width: $desktop) {
+        width: 24px;
+        height: 23px;
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        border-radius: 50px 0 0 50px;
+        background-color: #6a53f8;
+        z-index: 1;
+      }
+    }
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 100px;
+    font-size: 18px !important;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: $font-Sen;
+    color: #3F4041;
+
+    &:hover {
+      background-color: #e7e7e7;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &__text {
+      display: none;
+      @media screen and (min-width: $desktop) {
+        display: flex;
+      }
+    }
+
+    &__text_mobile {
+      padding: 0 28px;
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
+      @media screen and (max-width: $mobile-s) {
+        padding: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: relative;
+      margin-left: 16px;
+      margin-bottom: 0 !important;
+    }
+
+    &__offer {
+      color: $primary-color;
+      @media screen and (min-width: $tablet) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

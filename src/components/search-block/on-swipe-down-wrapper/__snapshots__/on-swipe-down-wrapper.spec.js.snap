@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnSwipeDownWrapper renders correctly 1`] = `
+<div
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+/>
+`;

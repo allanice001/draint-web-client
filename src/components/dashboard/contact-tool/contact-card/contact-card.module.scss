@@ -1,0 +1,135 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  .card_item_info:last-child {
+    padding-bottom: 15px;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: #b2b3b3;
+    color: white;
+    border-radius: 0 0 15px 15px;
+    z-index: 1;
+    font-size: 16px;
+    min-height: 24px;
+
+    &__unregistered {}
+    margin-top: 30px;
+  }
+
+  &:hover {
+    .edit_icon {
+      display: block;
+    }
+
+    .trash_icon {
+      display: block;
+    }
+  }
+}
+
+.card_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card_content {
+  @include text;
+  @include ellipsis(100%);
+
+  &:not(:last-child:first-child) {
+    flex-basis: 50%;
+  }
+}
+
+.card_actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+
+  & > *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: $caption-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.edit_icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  bottom: -10px;
+  right: 14px;
+}
+
+.trash_icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  bottom: -10px;
+  right: 40px;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: $desktop) {
+  .edit_icon {
+    display: block;
+  }
+
+  .trash_icon {
+    display: block;
+  }
+}
+
+.edit_button {
+  position: relative;
+}
+
+.card_item_info {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: $tablet) {
+    overflow-x: auto;
+  }
+}
+
+.contact_name {
+  @include text-title;
+  @include ellipsis(calc(100% - 95px));
+}
+
+.delim {
+  width: 25px;
+  height: 1px;
+  background-color: $border-color;
+  transform: rotate(90deg);
+}
+
+.link {
+  color: $primary-color;
+}

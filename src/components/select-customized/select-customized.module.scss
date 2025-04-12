@@ -1,0 +1,89 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .label {
+    display: flex;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .right_icon {
+    margin-top: 9px;
+    margin-right: 12px;
+  }
+  .select {
+    width: 300px;
+    color: #3f4041;
+  }
+}
+
+.wrapper_square {
+  display: flex;
+  flex-direction: column;
+
+  &__formControl {
+    font-size: 12px;
+    width: 220px;
+
+    @include media-down($tablet) {
+      width: 90%;
+    }
+
+    @include media-down($mobile) {
+      font-size: 16px;
+      width: 100%;
+    }
+
+    @include media-up($desktop) {
+      font-size: 16px;
+      width: 300px;
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 16px;
+      margin-right: 20px;
+      padding-bottom: 12px;
+      &__center {
+        align-self: center;
+      }
+    }
+  }
+
+  &__formNoborderControl {
+    font-size: 12px;
+    width: 390px;
+
+    @include media-down($mobile) {
+      font-size: 16px;
+      width: 100%;
+    }
+
+    @include media-down($desktop) {
+      font-size: 16px;
+      width: 312px;
+    }
+  }
+
+  .right_icon {
+    margin-top: 7px;
+    margin-right: 10px;
+    @include media-up($desktop) {
+      margin-right: 24px;
+    }
+    @include media-down($mobile) {
+      margin-right: 24px;
+    }
+  }
+
+  .left_icon {
+    margin: 0 15px 0 5px;
+  }
+}

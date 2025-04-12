@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.root {
+  position: relative;
+  padding-bottom: 4rem;
+
+  @include media-down($tablet) {
+    @include border-bottom;
+  }
+
+  @include media-up($desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.features {
+  margin-top: 2rem;
+
+  @include media-up($desktop) {
+    margin-bottom: -3rem;
+  }
+}
+
+.subtitle {
+  margin-bottom: 0;
+}
+
+.actions {
+  text-align: center;
+}

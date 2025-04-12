@@ -1,0 +1,11 @@
+export const DELETE_MESSAGE = 'Hashtag successfully deleted';
+export const UPDATE_MESSAGE = 'Hashtag successfully updated';
+export const ENTER_KEY = 'Enter';
+export const NAME_INPUT = 'name';
+export const SEARCH_INPUT = 'search';
+export const SEARCH_LABEL = ' ';
+export const SEARCH_PLACEHOLDER = 'hashtag search';
+export const SEARCH_ICON_COLOR = '#806BFF';
+export const MAX_LENGTH = 30;
+export const BUTTON_TYPE = 'button';
+export const HASHTAG_FORM_NAME = 'hashtag';

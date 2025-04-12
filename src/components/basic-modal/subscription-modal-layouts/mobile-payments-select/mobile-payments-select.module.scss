@@ -1,0 +1,87 @@
+@import 'src/styles/variables';
+
+.root {
+  width: 100%;
+}
+
+.header {
+  margin-top: -6px;
+  margin-bottom: 6px;
+  font-size: 16px;
+
+  @media screen and (max-width: $iPhone6){
+    margin-bottom: 10px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment {
+  &__box {
+    $drop-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px;
+    padding: 20px 10px;
+    box-shadow: $drop-shadow;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+
+    &:active, &:focus {
+      box-shadow: $drop-shadow, 0 0 0 2px $primary-color;
+    }
+
+    &_wrapper {
+      position: relative;
+      width: 100%;
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    .label {
+      font-family: $font-Mulish;
+      font-size: 14px;
+      font-weight: bold;
+      padding-top: 10px;
+
+      @media screen and (min-width: $iPhone6) {
+        font-size: 16px;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  &__icons {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > svg {
+      margin: 2px;
+    }
+  }
+}

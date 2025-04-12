@@ -1,0 +1,5 @@
+const PRIMARY_COLOR = '#806bff';
+const OUTLINE_COLOR = '#c7c7c7';
+const RED_COLOR = '#D80027';
+
+export { PRIMARY_COLOR, OUTLINE_COLOR, RED_COLOR };

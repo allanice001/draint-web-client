@@ -1,0 +1,400 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+  margin-top: 4.8rem;
+
+  @include media-up($tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 6.5rem;
+  }
+
+  @include media-up($desktop) {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+
+  & > * {
+    @include media-up($tablet) {
+      margin: 0 15px;
+
+      &:first-child {
+        min-width: 280px;
+      }
+    }
+
+    @include media-up($desktop) {
+      flex: 1;
+      margin: 0 35px;
+
+      &:first-child {
+        width: auto;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: 34px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    border: none;
+  }
+}
+
+.edit_wrapper {
+  text-align: end;
+
+  .button {
+    height: 30px;
+    padding: 0 20px;
+    background-color: $primary_color;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.button_small {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background-color: $primary_color;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &:disabled {
+    background-color: lighten($color: $primary_color, $amount: 10);
+    cursor: inherit;
+  }
+}
+
+.block {
+  flex: 1;
+  max-width: 100%;
+  margin-bottom: 2rem;
+
+  @include media-up($desktop) {
+    max-width: 350px;
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: $font-Sen;
+  font-weight: normal;
+  margin-right: auto;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__item {
+    padding: 8px 0;
+  }
+
+  .info {
+    word-wrap: break-word;
+    max-width: calc(100% - 30px);
+    width: 100%;
+  }
+
+  .years {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgba(63, 64, 65, 0.3);
+    max-width: 80%;
+    word-wrap: break-word;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.input_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin: 10px 0 10px 0;
+
+  .control {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .year_wrap {
+      display: flex;
+      width: 50%;
+    }
+
+    .flex_wrap {
+      display: flex;
+    }
+
+    .input_wrap {
+      padding-right: 24px;
+    }
+
+    .input {
+      width: 90%;
+      padding: 5px 10px;
+      margin: 5px 0;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 28px;
+      color: inherit;
+      box-sizing: border-box;
+
+      &.link {
+        width: 90%;
+      }
+
+      &.date {
+        width: 80px;
+        margin-right: 10px;
+        padding: 5px 5px 5px 10px;
+      }
+    }
+  }
+
+  .button_small {
+    align-self: flex-end;
+    margin-bottom: 14px;
+  }
+}
+
+.photo {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:hover .photoPreview {
+    visibility: visible;
+  }
+  &__unupload {
+    display: none;
+  }
+}
+
+.biography {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.biographyTitle {
+  font-size: 28px;
+  font-family: $font-Sen;
+  font-weight: 400;
+
+  @include media-up($desktop) {
+    font-size: 40px;
+  }
+}
+
+.group {
+  padding: 3rem 0;
+  border-bottom: 1px solid $border-color;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  margin-top: 1.5rem;
+
+  @include media-up($desktop) {
+    margin-bottom: 2rem;
+  }
+
+  .editButton {
+    min-width: 80px;
+    align-self: flex-start;
+    margin-top: 0.4rem;
+  }
+}
+
+.groupTitle {
+  font-size: 28px;
+  font-family: $font-Sen;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @include media-up($tablet) {
+    text-align: left;
+  }
+}
+
+.content {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  word-break: break-word;
+
+  @include media-up($tablet) {
+    text-align: left;
+  }
+}
+
+.question {
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+
+    @include media-up($desktop) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.blockquote {
+  margin-bottom: 4.5rem;
+  margin-top: 3rem;
+  word-break: break-word;
+}
+
+.textarea {
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  resize: none;
+  padding: 18px 29px;
+  font-size: 16px;
+  line-height: 29px;
+  font-family: $font-Mulish;
+  width: 100%;
+
+  @include with-scroll;
+}
+
+.editButtonIcon {
+  height: 14px;
+}
+.image {
+  max-height: 550px;
+  object-fit: cover;
+  object-position: center;
+  min-height: 180px;
+  border-radius: 15px;
+
+  @media screen and (min-width: $desktop) {
+    height: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    border-radius: 20px;
+    min-width: 280px;
+    min-height: 460px;
+    order: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @media screen and (max-width: $desktop) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      height: 470px;
+      order: 1;
+      max-width: 50%;
+      flex-grow: 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+      min-height: 200px;
+    }
+  }
+
+  &__wrapper:hover &__upload {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrapper:hover .edit_profile_image {
+    display: block;
+  }
+
+  @media screen and (max-width: $desktop) {
+    &__wrapper.edit &__upload {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 10px 5px 5px 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #e7e7e7;
+    box-shadow: 0 0 0 5px white;
+
+    @media screen and (max-width: $mobile) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media screen and (max-width: $iPhone5) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__upload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+}

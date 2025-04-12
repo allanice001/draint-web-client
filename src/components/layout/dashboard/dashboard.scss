@@ -1,0 +1,92 @@
+@import '../../../styles/variables';
+
+.app-wrapper {
+    // padding-bottom: 7em;
+    @media only screen and (max-width: 750px) {
+        // padding-bottom: 75px;
+    }
+    header {
+        margin: 0 0;
+        background-color: white;
+        .logo {
+            margin: 0;
+        }
+    }
+    .tabs-container {
+        .MuiTab-root {
+            font-size: 1rem;
+        }
+    }
+    .dashboard-content {
+        margin-top: 0px;
+    }
+    .dashboard-actions {        
+        background: white;
+        height: 4em;
+        border-bottom: 1px solid;
+        border-color: #e1e7f0;        
+        width: 100%;
+        z-index: 100;
+        @media screen and (max-width: 1024px) {
+            display:none
+        }
+        .btn-wrapper {
+            display:flex;
+            justify-content: space-evenly;
+            height: 100%;
+            .nav-btn {
+                flex: 0 1 25%;
+                span {
+                    color: rgb(112, 112, 112);
+                    text-decoration: none;
+                    font-size: 2em;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 3em;
+                    @media screen and (max-width: 510px) {
+                        font-size: 1em;
+                    }
+                }
+                &.active {
+                    background-color: #e1e7f0;
+                    span {
+                        color: #73B0F4;
+                    }
+
+                }
+            }
+            &.buyer-options {
+                .nav-btn {
+                    flex: 0 1 50%;
+                }
+            }
+        }
+        .MuiButton-root {
+            @media only screen and (max-width: 812px) {
+                font-size: 8px;
+                font-weight: 600;
+            }
+            @media only screen and (max-width: 736px) {
+                font-size: 7px;
+                font-weight: 600;
+            }
+            @media only screen and (max-width: 568px) {
+                font-size: 6px;
+                font-weight: 600;
+            }
+            @media only screen and (max-width: 414px) {
+                font-size: 11px;
+                font-weight: 800;
+            }
+            @media only screen and (max-width: 375px) {
+                font-size: 10px;
+                font-weight: 800;
+            }
+            @media only screen and (max-width: 320px) {
+                font-size: 9px;
+                font-weight: 800;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+.testimonial {
+
+  img {
+
+    float: left;
+    margin-right: $scale2;
+    width: $scale5;
+    border-radius: 100%;
+
+  }
+
+  blockquote, cite {
+
+    overflow: hidden;
+
+  }
+}

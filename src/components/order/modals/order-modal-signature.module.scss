@@ -1,0 +1,60 @@
+.footer {
+  padding: 20px 40px 30px 40px;
+}
+
+.footer_wrap {
+  padding: 15px 0 15px 0
+}
+
+.button {
+  width: 165px;
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+.button_wrap {
+  margin: 0;
+  width: 120px;
+  height: 50px;
+  background-color: #906BFF;
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Sen", sans-serif;
+  font-weight: bold;
+  transition: 400ms;
+
+  &:hover {
+    background-color: darken(#906BFF, 4%);
+  }
+
+  &:disabled {
+    background-color: darken(#ffffff, 3%);
+    color: rgba(63, 64, 65, 0.4);
+    cursor: default;
+  }
+
+  &__load {
+    width: 130px;
+    @keyframes load {
+      0% { color: rgba(63, 64, 65, 0.4); }
+      50% { color: #3F4041; }
+      100% { color: rgba(63, 64, 65, 0.4); }
+    }
+
+    animation-name: load;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
+}
+
+.sigPad {
+  width: 100%;
+  height: 170px;
+  //background: #F1F1F1;
+  border-radius: 5px;
+  margin: 20px 0; 
+}

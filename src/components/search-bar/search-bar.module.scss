@@ -1,0 +1,208 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+    margin-top: 38px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $desktop) {
+            flex-basis: 526px;
+        }
+    }
+
+    .title {
+        margin-bottom: 32px;
+        font-size: 28px;
+        line-height: 42px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+            font-size: 44px;
+            line-height: 64px;
+            text-align: left;
+        }
+    }
+
+    .form {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        background-color: #fff;
+
+        &__row {
+            display: flex;
+            width: 100%;
+        }
+
+        @media screen and (min-width: $desktop) {
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (min-width: $desktop) {
+            &::after {
+                position: absolute;
+                content: '';
+                height: 50%;
+                left: 34px;
+                right: 34px;
+                bottom: 0;
+                background-color: #fff;
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
+                opacity: .7;
+            }
+        }
+    }
+
+    .select,
+    .input {
+
+        &:focus {
+            border-color: #eaeaea;
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-color: #eaeaea;
+        }
+    }
+
+    .select {
+        border-radius: 8px 0 0 8px;
+        border-right: 0;
+
+        &:focus {
+            border-color: #eaeaea !important;
+        }
+
+        path {
+            stroke: rgba(63, 64, 65, 0.7);
+        }
+
+        &__wrapper {
+            position: relative;
+            width: auto;
+            flex-basis: 130px;
+            flex-shrink: 0;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 12px;
+                bottom: 12px;
+                width: 1px;
+                right: 0;
+                background-color: #e4e4e4;
+                z-index: 1;
+            }
+
+            @media screen and (min-width: $desktop) {
+                flex-basis: 155px;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+        }
+
+        &__multi{
+
+        }
+    }
+
+    .input {
+        border-left: 0;
+        border-radius: 0;
+        border-radius: 0 8px 8px 0;
+
+        &__wrapper {
+            width: auto;
+            flex-grow: 1;
+        }
+
+        @media screen and (min-width: $desktop) {
+            border-right: 0;
+            font-size: 20px;
+            border-radius: 0;
+        }
+    }
+
+    .button {
+        position: relative;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 52px;
+        margin-top: 2rem;
+        border-color: $primary-color;
+        border-radius: 8px;
+
+        background-color: $primary-color;
+        z-index: 1;
+
+        @include hover-primary;
+
+        &__icon {
+            display: none;
+
+            @media screen and (min-width: $desktop) {
+                display: block;
+            }
+        }
+
+        &__text {
+            font-family: $font-Sen;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            color: white;
+
+            @media screen and (min-width: $desktop) {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            flex-basis: 90px;
+            margin-top: 0;
+            border-radius: 0 8px 8px 0;
+        }
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        &__desktop {
+            display: none;
+            @media screen and (min-width: $desktop) {
+                display: block;
+            }
+        }
+        &__mobile {
+            margin-top: 20px;
+            margin-bottom: -60px;
+            @media screen and (min-width: $desktop) {
+                display: none;
+            }
+        }
+        @media screen and (min-width: $desktop) {
+            flex-basis: 560px;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import 'src/styles/variables';
+
+.content {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.content_one_purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 40px;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    left: 220px;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    color: $primary-color;
+    margin-left: 10px;
+  }
+
+  &__text {
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    font-style: italic;
+    word-break: break-all;
+  }
+}
+
+.chart {
+  // flex-basis: calc(100%);
+  margin-top: -18px;
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: 600px;
+  }
+}
+
+.info {
+  flex-basis: 50%;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  .row_in_watchlist {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex: 1;
+    }
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      top: 10px;
+    }
+  }
+}
+
+.placeholder {
+  height: 250px;
+  width: inherit;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+  }
+}

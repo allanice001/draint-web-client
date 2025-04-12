@@ -1,0 +1,37 @@
+.google-places-autocomplete {
+    margin-bottom: 14px;
+
+    &__input {
+        width: 100%;
+        padding: 11px 20px;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 28px;
+        color: inherit;
+        box-sizing: border-box;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            border: 1px solid #e7e7e7;
+        }
+    }
+
+    &__suggestions-container {
+        border-radius: 5px;
+        border: 1px solid #e7e7e7;
+        box-shadow: none;
+    }
+
+    &__suggestion {
+        padding: .5rem 1rem;
+        font-size: inherit;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #e7e7e7;
+        }
+    }
+}

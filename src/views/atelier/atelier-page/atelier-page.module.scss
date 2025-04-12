@@ -1,0 +1,107 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  padding-bottom: 100px;
+
+  &.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-up($desktop) {
+    padding-bottom: 140px;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+
+  @include media-down($tablet) {
+    flex-wrap: wrap;
+  }
+
+  .action {
+    min-width: 160px;
+  }
+
+  .status {
+    text-transform: capitalize;
+    color: $font-color;
+    font-family: $font-Sen;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+
+    @include media-down($tablet) {
+      text-align: start;
+    }
+
+    @include media-up($desktop) {
+      font-size: 24px;
+    }
+
+    &.approved {
+      color: $verified-color;
+    }
+
+    &.disapproved {
+      color: $unverified-color;
+    }
+
+    &.pending {
+      color: $pending-color;
+    }
+
+    &.waiting {
+      color: $pending-color;
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: $font-Sen;
+  width: 60%;
+
+  @include media-up($desktop) {
+    font-size: 30px;
+  }
+}
+
+.section:not(:last-child):not(:empty) {
+  margin-bottom: 70px;
+}
+
+.section:not(:first-child):not(:empty) {
+
+  &.border {
+    border-top: 1px solid $border-color;
+    padding-top: 30px;
+
+    @include media-up($tablet) {
+      border-top: 1px solid $border-color;
+      padding-top: 50px;
+    }
+  }
+}
+
+.image {
+  height: 220px;
+
+  @include media-up($desktop) {
+    height: 410px;
+  }
+}
+
+.footer {
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.loader {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  .center {
+
+    position: absolute;
+    z-index: 100000;
+
+  }
+
+  .orbit {
+
+    $speed: 1.2s;
+
+    position: absolute;
+    z-index: 100001;
+    -webkit-animation: rotate $speed infinite linear;
+    -moz-animation: rotate $speed infinite linear;
+    -o-animation: rotate $speed infinite linear;
+    animation: rotate $speed infinite linear;
+
+  }
+}

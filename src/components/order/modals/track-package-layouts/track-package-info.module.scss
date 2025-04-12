@@ -1,0 +1,80 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.footer {
+  padding: 20px 40px 30px 40px;
+}
+
+.button {
+  width: 165px;
+
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+.sigPad {
+  width: 100%;
+  height: 170px;
+  background: #F1F1F1;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.package_wrapper {
+  font-family: Mulish, serif;
+  font-style: normal;
+  font-weight: normal;
+
+  .track_wrapper {
+
+    .track_button {
+      border: none;
+      font-family: "Muli", sans-serif;
+      font-weight: bold;
+      color: white;
+      background-color: #43BF5F;
+      margin: 10px 0;
+      height: 40px;
+      width: 130px;
+      border-radius: 50px;
+      font-size: 15px;
+
+      &__load {
+        @keyframes loadTrack {
+          0% {background-color: $success-color;}
+          50% {background-color: lighten($success-color, 15%);}
+          100% {background-color: $success-color;}
+        }
+
+        animation-name: loadTrack;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+      }
+    }
+  }
+
+  .info_wrapper {
+    max-width: 600px;
+    .title {
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .sub_title {
+      font-weight: bold;
+    }
+
+    .rows_wrapper {
+      .rows {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+export const COLLECTOR_DASHBOARD = '/collector-dashboard';
+export const ARTWORKS = '/artworks';
+export const WATCHLIST = '/watchlist';
+export const SALES = '/sales';
+export const OFFERS = '/offers';
+export const ORDERS = '/orders';
+export const FEEDBACK = '/feedback';
+export const SETTINGS = '/settings';
+export const COLLECTOR_DASHBOARD_ARTWORKS = COLLECTOR_DASHBOARD + ARTWORKS;
+export const COLLECTOR_DASHBOARD_WATCHLIST = COLLECTOR_DASHBOARD + WATCHLIST;
+export const COLLECTOR_DASHBOARD_SALES = COLLECTOR_DASHBOARD + SALES;
+export const COLLECTOR_DASHBOARD_OFFERS = COLLECTOR_DASHBOARD + OFFERS;
+export const COLLECTOR_DASHBOARD_ORDERS = COLLECTOR_DASHBOARD + ORDERS;
+export const COLLECTOR_DASHBOARD_FEEDBACK = COLLECTOR_DASHBOARD + FEEDBACK;
+export const COLLECTOR_DASHBOARD_SETTINGS = COLLECTOR_DASHBOARD + SETTINGS;

@@ -1,0 +1,152 @@
+@import 'src/styles/variables';
+
+#checkout-material-wrapper {
+  // padding: 5px 5px 20px 5px;
+  //display: flex;
+  width: 100%;
+  span {
+    margin-top: 0;
+  }
+
+  .checkbox-wrapper {
+    margin: 0;
+
+    span {
+      width: auto;
+      line-height: 15px;
+    }
+
+    .MuiTypography-body1 {
+      color: #546DB7;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      font-size: 13px;
+    }
+  }
+
+  .MuiPaper-root {
+    background-color: lighten(#f5f7fa, 2%);
+    transition: 500ms;
+
+    &:hover {
+      background-color: lighten(#f5f7fa, 3%);
+    }
+  }
+
+  .Mui-focused {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #73b0f4;
+    }
+  }
+
+  .MuiFormLabel-root.Mui-focused {
+    color: #73b0f4;
+    //background-color: white;
+    //padding: 0 5px;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    //border-color: rgba(0, 0, 0, 0.23);
+  }
+
+  .sign-up-header {
+    color: #73b0f4;
+    font-weight: 500;
+  }
+
+  .MuiCardContent-root {
+    width: 100%;
+    padding: 16px 16px 0 16px;
+  }
+
+  .MuiCardActions-root {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .MuiButton-root {
+    background-color: #86c581;
+    margin: 15px 10px;
+    padding: 10px 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .MuiButton-contained.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .stripe-button {
+    width: 100%;
+    background-color: #86c581;
+    margin: 15px 0;
+    padding: 10px 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .MuiFormHelperText-root.Mui-error {
+      color: #f44336;
+      font-size: 13px;
+    }
+
+    .MuiFormHelperText-contained {
+      margin: 5px 0 8px;
+    }
+
+    .MuiInputLabel-outlined {
+      line-height: 18px;
+    }
+
+    .MuiInputBase-root {
+      font-size: 16px;
+      color: #707070;
+    }
+
+    .MuiOutlinedInput-input {
+      padding: 18.5px 14px;
+    }
+  }
+
+  .MuiSelect-iconOutlined {
+    right: 7px;
+    top: 20px;
+  }
+
+  .MuiSelect-select {
+    background-color: transparent;
+  }
+
+  .register-info {
+    padding: 0 5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #707070;
+
+    span {
+      text-align: start;
+    }
+
+    a {
+      text-decoration: none;
+      color: #546DB7;
+      font-weight: 600;
+    }
+  }
+
+  .MuiPaper-elevation1 {
+    width: 510px;
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 0 3px 0px rgba(0, 0, 0, 0.12);
+    transition: 500ms;
+
+    &:hover {
+      box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.2), 0px 0px 8px 1px rgba(0, 0, 0, 0.14), 0px 0 3px 0px rgba(0, 0, 0, 0.12)
+    }
+  }
+}

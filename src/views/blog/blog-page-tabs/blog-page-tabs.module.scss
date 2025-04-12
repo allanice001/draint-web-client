@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include media-up($desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.list {
+  @include with-scroll;
+
+  width: 100%;
+  overflow-x: auto;
+  margin-right: auto;
+  border-bottom: 1px solid $border-color;
+
+  @include media-down($desktop) {
+    @include hide-scrollbar;
+  }
+
+  @include media-up($desktop) {
+    border-bottom: none;
+  }
+
+  @include media-down($mobile) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.item {
+  position: relative;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: rgba($font-color, 0.4);
+  flex-shrink: 0;
+
+  & .active {
+    color: $primary-color;
+    font-weight: 800;
+    position: relative;
+
+    &::after {
+      background-color: $primary-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      content: '';
+    }
+  }
+
+  @include media-up($desktop) {
+    color: $font-color;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &:hover:not(.active) {
+    color: $primary-color;
+  }
+}
+
+.sort {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+
+  @include media-down($desktop) {
+    align-self: flex-end;
+    margin-top: 26px;
+  }
+}
+
+.select {
+  min-width: 160px;
+}
+
+.label {
+  margin-right: 2rem;
+}
+
+.tab_icon {
+  @include media-up($mobile) {
+    display: none;
+  }
+}
+
+.tab_label {
+  @include media-down($mobile) {
+    display: none;
+  }
+}

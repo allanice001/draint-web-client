@@ -1,0 +1,230 @@
+@import 'src/styles/variables';
+
+
+.selected {
+    background-color: $primary-color !important;
+    color: white !important;
+}
+
+.wrapper {
+    width: 100%;
+
+    &.shadow .control::after {
+        display: inline-block;
+    }
+
+    &.required .label::after {
+        position: relative;
+        content: '*';
+        color: $error-color;
+        left: 5px;
+    }
+
+    &.inline {
+        width: auto;
+
+        .label {
+            display: inline-block;
+            flex-shrink: 0;
+            flex-grow: 1;
+            margin-right: 15px;
+            color: #C7C7C7;
+            word-wrap: unset;
+        }
+
+        .control {
+            width: auto;
+        }
+
+        .select {
+            display: inline-block;
+            width: auto;
+            min-width: 200px;
+        }
+    }
+
+    &.small {
+
+        .select {
+            padding: 4px 10px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            right: 10px;
+        }
+    }
+
+    .label {
+        margin-bottom: 6px;
+        padding-left: 5px;
+        font-size: 14px;
+        line-height: 28px;
+        font-family: inherit;
+        font-weight: bold;
+        text-transform: unset;
+        color: inherit;
+    }
+
+    .control {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        &::after {
+            content: '';
+            display: none;
+            position: absolute;
+            height: 14px;
+            bottom: 0;
+            left: 18px;
+            right: 18px;
+            background-color: #c4c4c4;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .select {
+        position: relative;
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: inherit;
+        padding: 11px 0 11px 20px;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+        // background-color: white;
+        background-color: rgba(0,0,0,0);
+        appearance: none;
+        z-index: 3;
+        color: inherit;
+
+        &.flat {
+            padding: 0 0 3px 0;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid black;
+        }
+
+        &.multi {
+            padding-right: 35px;
+        }
+
+        &.default {
+            opacity: 0.45;
+        }
+
+        &:focus {
+            outline: none;
+            border-radius: 5px;
+            border-color: $primary-color;
+            // background-color: #fff;
+        }
+
+        &:disabled {
+            background-color: rgba(239, 239, 239, .5);
+        }
+    }
+
+    .select_modal_pricing {
+        position: relative;
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: inherit;
+        padding: 11px 0 11px 20px;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+        background-color: white;
+        appearance: none;
+        z-index: 1;
+        color: inherit;
+
+        &.flat {
+            padding: 0 0 3px 0;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid black;
+        }
+
+        &.multi {
+            padding-right: 35px;
+        }
+
+        &:focus {
+            outline: none;
+            border-radius: 5px;
+            border-color: $success-color;
+            background-color: #fff;
+        }
+
+        &:disabled {
+            background-color: rgba(239, 239, 239, .5);
+        }
+
+        &.userSelected {
+            border: 1px solid $success-color;
+        }
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 22px;
+        z-index: 2;
+    }
+
+    .error {
+        margin-top: 6px;
+        font-size: 14px;
+        line-height: 16px;
+        color: $error-color;
+    }
+
+    .country__wrapper {
+        margin-bottom: 10px;
+    }
+
+    .country__label {
+        font-weight: 700;
+        color: #3F4041;
+        text-transform: initial;
+        line-height: 28px;
+        font-family: $font-Mulish;
+        font-size: 16px;
+    }
+
+    .country__item {
+        display: inline-flex;
+        width: auto;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: rgba(204, 196, 255, 0.5);
+        color: $primary-color;
+    }
+
+    .close {
+        height: 12px;
+        width: 12px;
+        margin-left: 30px;
+
+        path {
+            fill: $primary-color;
+        }
+    }
+}
+
+.default {
+  color: $disabled-color;
+}

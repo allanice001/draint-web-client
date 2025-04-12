@@ -1,0 +1,44 @@
+@import '../../../styles/mixins';
+
+.element {
+  position: relative;
+
+  &.active {
+    box-sizing: border-box;
+    box-shadow: 0 0 0 2px #806bff, 0px 4px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  &:not(.active)::after {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 10px;
+    left: -4px;
+    width: 50%;
+    content: '';
+    z-index: -1;
+    background-color: #806bff;
+  }
+}
+
+.content {
+  position: relative;
+
+  @include media-up($tablet) {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      z-index: 1;
+      content: '';
+      background: linear-gradient(
+        180deg,
+        rgba(250, 250, 250, 0) 1.36%,
+        #fafafa 36.13%
+      );
+      transform: translateX(100%);
+    }
+  }
+}

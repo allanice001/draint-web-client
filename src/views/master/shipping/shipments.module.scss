@@ -1,0 +1,243 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.expanded {
+  margin: 12px 0 12px 0;
+}
+
+.expanded_manual {
+  background-color: $c-bg_white;
+}
+
+.summary {
+  div {
+    flex-wrap: wrap !important;
+    justify-content: center;
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap !important;
+    }
+  }
+}
+
+.panel_wrapper {
+  background-color: #f9f9f9 !important;
+
+  .title_image_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+
+    .title_image {
+      border-radius: 10px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+
+  .info_wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    justify-content: center;
+    @media screen and(min-width: $desktop) {
+      margin-left: 20px;
+      justify-content: space-between;
+    }
+
+    .info {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      @media screen and(min-width: $desktop) {
+        justify-content: flex-start;
+      }
+
+      span {
+        margin-right: 10px;
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        color: #3F4041;
+      }
+    }
+
+    .open_button {
+      display: flex;
+      justify-content: center;
+      @media screen and(min-width: $desktop) {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      button {
+        padding: 5px 8px !important;
+      }
+    }
+
+    .button_arrow {
+      transition: 400ms;
+
+      &__open {
+        transform: rotate(180deg);
+      }
+    }
+
+    .icon_warning {
+      color: #f7af11;
+    }
+
+    .icon_checked {
+      color: #00c853;
+    }
+
+    .icon_declined {
+      color: #f50057;
+    }
+
+    .icon_pickup {
+      &__onWay {
+        @keyframes pickUp {
+          0% {
+            color: #3f51b5;
+          }
+          50% {
+            color: transparent;
+          }
+          100% {
+            color: #3f51b5;
+          }
+        }
+
+        animation-name: pickUp;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      &__status {
+        color: #3f51b5;
+      }
+    }
+  }
+
+  .stepper_wrapper {
+    .photo_container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .title_wrapper {
+      margin: 0 0 25px 25px;
+
+      .title {
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 40px;
+
+        display: flex;
+        align-items: center;
+
+        color: #3F4041;
+      }
+    }
+
+    .photo_wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .photo {
+        border-radius: 5px;
+        max-height: 500px;
+      }
+    }
+
+    .buttons_group {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 20px 0 20px 0;
+
+      .middle_button {
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+
+    button {
+      margin: 0 10px 0 10px;
+    }
+  }
+
+  .send_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.status_button {
+  font-weight: bold;
+
+  &__verified {
+    background-color: #3f51b5 !important;
+    color: white !important;
+    font-weight: bold !important;
+  }
+
+  &__declined {
+    background-color: #f50057 !important;
+    color: white !important;
+    font-weight: bold !important;
+  }
+
+  &__pending {
+    background-color: #f7af11 !important;
+    color: white !important;
+    font-weight: bold !important;
+  }
+}
+
+.stepper {
+  justify-content: center !important;
+
+  .right {
+    margin-left: 15px;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .left {
+    margin-right: 15px;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.send {
+  background-color: #00c853 !important;
+  font-weight: bold !important;
+  color: white !important;
+  font-size: 15px !important;
+  padding: 10px 20px !important;
+  width: 100%;
+
+  &__disabled {
+    color: rgba(0, 0, 0, 0.26) !important;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+  }
+}

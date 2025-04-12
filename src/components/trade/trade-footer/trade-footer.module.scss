@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.container {
+  @include media-down($mobile) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  max-width: 982px;
+  margin: 0 auto;
+
+  @include media-down($desktop) {
+    display: block;
+    & > img {
+      margin-block: 14px 72px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.text {
+  margin-left: 63px;
+  max-width: 428px;
+
+  @include media-down($desktop) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 112px 0;
+}

@@ -1,0 +1,33 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include media-up($tablet) {
+    flex-direction: row;
+  }
+
+  & > *:not(:last-child) {
+    @include media-up($tablet) {
+      margin-right: 2em;
+    }
+  }
+
+  .root {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & > *:not(:last-child) {
+      display: inline-block;
+      margin-right: 1em;
+      margin-bottom: 0.5em;
+      color: rgba(black, 0.54);
+    }
+  }
+}

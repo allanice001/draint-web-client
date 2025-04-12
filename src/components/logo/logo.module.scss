@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 90px;
+  max-height: 40px;
+  cursor: pointer;
+
+  @media only screen and (min-width: 960px) {
+    max-width: 113px;
+    max-height: 60px;
+  }
+}

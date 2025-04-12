@@ -1,0 +1,29 @@
+.section {
+  padding: 0;
+  border: 0px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal {
+  display: flex;
+  justify-content: space-around;
+
+  div:last-child {
+    display: flex;
+    flex-direction: column;
+    box-shadow: unset;
+    align-items: baseline;
+  }
+}
+
+.checkbox {
+  padding: 0 10px;
+  margin: 0 4px;
+  box-shadow: unset;
+  align-items: baseline;
+  width: 100%;
+}
+

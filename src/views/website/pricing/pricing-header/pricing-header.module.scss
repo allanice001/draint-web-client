@@ -1,0 +1,77 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  @include media-up($desktop) {
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+
+  @include media-down($desktop) {
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    font-family: $font-title;
+    margin-bottom: 1rem;
+
+    @include media-up($desktop) {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 400;
+    }
+  }
+
+  .subtitle {
+    @include media-up($desktop) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    margin-top: 1rem;
+
+    @include media-down($desktop) {
+      width: 100%;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .button {
+      min-width: 150px;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      @include media-up($desktop) {
+        min-width: 160px;
+      }
+
+      &:disabled {
+        background-color: #c0b4fc;
+        cursor: pointer;
+      }
+    }
+
+    @include media-up($desktop) {
+      .primary {
+        min-width: 180px;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.full-width {
+  max-width: 100%;
+  width: 100%;
+
+  > * {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.restrict-width {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  line-height: 0;
+}
+
+.align-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.align-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.align-xy {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.overlay {
+  @media (hover: hover) and (pointer: fine) {
+    @supports not (scrollbar-width: thin) {
+      padding-right: $scrollbar-width !important;
+
+      .page-header {
+        right: $scrollbar-width;
+      }
+    }
+  }
+}
+
+.disable-scroll {
+  @include media-down($desktop) {
+    overflow: hidden !important;
+  }
+}
+
+.pending {
+  color: $pending-color;
+}
+.verified {
+  color: $verified-color;
+}
+.unverified {
+  color: $unverified-color;
+}
+.deleted {
+  color: black;
+}
+.sale {
+  color: $success-color;
+}
+.no-sale {
+  color: $error-color;
+}
+.sold {
+  color: black;
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+.u-link {
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.subtitle-1 {
+  font-size: 18px;
+  font-family: $font-Sen;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}

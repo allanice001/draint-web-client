@@ -1,0 +1,59 @@
+$base-color: #ced4da;
+$light-background: lighten(desaturate($base-color, 50%), 12.5%);
+
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  li.page-item.active {
+    button.page-link {
+      color: saturate(darken($base-color, 50%), 5%) !important;
+      background-color: saturate(lighten($base-color, 7.5%), 2.5%) !important;
+      border-color: $base-color !important;
+    }
+  }
+
+  button.page-link {
+    padding: 0.75rem 1rem;
+    min-width: 3.5rem;
+    text-align: center;
+    box-shadow: none !important;
+    border-color: $base-color !important;
+    color: saturate(darken($base-color, 30%), 10%);
+    font-weight: 800;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: $light-background;
+    }
+  }
+
+  .arrow-r {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    .sr-only {
+      font-size: 15px;
+    }
+  }
+
+  .arrow-l {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    .sr-only {
+      font-size: 15px;
+    }
+  }
+}

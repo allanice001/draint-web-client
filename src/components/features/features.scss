@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.feature-list {
+
+  li {
+
+    float: left;
+    width: 50%;
+    padding: $scale2 0;
+    text-align: center;
+
+  }
+
+  .ico {
+
+    display: block;
+    width: $scale2;
+    height: $scale2;
+    margin: 0 auto $scale;
+
+  }
+
+  @media (min-width: $mobile){
+
+    li {
+
+      width: 25%;
+
+    }
+  }
+}

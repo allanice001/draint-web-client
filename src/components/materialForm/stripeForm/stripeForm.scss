@@ -1,0 +1,127 @@
+#stripe-form-wrapper {
+
+  .inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 550px) {
+      flex-direction: row;
+    }
+
+    .title {
+      margin-bottom: 5px;
+      padding-left: 5px;
+      font-size: 14px;
+      line-height: 28px;
+      font-family: inherit;
+      font-weight: bold;
+      text-transform: unset;
+      color: inherit;
+      @media screen and (max-width: 550px) {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+
+    .number-wrapper {
+      width: 100%;
+      margin-right: 0;
+      @media screen and (min-width: 550px) {
+        margin-right: 25px;
+      }
+
+      .stripe-form-number {
+        border: solid 1px #E7E7E7;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-number-focused {
+        border: solid 1px #43BF5F;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-error-number {
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+        border: solid 1px #f44336;
+      }
+    }
+
+    .date-wrapper {
+      width: 100%;
+      margin-right: 0;
+      @media screen and (min-width: 550px) {
+        width: 50%;
+        margin-right: 25px;
+      }
+
+      .stripe-form-date {
+        border: solid 1px #E7E7E7;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-date-focused {
+        border: solid 1px #43BF5F;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-error-date {
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+        border: solid 1px #f44336;
+      }
+    }
+
+    .cvc-wrapper {
+      width: 100%;
+      @media screen and (min-width: 550px) {
+        width: 50%;
+      }
+
+      .stripe-form-csv {
+        border: solid 1px #E7E7E7;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-csv-focused {
+        border: solid 1px #43BF5F;
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+      }
+
+      .stripe-form-error-csv {
+        border-radius: 4px;
+        transition: 200ms;
+        height: 55px;
+        padding: 17px;
+        border: solid 1px #f44336;
+      }
+    }
+  }
+
+  .error {
+    color: #f44336;
+    font-size: 13px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+}

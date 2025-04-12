@@ -1,0 +1,116 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  position: relative;
+  text-align: center;
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-Sen;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: $primary-color;
+  min-width: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+
+  @include media-up($desktop) {
+    color: $font-color;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    order: 1;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+
+    @include media-up($desktop) {
+      background-color: darken(#fff, 5%);
+    }
+  }
+}
+
+.slides {
+  margin-left: -20px;
+  margin-right: -20px;
+  min-height: 584px;
+
+  @include media-down($samsung) {
+    padding-top: 70px;
+    min-height: 443px;
+  }
+}
+
+.slide {
+  display: flex;
+  text-align: left;
+  height: 100%;
+
+  & > * {
+    flex-basis: unset;
+    height: auto;
+    width: 377px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include media-down($orient-laptop) {
+      max-width: 340px;
+      min-width: 260px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @include media-down($desktop) {
+      min-width: 340px;
+    }
+
+    @include media-down($samsung) {
+      min-width: 244px;
+      max-width: 244px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 40px;
+  position: absolute;
+  width: 100%;
+  right: 22%;
+
+  @include media-down($desktop) {
+    right: 12%;
+  }
+
+}
+
+.button {
+  color: $font-color;
+
+  &.disabled {
+    display: none;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
+

@@ -1,0 +1,146 @@
+@import 'src/styles/variables';
+
+.wrapper {
+    position: relative;
+    margin-bottom: 86px;
+    z-index: 1;
+
+    @media screen and (min-width: $desktop) {
+        padding: 0 30px 30px;
+        margin-bottom: 116px;
+        border-radius: 25px;
+        border: 1px solid #E8E8E8;
+        background-color: #fff;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9px;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: $desktop) {
+        &__card {
+            width: 100%;
+            padding: 3px 30px 15px;
+            margin-bottom: 30px;
+            border: 1px solid #e7e7e7;
+            border-radius: 15px;
+            text-align: center;
+            background-color: #fff;
+        }
+    }
+
+}
+
+.lead {
+    font-size: 26px;
+    line-height: 36px;
+    font-family: $font-Sen;
+    font-weight: bold;
+    color: #0B2349;
+    display: table;
+    margin: 0px auto 20px;
+
+    @media screen and (max-width: $desktop) {
+        background: linear-gradient(to right, #4437F7, #C51699);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        &__desktop {
+            padding-top: 20px;
+            background: linear-gradient(to bottom, #4437F7, #C51699);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+}
+
+.toggle {
+    display: inline-flex;
+    padding: 7px 10px;
+    border-radius: 50px;
+    background-color: #f6f6f6;
+
+    &__button {
+        display: inline-flex;
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 18px;
+        color: rgba(63, 64, 65, 0.4);
+        font-weight: 600;
+        transition: all .3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &.active {
+            background-color: #fff;
+            color: inherit;
+        }
+    }
+
+}
+
+.body {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(231, 231, 231, 0.8);
+        }
+    }
+
+    .name {
+        flex-grow: 1;
+        font-weight: 800;
+        line-height: 18px;
+    }
+
+    .cell {
+        flex-basis: 280px;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    .disabled {
+        opacity: .3;
+    }
+}
+
+.desktop {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        min-width: 1125px;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .mobile {
+        display: none;
+    }
+}

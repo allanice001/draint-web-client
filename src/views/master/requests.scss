@@ -1,0 +1,40 @@
+.shipment-requests-container {
+  display: flex;
+  flex-direction: column;
+  .shipment-requests-item {
+    display: flex;
+    .MuiExpansionPanel-root {
+      width: 100%;
+      .MuiExpansionPanelSummary-content > .title-panel {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+      }
+      .details-panel {
+        display: flex;
+        flex-direction: column;
+        .info-block {
+          display: flex;
+          flex: 1;
+          justify-content: space-around;
+          .info-item {
+            display: flex;
+            flex-direction: column;
+            & span:first-child {
+              font-weight: 700;
+            }
+            img {
+              width: 70px;
+            }
+          }
+        }
+        .data-block {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+      } 
+    }
+  }
+}

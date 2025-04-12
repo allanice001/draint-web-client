@@ -1,0 +1,139 @@
+{
+  "extends": [
+    // "eslint:recommended",
+    // "airbnb", "airbnb/hooks",
+    "react-app",
+    "react-app/jest",
+
+    // "plugin:react/all",
+    "plugin:react-hooks/recommended",
+    // "plugin:react-redux/recommended",
+    // "plugin:compat/recommended",
+    // "plugin:prettier/recommended",
+    // "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/babel",
+    "prettier/react",
+    "prettier/standard",
+    "prettier/unicorn" //,
+    // "plugin:sonarjs/recommended",
+    // "plugin:unicorn/recommended",
+    // "plugin:import/errors",
+    // "plugin:import/warnings",
+    // "plugin:promise/recommended",
+    // "plugin:jest/all",
+    // "plugin:jest/style",
+    // "plugin:jest-formatting/strict",
+    // "plugin:security/recommended",
+    // "plugin:optimize-regex/all",
+    // "plugin:eslint-comments/recommended",
+    // "plugin:no-use-extend-native/recommended" //,
+    // "hardcore", "hardcore/fp"
+  ],
+  "plugins": [
+    "prettier"
+    // "spellcheck"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "ignorePatterns": [],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ]
+    // "spellcheck/spell-checker": [
+    //   1,
+    //   {
+    //     "comments": true,
+    //     "strings": true,
+    //     "identifiers": true,
+    //     "lang": "en_US",
+    //     "skipWords": [
+    //       "dict",
+    //       "aff",
+    //       "hunspellchecker",
+    //       "hunspell",
+    //       "utils",
+    //       "func",
+    //       "csv",
+    //       "snackbar",
+    //       "axios",
+    //       "zipcode",
+    //       "resize",
+    //       "gif",
+    //       "xhr",
+    //       "droppable",
+    //       "bool",
+    //       "notempty",
+    //       "jpeg",
+    //       "jpg",
+    //       "zm",
+    //       "instagram",
+    //       "pathname",
+    //       "graphql",
+    //       "paypal",
+    //       "klarna",
+    //       "draint",
+    //       "classnames",
+    //       "signup",
+    //       "signin",
+    //       "igtv",
+    //       "href",
+    //       "str",
+    //       "jshint",
+    //       "dropzone",
+    //       "uploader",
+    //       "jsx",
+    //       "rect",
+    //       "sofort",
+    //       "sepa",
+    //       "checkbox",
+    //       "len",
+    //       "hotjar",
+    //       "signout",
+    //       "qrcode",
+    //       "textarea",
+    //       "datepicker",
+    //       "dropdown",
+    //       "amex",
+    //       "evenodd",
+    //       "disabler",
+    //       "autofill",
+    //       "shortcode",
+    //       "felix",
+    //       "typename",
+    //       "svg",
+    //       "tabview"
+    //     ],
+    //     "skipIfMatch": [
+    //       "http://[^s]*",
+    //       "^[-\\w]+/[-\\w\\.]+$" //For MIME Types
+    //     ],
+    //     "skipWordIfMatch": [
+    //       "^foobar.*$" // words that begin with foobar will not be checked
+    //     ],
+    //     "minLength": 3
+    //   }
+    // ]
+  }
+}

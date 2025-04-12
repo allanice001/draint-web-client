@@ -1,0 +1,9 @@
+export const SET_FAQ_DATA = 'SET_FAQ_DATA';
+export const SET_CATEGORIES = 'SET_CATEGORIES';
+export const UPDATE_TOPIC = 'UPDATE_TOPIC';
+export const DELETE_TOPIC = 'DELETE_TOPIC';
+export const EDIT_CATEGORY = 'EDIT_CATEGORY';
+export const EDIT_QUESTION = 'EDIT_QUESTION';
+export const DELETE_QUESTION = 'DELETE_QUESTION';
+export const CREATE_TOPIC = 'CREATE_TOPIC';
+export const CREATE_QUESTION = 'CREATE_QUESTION';

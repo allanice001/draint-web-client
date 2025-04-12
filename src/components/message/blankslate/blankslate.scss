@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+
+.blankslate-message {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  .mobile {
+
+    display: inline-block;
+
+  }
+
+  .desktop {
+
+    display: none;
+
+  }
+
+  img {
+
+    max-width: 35%;
+
+  }
+
+  h2 {
+
+    position: relative;
+    margin: 0 0 $scale2;
+
+    &:after {
+
+      content: "";
+      position: absolute;
+      bottom: -0.5em;
+      left: 50%;
+      width: $scale4;
+      height: 2px;
+      background-color: lighten($c-text, 30%);
+      transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+
+    }
+  }
+
+  a {
+
+    color: $c-primary;
+
+  }
+
+  @media (min-width: 500px){
+
+    width: 26em;
+
+    .mobile {
+
+      display: none;
+
+    }
+
+    .desktop {
+
+      display: inline-block;
+
+    }
+  }
+
+  @media (min-width: 700px){
+
+    width: 24em;
+
+  }
+}

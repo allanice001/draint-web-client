@@ -1,0 +1,74 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.content {
+  display: flex;
+  justify-content: center;
+  min-height: 260px;
+  padding-top: 45px;
+
+  @media screen and (min-width: $desktop) {
+        padding-bottom: 60px;
+    }
+
+    .chart {
+        position: absolute;
+        display: block;
+        max-width: 100%;
+        flex: 1;
+        opacity: 0;
+        transition: opacity .4s ease-in-out;
+
+        &.active {
+            opacity: 1;
+        }
+
+        @media screen and (min-width: $tablet) {
+            position: static;
+            max-width: 50%;
+            height: auto;
+            opacity: 1;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-family: $font-Lato;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        &:first-child {
+            margin-right: 40px;
+        }
+    }
+}
+
+.dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.35);
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &.active {
+        background-color: #c4c4c4;
+    }
+}

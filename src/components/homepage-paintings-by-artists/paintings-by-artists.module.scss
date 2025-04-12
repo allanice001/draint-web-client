@@ -1,0 +1,143 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 95px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .title {
+    color: $font-color;
+    font-family: $font-Sen;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+
+    @include media-down($gpixel) {
+      font-size: 24px;
+    }
+
+    @include media-down($iPhone6) {
+      font-size: 20px;
+    }
+  }
+
+  @include media-down($gpixel) {
+    margin-bottom: 30px;
+  }
+
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 30px;
+
+  :last-child {
+    margin-left: 24px;
+  }
+
+  :first-child {
+    margin-left: 0
+  }
+
+  .show_more_button{
+    width: 168px;
+    height: 60px;
+  }
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card_wrapper {
+  width: 280px;
+  margin: 20px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-Sen;
+  font-weight: 700;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 40px;
+  color: $font-color;
+  border: 1px solid $border-color;
+  background-color: #fff;
+  min-width: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+}
+
+.form_wrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #E7E7E7;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  width: 800px;
+  height: 56px;
+  margin-bottom: 80px;
+  background: #f4f4f4;
+
+  @include media-down($desktop) {
+    width: 700px;
+  }
+
+}
+
+.input_button {
+  border-radius: 0 3px 3px 0;
+
+}
+
+.wrapper {
+  width: 400px;
+
+  @include media-down($desktop) {
+    width: 500px;
+  }
+
+  @include media-down($mobile) {
+    width: 410px;
+  }
+
+  @include media-down($tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include media-down($samsung) {
+    width: 320px;
+  }
+
+  @include media-down($iPhone5) {
+    width: 280px;
+  }
+
+}

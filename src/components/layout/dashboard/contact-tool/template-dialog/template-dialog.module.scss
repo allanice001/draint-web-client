@@ -1,0 +1,78 @@
+@import '../../../../../styles/variables';
+
+.template_content {
+    display: flex;
+    justify-content: center;
+
+    .choose_template {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 480px;
+        @media screen and(max-width: $mobile) {
+            justify-content: center;
+        }
+
+        .template_item {
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid #E7E7E7;
+            box-sizing: border-box;
+            height: 215px;
+
+            .item_image {
+                padding: 16px 21px 24px;
+            }
+
+            .item_title {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 10px;
+                color: $primary-color;
+                background: #D9D3FF;
+                border-radius: 0px 0 5px 5px;
+
+                font-family: $font-Muli;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 15px;
+                line-height: 36px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+
+                text-align: center;
+            }
+
+        }
+
+        .active_template_item{
+            border: 1px solid $primary-color;
+        }
+
+        .disabled_template_item{
+            .item_title {
+                color: white;
+                background: rgb(170, 170, 170);
+            }
+        }
+
+        >div{
+            width: 225px;
+            margin: 20px 0;
+        }
+    }
+}
+
+.choose_template_footer{
+    display: flex;
+    justify-content: center;
+}
+
+.maxWidth {
+  max-width: 300px!important;
+}

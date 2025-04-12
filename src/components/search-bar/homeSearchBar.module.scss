@@ -1,0 +1,116 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+
+  @media screen and (min-width: $desktop) {
+    width: 95%;
+  }
+
+  &__results {
+    position: absolute;
+    width: 100%;
+    margin-top: 6px;
+    max-height: 250px;
+    padding: 0 15px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    z-index: 4;
+    overflow-y: auto;
+
+    @include with-scroll;
+
+    &.hide {
+      display: none;
+    }
+
+    .result {
+      padding: 10px 0;
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        border-bottom: 0.5px solid #E7E7E7;
+      }
+
+      &:last-child {
+        padding-top: 15px;
+        padding-bottom: 25px;
+      }
+
+      &:hover {
+        // background: $primary-color;
+        color: $primary-color;
+        cursor: pointer;
+      }
+
+      .data {
+        font-family: $font-Lato;
+        font-size: 16px;
+        // display: flex;
+        // align-items: center;
+      }
+
+      .type {
+        font-family: $font-Lato;
+        font-size: 12px;
+        line-height: 22px;
+        color: rgba(63, 64, 65, 0.4);
+        // display: flex;
+        // align-items: center;
+      }
+    }
+  }
+
+  &__form {
+    .input {
+      height: 50px;
+      font-size: 16px;
+      border-radius: 8px;
+
+      &:hover {
+        border-color: $primary-color;
+      }
+
+      @media screen and (min-width: $desktop) {
+        height: 70px;
+        font-size: 20px;
+      }
+    }
+
+    .label {
+      display: none;
+    }
+
+    .icon {
+      path {
+        fill: $primary-color;
+      }
+
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+
+      &__spinner {
+        width: 20px !important;
+        height: 20px !important;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 26px;
+        height: 26px;
+        margin-top: 4px;
+
+        &__spinner {
+          width: 26px !important;
+          height: 26px !important;
+        }
+      }
+    }
+  }
+}

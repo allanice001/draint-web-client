@@ -1,0 +1,30 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .content_text {
+    font-size: 25px;
+    line-height: 35px;
+    font: $font-Mulish;
+    text-align: center;
+
+    @include media-down($mobile) {
+      font-size: 20px;
+    }
+  }
+}
+
+.button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}

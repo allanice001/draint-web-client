@@ -1,0 +1,67 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.content {
+  display: flex;
+  margin-top: 40px;
+  padding-bottom: 90px;
+  justify-content: center;
+
+  @include media-down($desktop) {
+    flex-wrap: wrap;
+    flex-flow: wrap;
+  }
+
+  @include media-down($tablet) {
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    padding-bottom: 60px;
+    margin-top: 0;
+  }
+}
+
+h2 {
+  font-family: $font-Sen;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+p {
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.macbook {
+  @include media-down($desktop) {
+    order: 2;
+  }
+}
+
+.macbook img {
+  width: 100%;
+  height: auto;
+}
+
+.text_content {
+  width: 40%;
+  margin-left: 40px;
+  padding: 20px;
+
+  @include media-down($desktop) {
+   width: 100%;
+   height: auto;
+   margin-left: 0;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  @include media-down($mobile) {
+    text-align: center;
+  }
+}

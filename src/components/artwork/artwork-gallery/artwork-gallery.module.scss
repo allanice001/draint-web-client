@@ -1,0 +1,165 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  & > button {
+    margin-right: 1rem;
+  }
+
+  @include media-up($tablet) {
+    & > button {
+      margin-right: 2rem;
+    }
+  }
+
+  @include media-up($desktop) {
+    & > button {
+      margin-right: 0;
+
+      *:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  @include media-down($desktop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: $font-Sen;
+  margin: 20px 0 30px 0;
+  padding: 0;
+
+  @include media-up($desktop) {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  @include media-up($desktop) {
+    margin-top: 48px;
+    flex-direction: row;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  & > * {
+    width: 100%;
+
+    @include media-up($desktop) {
+      flex: 1;
+      width: calc(100% / 3);
+      margin: 0 25px;
+    }
+  }
+}
+
+.uploadButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $border-color;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 290px;
+  font-size: 24px;
+  line-height: 28px;
+  color: $primary-color;
+  font-family: $font-Sen;
+  font-weight: 700;
+  margin-bottom: 50px;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &:hover {
+    color: darken($primary-color, 5%);
+  }
+}
+
+.edit__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+button.action {
+  height: 46px !important;
+  min-width: 136px !important;
+
+  @include media-down($iPhone6) {
+    font-size: 13px;
+    min-width: 110px!important;
+  }
+
+  @include media-up($desktop) {
+    min-width: 160px !important;
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  order: -1;
+  margin-left: auto;
+  margin-right: 0;
+
+  @include media-up($desktop) {
+    order: unset;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .label {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: inline;
+      margin-right: 16px;
+    }
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.actionIcon {
+  margin-left: 1rem;
+}
+
+.pagination_wrapper {
+  margin: 20px 0 20px 0;
+}

@@ -1,0 +1,52 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.template_info {
+
+    height: calc(100% - 280px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .template_info_content {
+        @include with-scroll;
+        min-height: 400px;
+        overflow-y: auto;
+    }
+
+    .artwork_wrapper {
+        @include with-scroll;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-row-gap: 25px;
+        justify-items: center;
+
+        & > div {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            min-width: 150px;
+            width: 150px;
+            img {
+                height: 100px;
+            }
+        }
+
+        .column_wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .button_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 0 10px;
+        button {
+            padding: 10px 20px;
+            line-height: normal;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+}

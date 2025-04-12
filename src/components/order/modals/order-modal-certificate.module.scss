@@ -1,0 +1,29 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  padding: 0;
+}
+
+.modal_width {
+ max-width: 800px!important;
+}
+
+.body {
+  padding: 0;
+  overflow-y: auto;
+  @include with-scroll;
+  @media screen and (max-width: $tablet) {
+    padding: 28px 15px;
+  }
+}
+
+.button {
+  min-width: 120px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

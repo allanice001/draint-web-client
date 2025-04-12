@@ -1,0 +1,246 @@
+@import 'src/styles/variables';
+.payment_options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.unsubscribe_title {
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+  }
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $desktop) {
+    align-items: center;
+  }
+
+  .title_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+      align-self: flex-start;
+    }
+    .title {
+      font-weight: 800;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+      display: none;
+      @media screen and (min-width: $desktop) {
+        display: inherit;
+      }
+    }
+
+    .checkbox {
+      font-weight: 800;
+      &.checkbox__mobile {
+        padding: 0 0 40px 5px;
+      }
+    }
+
+    .title_sm {
+      position: relative;
+      display: none;
+      @media screen and (min-width: $desktop) {
+        font-weight: 700;
+        font-size: 14px;
+        top: 10px;
+        display: inherit;
+      }
+    }
+  }
+
+  .select_wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (min-width: $tablet) {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    .border_line {
+      width: 0;
+      height: 350px;
+      margin-right: 20px;
+      border: 1px solid #E7E7E7;
+      display: none;
+      @media screen and (min-width: $tablet) {
+        display: inherit;
+        margin: 0 50px 0 50px;
+      }
+    }
+
+    .select_payment_wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      @media screen and (min-width: $desktop) {
+        display: inherit;
+        margin-bottom: 0;
+      }
+      .delimiter {
+        width: 15px;
+        @media screen and (min-width: $mobile) {
+          width: 40px;
+        }
+        @media screen and (min-width: $desktop) {
+          width: 30px;
+        }
+      }
+    }
+
+    .stripe_form_component_wrapper {
+      display: flex;
+      width: 539px;
+
+      .inputs_wrapper{
+        position: relative;
+        width: 100%;
+        top: -17px;
+
+        @media screen and (max-width: $tablet){
+          top: 0
+        }
+      }
+      .inputs_wrapper_pay_pal{
+        width: 100%;
+        top: 25px;
+      }
+    }
+  }
+}
+.checked_payment_wrapper {
+  position: relative;
+  margin-bottom: 15px;
+
+  .check_payment {
+    width: 180px;
+    height: 60px;
+
+    border: 1px solid $success-color;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .check_icon {
+    position: absolute;
+    left: 165px;
+    top: -7px;
+  }
+
+  .mobile_title {
+    font-weight: 800;
+    font-style: normal;
+    //font-size: 17px;
+    position: absolute;
+    display: inherit;
+    font-size: 14px;
+    width: 161px;
+    left: 0;
+    top: -23px;
+    @media screen and (min-width: $iPhone6) {
+      font-weight: 800;
+      left: 0;
+      top: -23px;
+    }
+    @media screen and (min-width: $mobile) {
+      font-size: 19px;
+      width: 300px;
+      left: -40px;
+      top: -30px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+  .payment_icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.payment_icon_wrapper {
+  display: flex;
+  margin-left: 15px;
+}
+
+
+.payment_wrapper {
+  position: relative;
+  margin-bottom: 15px;
+
+  .check_payment {
+    width: 180px;
+    height: 60px;
+
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: 400ms;
+    &:hover {
+      background-color: #f5f7fa;
+    }
+  }
+
+  .check_icon {
+    display: none;
+  }
+
+  .mobile_title {
+    font-weight: 800;
+    font-style: normal;
+    position: absolute;
+    display: inherit;
+    font-size: 14px;
+    width: 161px;
+    left: 0;
+    top: -23px;
+    @media screen and (min-width: $iPhone6) {
+      font-size: 12px;
+      left: 0;
+      top: -23px;
+    }
+    @media screen and (min-width: $mobile) {
+      font-size: 19px;
+      width: 300px;
+      left: -40px;
+      top: -30px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .payment_icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.payment_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: unset;
+  color: inherit;
+}
+
+.select_field_wrapper {
+  margin-bottom: 10px;
+}

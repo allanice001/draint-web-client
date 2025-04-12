@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.button {
+  position: fixed;
+  z-index: 2;
+  bottom: 86px;
+  right: 16px;
+  background: $primary-color;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  box-shadow: 0 0 5px $primary-color;
+  &:hover {
+    box-shadow: 0 -3px 9px -2px grey;
+  }
+  .icon {
+    fill: white;
+    path {
+      fill: white;
+    }
+  }
+  @media screen and(max-width: $desktop) {
+    width: 45px;
+    height: 45px;
+    bottom: 70px;
+    right: 0;
+    padding-top: 1px;
+    padding-right: 1px;
+    .icon {
+      width: 22px;
+    }
+  }
+}

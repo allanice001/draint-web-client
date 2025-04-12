@@ -1,0 +1,115 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+$timeline-color: #f4f4f4;
+
+.root {
+  padding-bottom: 12rem;
+  &.invisible {
+    display: none;
+  }
+
+  .timeline,
+  .fill {
+    height: 8px;
+    border-radius: 10px;
+    background-color: $timeline-color;
+    width: 100%;
+  }
+
+  .fill {
+    position: absolute;
+    background-color: $primary-color;
+    content: '';
+  }
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 3.6rem;
+
+    .fill {
+      position: absolute;
+      height: 8px;
+      border-radius: 10px;
+      background-color: $primary-color;
+      width: 100%;
+      content: '';
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .point {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: calc(100% / 3);
+
+    .dot {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: #e7e7e7;
+      border-radius: 50%;
+    }
+
+    &:not(.start) .dot {
+      transform: translateX(-4px);
+    }
+
+    &.active .dot {
+      background-color: $primary-color;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &.start {
+      left: 0;
+
+      b {
+        color: $primary-color;
+      }
+
+      .dot::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0;
+
+      @include media-up($desktop) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    b {
+      font-weight: 800;
+    }
+  }
+}

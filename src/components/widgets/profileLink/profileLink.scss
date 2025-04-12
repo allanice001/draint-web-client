@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+
+.profile-link {
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  right: 16px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  &:hover {
+    box-shadow: 0 -3px 9px -2px grey;
+  }
+  @media screen and (max-width: $desktop) {
+    bottom: 10px;
+    right: 0;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    svg.MuiSvgIcon-root {
+      font-size: 21px !important;
+    }
+  }
+
+  .MuiButtonBase-root {
+    border-radius: 50%;
+    background: $primary-color;
+    box-shadow: 0 0 5px $primary-color;
+    &:hover {
+      background: $primary-color;
+    } 
+  }
+
+  svg.MuiSvgIcon-root {
+    fill: white;
+    font-size: 36px;
+  }
+}
+
+.MuiTooltip-popper {
+  .MuiTooltip-tooltip {
+    font-size: 16px;
+  }
+}

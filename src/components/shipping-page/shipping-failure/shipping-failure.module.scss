@@ -1,0 +1,90 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #E7E7E7;
+
+  @include media-down($ipadAir) {
+    text-align: center;
+  }
+
+}
+
+.title {
+  font-family: $font-Sen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 40px;
+  margin-top: 70px;
+
+  @include media-down($ipadAir) {
+    margin-top: 40px
+  }
+}
+
+.subtitle {
+  font-family: $font-Mulish;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  padding-bottom: 90px;
+
+  @include media-down($ipadAir) {
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    text-align: center;
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  height: auto;
+
+  @include media-down($ipadAir) {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+.image img {
+  width: 442px;
+  height: 422px;
+
+  @include media-down($mobile) {
+    width: 247px;
+    height: 236px;
+  }
+}
+
+.text_content {
+  width: 50%;
+  height: auto;
+  margin-left: 44px;
+
+  @include media-down($ipadAir) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.text_content p {
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}

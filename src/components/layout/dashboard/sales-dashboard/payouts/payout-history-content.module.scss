@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+.header {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  font-family: $font-Mulish !important;
+  padding: 25px 16px 25px 16px !important;
+  color: $black-font !important;
+}
+
+.body {
+  font-size: 14px !important;
+  font-family: $font-Mulish !important;
+  color: $black-font !important;
+  padding: 35px 16px 35px 16px !important;
+  line-height: 0 !important;
+}

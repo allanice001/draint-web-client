@@ -1,0 +1,125 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  background-color: #f6f6f6;
+  position: sticky;
+  top: 50px;
+  z-index: 4;
+
+  @include media-up($desktop) {
+    display: none;
+    top: 80px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+
+  &:not(.inner) {
+    @include with-scroll;
+
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50px;
+    max-height: calc(100% - 50px);
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: auto;
+    background-color: #f6f6f6;
+  }
+
+  & > * {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &.inner > *:last-child {
+    border-bottom: none;
+  }
+
+  &.inner {
+    margin-left: 38px;
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 46px;
+  width: 100%;
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+  padding: 0 20px;
+
+  svg path {
+    transition: fill 0.2s ease-in-out;
+    will-change: fill;
+  }
+
+  &.active {
+    color: var(--primary-color, $primary-color);
+    font-weight: 800;
+
+    svg path {
+      fill: var(--primary-color, $primary-color);
+    }
+  }
+
+  &.preview {
+    margin: 0 -20px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 4;
+    background-color: #f6f6f6;
+    width: auto;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 14px;
+  }
+
+  .inner & {
+    height: 42px;
+  }
+
+  .arrow {
+    margin-left: auto;
+    margin-right: 0;
+    transform: rotateZ(90deg);
+  }
+}
+
+.backdrop {
+  max-width: 1280px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 3;
+  transition: opacity 0.2s linear;
+  will-change: opacity;
+  opacity: 0;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}

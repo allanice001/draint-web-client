@@ -1,0 +1,129 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.subscriptions {
+  margin-top: 50px;
+  padding-bottom: 20px;
+
+  .pagination_wrapper {
+    margin: 30px 0 20px 0;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .artwork {
+    border-bottom: 1px solid #e7e7e7;
+
+    @include media-down($desktop) {
+      padding: 1em 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      border-bottom: none;
+    }
+
+    &:not(:last-child) {
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 5px;
+
+      @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .sale_statuses {
+        @include media-up($desktop) {
+          white-space: nowrap;
+        }
+
+        .sale_text {
+          text-transform: capitalize;
+          font-size: 12px;
+
+          @include media-up($desktop) {
+            font-size: 16px;
+          }
+
+          .sale_status {
+            font-weight: bold;
+            color: var(--primary-color, $primary-color);
+            font-size: 16px;
+          }
+        }
+      }
+
+      .resale label {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 800;
+        font-style: italic;
+        color: #3f4041;
+
+        @media screen and (min-width: $desktop) {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+
+      .makeOffer label {
+        color: rgba(63, 64, 65, 0.4);
+      }
+
+      .input {
+        padding: 0 0 0 15px;
+        max-width: 150px;
+      }
+
+      .input_wrapper_width {
+        width: auto;
+      }
+
+      .endpoint {
+        top: 45%;
+      }
+
+      .error {
+        bottom: 0;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 18px;
+
+        .label {
+          margin-right: 1em;
+
+          @include media-down($desktop) {
+            font-size: 12px;
+          }
+        }
+
+        @include media-up($desktop) {
+          justify-content: flex-end;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

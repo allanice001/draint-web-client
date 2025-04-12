@@ -1,0 +1,32 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  & > *:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  button {
+    margin-top: 0.6em;
+    margin-right: 0.5em;
+  }
+
+  .button_container {
+    display: inline-flex;
+  }
+}
+
+.role_form {
+  flex-direction: column;
+
+  button {
+    width: 30%;
+    height: 30%;
+  }
+
+  .button_container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,102 @@
+.master-artists-wrapper {
+  .master-filter-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    .master-countries-select {
+      width: 350px;
+      margin: 4px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      label {
+        font-weight: 500;
+      }
+    }
+    .csv-btn-wrapper {
+      display: flex;
+      flex-direction: row;
+      padding: 15px;
+      margin: 4px;
+    }
+  }
+
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .master-artist-containter {
+    min-height: 400px;
+
+    .img-container {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+
+      .artist-img {
+        height: 100%;
+      }
+    }
+
+    .MuiCardActions-root.MuiCardActions-spacing {
+      padding: 10px;
+    }
+
+    .MuiButtonBase-root.MuiCardActionArea-root {
+      min-height: 325px;
+    }
+
+    .artists-name {
+      font-weight: 700;
+    }
+
+    .disabled-field {
+      color: gray;
+    }
+
+    .artworks-status {
+      &.pending {
+        color: #f7af11;
+      }
+
+      &.verified {
+        color: #3f51b5;
+      }
+
+      &.unverified {
+        color: #f50057;
+      }
+    }
+
+    .artist-status {
+      font-size: 1em;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin-top: 1rem;
+
+      &.pending {
+        color: #f7af11;
+      }
+
+      &.verified {
+        color: #3f51b5;
+      }
+
+      &.unverified {
+        color: #f50057;
+      }
+    }
+
+    .pending-button {
+      background-color: #ff9100;
+    }
+  }
+}
+
+.master-dashboard-wrapper {
+  .resize-artwork-button {
+    background-color: #3f51b5 !important;
+  }
+}

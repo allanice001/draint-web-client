@@ -1,0 +1,286 @@
+{
+  "PageView": {
+    "category": "PageView",
+    "label": "PageView"
+  },
+  "CustomViewContent": {
+    "type": "custom",
+    "label": "CustomViewContent"
+  },
+  "SignIn": {
+    "type": "custom",
+    "title": "Signin action",
+    "category": "User",
+    "label": "SigninAction"
+  },
+  "SignUpArtist": {
+    "type": "custom",
+    "title": "Artist signUp action",
+    "category": "User",
+    "label": "SignUpAction"
+  },
+  "Test": {
+    "type": "custom",
+    "title": "Test SignUp"
+  },
+  "CompletedSignup": {
+    "type": "custom",
+    "category": "User",
+    "title": "Completed signup",
+    "label": "CompletedSignupAction"
+  },
+  "SignUpCollector": {
+    "type": "custom",
+    "title": "Collector signUp action",
+    "category": "User",
+    "label": "SignUpAction"
+  },
+  "MasterSignIn": {
+    "type": "custom",
+    "title": "Master signin action",
+    "category": "User",
+    "label": "MasterSigninAction"
+  },
+  "ArtworkEdit": {
+    "type": "custom",
+    "title": "Artwork was edited",
+    "category": "Artwork",
+    "label": "ArtworkWasEdited"
+  },
+  "ArtworkDeleted": {
+    "type": "custom",
+    "title": "Artwork was deleted",
+    "category": "Artwork",
+    "label": "ArtworkWasDeleted"
+  },
+  "ArtworkImagesWasEdited": {
+    "type": "custom",
+    "title": "Artwork Image was edited",
+    "category": "Artwork",
+    "label": "ArtworkImagesWasEdited"
+  },
+  "QRCodeGenerated": {
+    "type": "custom",
+    "title": "Artwork QR code was generated",
+    "category": "Artwork",
+    "label": "QRCodeGenerated"
+  },
+  "ArtworkStatusChangedForSale": {
+    "type": "custom",
+    "title": "Artwork Status Changed For Sale",
+    "category": "Artwork",
+    "label": "ArtworkStatusChangedForSale"
+  },
+  "ArtworkStatusChangedNotForSale": {
+    "type": "custom",
+    "title": "Artwork Status Changed Not For Sale",
+    "category": "Artwork",
+    "label": "ArtworkStatusChangedForSale"
+  },
+  "OfferWasSent": {
+    "type": "custom",
+    "category": "Offer",
+    "title": "Offer was made"
+  },
+  "AddToCart": {
+    "type": "custom",
+    "category": "Artwork",
+    "title": "Artwork was added to cart"
+  },
+  "NewSeriesWereCreated": {
+    "type": "custom",
+    "category": "Series",
+    "title": "New Series Were Created"
+  },
+  "SeriesWereDeleted": {
+    "type": "custom",
+    "category": "Series",
+    "title": "Series Were Deleted"
+  },
+  "ArtistBiographyWasEdited": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Biography Was Edited"
+  },
+  "EducationWasAdded": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Biography Was Edited"
+  },
+  "ExhibitionsWasAdded": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Exhibition Was Added"
+  },
+  "PublicationsWasAdded": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Publications Was Added"
+  },
+  "EducationWasDeleted": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Biography Was Deleted"
+  },
+  "ExhibitionsWasDeleted": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Exhibition Was Deleted"
+  },
+  "PublicationsWasDeleted": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist Publications Was Deleted"
+  },
+  "BlogPostWasCreated": {
+    "type": "custom",
+    "category": "Blog",
+    "title": "Blog Post was Created"
+  },
+  "BlogPostWasEdited": {
+    "type": "custom",
+    "category": "Blog",
+    "title": "Blog Post was Edited"
+  },
+  "BlogPostWasDeleted": {
+    "type": "custom",
+    "category": "Blog",
+    "title": "Blog Post was Deleted"
+  },
+  "InstagramLinkChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Instagram link was changed"
+  },
+  "ProfileSettingsChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Profile settings was changed"
+  },
+  "ProfStatusChanged" : {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Professional status was changed"
+  },
+  "AddressChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Address was changed"
+  },
+  "PasswordChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Password was changed"
+  },
+  "AccountDeleted": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Artist delete account"
+  },
+  "ProfileImageChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Profile image was changed"
+  },
+  "DescriptionChanged": {
+    "type": "custom",
+    "category": "Artist",
+    "title": "Description was changed"
+  },
+  "ContactWasAddedToContactTool": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Contact was added to Contact Tool"
+  },
+  "ContactWasUpdatedToContactTool": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Contact was updated to Contact Tool"
+  },
+  "ContactWasDeletedToContactTool": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Contact was deleted from Contact Tool"
+  },
+  "CustomMessageSent": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Custom message sent"
+  },
+  "TemplateMessageSent": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Template message sent"
+  },
+  "ContactSubscribed": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Contact Was subscribed"
+  },
+  "ContactUnSubscribed": {
+    "type": "custom",
+    "category": "ContactTool",
+    "title": "Contact Was Unsubscribed"
+  },
+  "OfferWasVerifiedByArtist": {
+    "type": "custom",
+    "category": "Offer",
+    "title": "Order was verified by artist"
+  },
+  "OfferWasDeclinedByArtist": {
+    "type": "custom",
+    "category": "Offer",
+    "title": "Order was declined by artist"
+  },
+  "OrderWasVerifiedByArtist": {
+    "type": "custom",
+    "category": "Order",
+    "title": "Order was verified by artist"
+  },
+  "OrderWasDeclinedByArtist": {
+    "type": "custom",
+    "category": "Order",
+    "title": "Order was declined by artist"
+  },
+  "CollectorProfileSettingsChanged": {
+    "type": "custom",
+    "category": "Collector",
+    "title": "Collector profile settings was changed"
+  },
+  "CollectorAddressChanged": {
+    "type": "custom",
+    "category": "Collector",
+    "title": "Collector address was changed"
+  },
+  "CollectorPasswordChanged": {
+    "type": "custom",
+    "category": "Collector",
+    "title": "Collector changed password"
+  },
+  "CollectorDeleteAccount": {
+    "type": "custom",
+    "category": "Collector",
+    "title": "Collector delete account"
+  },
+  "CollectorVerifiedOrder": {
+    "type": "custom",
+    "category": "Order",
+    "title": "Order was unverified by Collector"
+  },
+  "CollectorUnVerifiedOrder": {
+    "type": "custom",
+    "category": "Order",
+    "title": "Order was unverified by Collector"
+  },
+  "CollectorChangeArtworkPrice": {
+    "type": "custom",
+    "category": "Artwork",
+    "title": "Collector changed artwork price"
+  },
+  "ArtworkViewed": {
+    "type": "custom",
+    "label": "ArtworkViewed",
+    "title": "Artwork was viewed",
+    "category": "Artwork"
+  }
+}

@@ -1,0 +1,98 @@
+@import '../../../styles/variables';
+
+.wrapper {
+
+    .list {
+        margin-left: -20px;
+        margin-right: -20px;
+
+        @media screen and (min-width: 700px) {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin: 20px;
+
+            &>* {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    //.button_container {
+    //    display: flex;
+    //    justify-content: center;
+    //    margin: 0 0 30px;
+    //
+    //    &>* {
+    //        // flex: 1;
+    //
+    //        @media screen and (min-width: $desktop) {
+    //            flex: 0;
+    //        }
+    //
+    //        &:not(:last-child) {
+    //            margin-right: 24px;
+    //        }
+    //    }
+    //
+    //    @media screen and (min-width: $desktop) {
+    //        :not(:last-child) {
+    //            margin-right: 24px;
+    //        }
+    //    }
+    //}
+    .button_container {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 30px;
+
+        :last-child {
+            margin-left: 24px;
+        }
+
+        :first-child {
+            margin-left: 0
+        }
+    }
+}
+
+
+.button {
+    &__more {
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+
+        background-color: #fff;
+        color: $primary-color;
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+}
+
+.more__card {
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+//@media screen and (max-width: $desktop) {
+//    .more {
+//        display: none !important;
+//    }
+//}

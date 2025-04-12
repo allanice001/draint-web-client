@@ -1,0 +1,261 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+$laptop: 1200px;
+
+$min-width-desktop: 1110px;
+
+.wrapper {
+  position: relative;
+  margin-bottom: 40px;
+  z-index: 1;
+
+  @media screen and (min-width: $desktop) {
+    padding: 24px 0 46px 49px;
+    margin-bottom: 80px;
+    border-radius: 15px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+  }
+
+  .image {
+    width: 170px;
+    height: 100%;
+    margin-bottom: 18px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    min-width: $min-width-desktop;
+    padding-right: 49px;
+  }
+
+  @media screen and (max-width: $desktop) {
+    &__card {
+      width: 100%;
+      padding: 3px 30px 15px;
+      margin-bottom: 30px;
+      border: 1px solid #e7e7e7;
+      border-radius: 15px;
+      text-align: center;
+      background-color: #fff;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__card {
+      width: 100%;
+      max-width: 228px;
+    }
+  }
+}
+
+.lead {
+  font-family: $font-Muli;
+  font-weight: bold;
+  color: #0b2349;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  p {
+    line-height: inherit;
+
+    @media screen and (min-width: $orient-laptop) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @media screen and (max-width: $orient-laptop) {
+      margin-bottom: 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #4437f7 0%, #c51699 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__desktop p {
+    @media screen and (min-width: $desktop) {
+      padding-top: 54px;
+      background: linear-gradient(180deg, #4437f7 0%, #c51699 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.toggle {
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 50px;
+  background-color: #f6f6f6;
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(63, 64, 65, 0.4);
+    background-color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      padding-right: 5px;
+    }
+
+    &.active {
+      background-color: #806bff;
+      color: #fff;
+    }
+  }
+}
+
+.body {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    min-width: $min-width-desktop;
+    padding-right: 49px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+
+    &:nth-child(even) {
+      background: linear-gradient(
+        270deg,
+        rgba(231, 231, 231, 0) 0%,
+        rgba(231, 231, 231, 0.5) 50%,
+        rgba(231, 231, 231, 0) 100%
+      );
+    }
+  }
+
+  .name {
+    display: flex;
+    align-items: flex-start;
+    max-width: 228px;
+    width: 100%;
+
+    & > *:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    svg:hover {
+      color: lighten($color: $primary-color, $amount: 10);
+    }
+  }
+
+  .cell {
+    flex: 1;
+    text-align: center;
+    color: $primary-color;
+
+    &--active {
+      min-width: 240px;
+    }
+  }
+
+  .disabled {
+    opacity: 0.3;
+  }
+}
+
+.desktop {
+  position: relative;
+  display: none;
+
+  @media screen and (min-width: $orient-laptop) {
+    display: block;
+    overflow-x: auto;
+    padding: 16px 0;
+    margin: -16px 0;
+  }
+}
+
+.mobile {
+  @media screen and (min-width: $orient-laptop) {
+    display: none;
+  }
+
+  .button_finish_signup {
+    background-color: #49df88;
+
+    &::after {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .button_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footnote {
+  margin-top: 20px;
+
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: right;
+    margin-right: 49px;
+  }
+
+  a {
+    font-weight: 600;
+    color: #806bff;
+    text-decoration: none;
+  }
+}
+
+.notes {
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 1.5em;
+  }
+
+  @include media-up($desktop) {
+    text-align: right;
+    margin-right: 49px;
+  }
+}
+
+.active {
+  position: absolute;
+  width: 240px;
+  top: 16px;
+  bottom: 16px;
+  box-shadow: 0 4px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.button-info {
+  margin-top: 0.5rem;
+}

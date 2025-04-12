@@ -1,0 +1,159 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 95px;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 348px;
+
+  @include media-down($home-shipment-section) {
+    flex-wrap: wrap;
+    height: 484px;
+  }
+
+  @include media-down($gpixel) {
+    height: 430px;
+  }
+
+  @include media-down($iPhone6) {
+    height: 400px;
+  }
+
+}
+
+.macbook_container {
+  position: relative;
+  display: flex;
+}
+
+.macbook {
+  width: 727px;
+  height: 400px;
+  position: relative;
+  bottom: -30px;
+
+  @include media-down($home-shipment-section) {
+    width: 632px;
+    height: 340px;
+  }
+
+  @include media-down($gpixel) {
+    width: 540px;
+    height: 300px;
+  }
+
+  @include media-down($mobile) {
+    width: 420px;
+    height: 240px;
+
+  }
+
+  @include media-down($iPhone6) {
+    width: 360px;
+    height: 200px;
+  }
+
+}
+
+.text_container {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 100%;
+  text-align: left;
+
+  .title {
+    color: rgba(255, 255, 255, 1);
+    font-family: $font-Sen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  .desc {
+    color: rgba(255, 255, 255, 1);
+    font-family: $font-Mulish;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  @include media-down($iPadPro) {
+    margin-top: 70px;
+  }
+
+  @include media-down($home-shipment-section) {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  @include media-down($gpixel) {
+    margin-top: 55px;
+    text-align: left;
+    margin-left: 27px;
+
+    .title {
+      width: 300px;
+    }
+
+    .desc {
+      width: 350px;
+    }
+  }
+
+  @include media-down($mobile-s) {
+    .desc {
+      width: 300px;
+    }
+  }
+
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-Sen;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: $primary-color;
+  min-width: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+
+  @include media-up($desktop) {
+    color: $font-color;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    order: 1;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+
+    @include media-up($desktop) {
+      background-color: darken(#fff, 5%);
+    }
+  }
+}
+
+.button {
+  margin-top: 30px;
+}

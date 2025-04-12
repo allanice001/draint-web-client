@@ -1,0 +1,49 @@
+.wrapper {
+    padding: 10px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #E7E7E7;
+    @media screen and(max-width: 1024px) {
+        padding: 5px;
+        flex-direction: column;
+    }
+    .wrapper-header {
+        font-size: 2em;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        @media screen and(max-width: 1024px) {
+            font-size: 1em;
+            margin-left: 0;
+        }
+    }
+    .wrapper-text {
+        font-size: 1.2em;
+        margin-left: 20px;
+        color: gray;
+        @media screen and(max-width: 1024px) {
+            font-size: 0.8em;
+            margin-left: 0;
+        }
+    }
+}
+
+.wrapper-pricing {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    @media screen and(max-width: 667px) {
+        padding: 0;
+        flex-direction: column;
+    }
+    .close-btn {
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+

@@ -1,0 +1,458 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 300px;
+  &__icon {
+    margin-bottom: 30px;
+  }
+}
+
+.title_item {
+  font-family: $font-Sen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.list {
+  margin-top: 40px;
+  margin-bottom: 0;
+  @media only screen and (max-width: $desktop) {
+    margin-bottom: 30px;
+  }
+
+  .list_artwork {
+    padding: 0 0 50px 0;
+  }
+
+  .desktop {
+    display: block;
+    @media only screen and (max-width: $desktop) {
+      display: none;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 195px;
+      margin-bottom: 50px;
+
+      .image_wrapper {
+        width: 200px;
+        height: 195px;
+
+        .image {
+          min-width: 200px;
+          min-height: 195px;
+          width: 200px;
+          height: 195px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+
+      .info_block {
+        width: 1000px;
+
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e7e7e7;
+
+          .title {
+            font-family: $font-Sen;
+            font-size: 28px;
+            line-height: 34px;
+          }
+
+          .artist_info {
+            font-family: $font-Muli;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        .artwork_params {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e7e7e7;
+
+          .label {
+            font-family: $font-Muli;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 22px;
+
+            @include media-up($desktop) {
+              color: #c7c7c7;
+              font-size: 14px;
+              line-height: 18px;
+              font-weight: bold;
+            }
+          }
+
+          .data {
+            margin-top: 7px;
+            font-family: $font-Muli;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #3f4041;
+          }
+        }
+
+        .price_info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-top: 15px;
+
+          .price_params {
+            .label {
+              font-family: $font-Muli;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 18px;
+              color: #c7c7c7;
+              margin: 0 15px;
+            }
+          }
+
+          .price {
+            color: $primary-color;
+            font-family: $font-Muli;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 35px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile {
+    display: none;
+    @media only screen and (max-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      padding: 20px;
+      max-width: 375px;
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+
+        .title {
+          font-family: $font-Sen;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 135px;
+        margin-bottom: 30px;
+
+        .image_wrapper {
+          width: 140px;
+          height: 135px;
+
+          .image {
+            min-width: 140px;
+            min-height: 135px;
+            width: 140px;
+            height: 135px;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+        }
+
+        .info_block {
+          padding-left: 25px;
+          width: 175px;
+          font-family: $font-Muli;
+
+          .artist_info {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          .country {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 22px;
+            color: #c7c7c7;
+          }
+
+          .price_params {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .price_param {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: flex-end;
+
+              .param_name {
+                font-size: 12px;
+                line-height: 22px;
+              }
+
+              .price_count {
+                font-size: 16px;
+                line-height: 22px;
+              }
+
+              .price {
+                margin-top: 10px;
+                color: $primary-color;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+
+      .artwork_params {
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+        padding: 10px 0;
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .param {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .label {
+              min-width: 75px;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 18px;
+              color: #c7c7c7;
+            }
+
+            .data {
+              margin: 5px 0 15px 0;
+              font-size: 18px;
+              line-height: 23px;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        .item {
+          .image_wrapper {
+            width: 120px;
+            height: 135px;
+
+            .image {
+              min-width: 120px;
+              min-height: 135px;
+            }
+          }
+
+          .info_block {
+            padding-left: 10px;
+            width: 155px;
+          }
+        }
+        .artwork_params {
+          .row {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    max-width: 80%;
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.piece {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 22px;
+
+  @include media-up($desktop) {
+    color: #c7c7c7;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  &__label {
+    margin-right: 10px;
+    min-width: 60px;
+  }
+
+  &__amount {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $font-color;
+
+    &_old {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $font-color;
+      position: relative;
+      &:before {
+        border-bottom: 3px solid red;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 50%;
+        transform: rotate(-7deg);
+      }
+    }
+  }
+
+  .rate_text_blurred {
+    animation: blink 2s linear infinite;
+    font-size: 14px;
+    font-weight: normal;
+
+    @keyframes blink {
+      0% {
+        color: $primary-rgba-color;
+      }
+      50% {
+        color: $primary-blurred-rgba-color;
+      }
+      100% {
+        color: $primary-rgba-color;
+      }
+    }
+  }
+
+  .rate_error_text_blurred {
+    animation: blink-error 3s linear infinite;
+    font-size: 14px;
+    font-weight: normal;
+
+    @include media-down($desktop) {
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 60px;
+      flex-shrink: 0;
+    }
+
+    @keyframes blink-error {
+      0% {
+        color: $error-color;
+      }
+      50% {
+        color: $primary-blurred-rgba-color;
+      }
+      100% {
+        color: $error-color;
+      }
+    }
+  }
+}
+
+.price_wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: auto;
+
+  @media screen and (max-width: $iPhone6) {
+    width: 100%;
+  }
+
+  .price__label {
+    @include media-up($desktop) {
+      display: none;
+    }
+  }
+}
+
+.price {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: $primary-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+}

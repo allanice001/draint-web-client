@@ -1,0 +1,78 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+
+.form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #fff;
+    &__row {
+        display: flex;
+        min-width: 380px;
+        //height: 46px;
+    }
+
+    .select {
+        border-radius: 10px 0 0 10px;
+        text-transform: capitalize;
+
+        &__wrapper {
+            min-width: 140px;
+            max-width: 140px;
+            text-transform: capitalize;
+        }
+    }
+
+    .input {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+
+        &__wrapper {
+            min-width: 240px;
+            max-width: 240px;
+        }
+
+        &__select {
+            border-radius: 0 !important;
+        }
+
+    }
+}
+
+
+
+//.select {
+//    height: 46px;
+//    width: 140px !important;
+//    border-radius: 10px 0 0 10px !important;
+//}
+
+//.input {
+//    height: 46px;
+//    width: 246px !important;
+//    border-radius: 0 !important;
+//}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    min-width: 50px;
+    //height: 46px;
+    //padding: 0 20px;
+    border-radius: 0 10px 10px 0 !important;
+    border-color: $primary-color;
+    background-color: $primary-color;
+    z-index: 1;
+    @include hover-primary;
+    &__icon{
+        width: 26px;
+        height: 26px;
+    }
+}
+

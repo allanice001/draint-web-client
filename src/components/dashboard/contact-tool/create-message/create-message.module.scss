@@ -1,0 +1,225 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.message_wrapper {
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  background: white;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 26px 30px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.component_title {
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: $font-color-light;
+}
+
+.massage_wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipients {
+  position: relative;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background: rgba(128, 107, 255, 0.25);
+  border-radius: 30px;
+  margin: 10px 10px 0 0;
+  flex-shrink: 0;
+}
+
+.recipients_empty {
+  position: relative;
+  width: 160px;
+  height: 40px;
+
+  background: transparent;
+  border-radius: 30px;
+  margin: 10px 10px 0 0;
+}
+
+.recipients_name {
+  display: block;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 40px);
+  white-space: nowrap;
+
+
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  color: $primary-color;
+}
+
+.close_icon {
+  position: absolute;
+  right: 14px;
+  top: 9px;
+  color: $primary-color;
+  font-size: 22px!important;
+}
+
+
+.title {
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: $font-color;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+}
+
+.subject_title {
+  width: 100%;
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: $font-color;
+
+  background: white;
+  box-sizing: border-box;
+}
+
+.subject_title_wrapper {
+  margin-top: 10px;
+}
+
+.template_button {
+  width: 150px;
+  height: 60px;
+  background: white;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 50px;
+
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: auto;
+
+  transition: 400ms;
+  &:hover{
+    background-color: darken(white, 5%);
+  }
+}
+
+.delimiter {
+  margin: 15px 0 20px 0;
+  height: 0;
+  border: 1px solid $border-color;
+}
+
+.message_letter_wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column-reverse;
+  div {
+    border-color: transparent!important;
+  }
+}
+
+.send_button {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  width: 100px;
+  height: 40px;
+
+  background: $primary-color;
+  border-radius: 50px;
+
+  transition: 400ms;
+  &:hover{
+    background-color: darken($primary-color, 5%);
+  }
+}
+
+.send_button_disabled {
+  background: $disabled-c-button;
+  cursor: inherit;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  width: 100px;
+  height: 40px;
+
+  border-radius: 50px;
+
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.send_name {
+  position: absolute;
+  top: 12px;
+  left: 21px;
+  color: white;
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.send_icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 13px;
+  left: 64px;
+}
+
+.title_mobile {
+  text-align: left !important;
+  margin-bottom: 10px !important;
+  margin-left: 6px;
+
+  @include media-up($desktop) {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  overflow-x: auto;
+  max-width: 690px;
+  padding-bottom: 1rem;
+
+  @include with-scroll;
+}
+
+.template {
+  max-height: 100%;
+}

@@ -1,0 +1,82 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.banner {
+  margin-bottom: 28px;
+}
+
+.filters_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  @include media-down($tablet) {
+    margin: 0 0 48px 0;
+    flex-direction: column;
+  }
+  @include media-up($desktop) {
+    padding-bottom: 38px;
+  }
+  &__item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @include media-up($desktop) {
+      justify-content: center;
+      &:not(:last-child) {
+        border-right: 2px solid #f4f4f4;
+      }
+    }
+    @include media-down($mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.section {
+  @include media-up($desktop) {
+    margin-top: 45px;
+  }
+}
+
+.artist_cart_section {
+  height: 100%;
+
+  @include media-up($desktop) {
+    max-height: 400px;
+  }
+}
+
+.filter_wrapper {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media-down($mobile) {
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.filter_container {
+  @include media-down($desktop) {
+   margin-bottom: 40px;
+  }
+}
+
+.filter_delimiter {
+  margin: 0 10px 48px 10px;
+
+  @include media-up($desktop) {
+    border-bottom: 2px solid #f4f4f4;
+  }
+}
+
+.section_wrapper {
+  margin-bottom: 90px;
+}

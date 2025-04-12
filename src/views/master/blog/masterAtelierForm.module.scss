@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.form {
+  margin-bottom: 2em;
+
+  .row {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+
+    &:first-child {
+      border-top: 1px solid $border-color;
+    }
+
+    & > *:not(:first-child) {
+      margin-left: 1em;
+    }
+
+    .title {
+      font-size: 18px;
+      margin-right: auto;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  .submit {
+    min-width: 200px;
+  }
+}

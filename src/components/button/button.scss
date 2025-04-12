@@ -1,0 +1,206 @@
+@import '../../styles/variables';
+
+button {
+
+  // naked default button
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+.btn {
+
+  cursor: pointer;
+  color: white;
+  font-size: $scale;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  padding: 1em $scale4;
+  transition: all 0.4s ease-in-out;
+  border-radius: $radius;
+  background-color: $c-green;
+
+  &.red {
+
+    background-color: $c-red;
+
+    &:hover {
+
+      background-color: darken($c-red, 5%);
+
+    }
+  }
+
+  &.blue {
+
+    background-color: $c-blue;
+
+    &:hover {
+
+      background-color: darken($c-blue, 5%);
+
+    }
+  }
+
+  &.small {
+
+    font-size: 0.8em;
+    padding: 0.8em $scale2;
+
+  }
+
+  &:hover {
+
+    background-color: darken($c-green, 6%);
+    transition: all 0.4s ease-in-out;
+
+  }
+}
+
+.btn-loader {
+
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: $c-green;
+  border-radius: $radius;
+
+  &:hover {
+
+    background-color: darken($c-green, 6%);
+    transition: all 0.4s ease-in-out;
+
+  }
+
+  &.red {
+
+    background-color: $c-red;
+
+    &:hover {
+
+      background-color: darken($c-red, 5%);
+
+    }
+  }
+
+  &.blue {
+
+    background-color: $c-blue;
+
+    &:hover {
+
+      background-color: darken($c-blue, 5%);
+
+    }
+  }
+
+  input, button, .btn {
+
+    position: relative;
+    display: block;
+    color: white;
+    width: 100% !important;
+    cursor: pointer;
+    font-size: $scale;
+    font-weight: 500;
+    padding: 1em $scale4;
+    background: transparent;
+
+  }
+
+  &:after {
+
+    display: none;
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 1em;
+    top: 1.05em;
+    z-index: 3;
+    background-size: contain;
+    background-image: url("./icons/ico-loader.svg");
+
+  }
+
+  &.full-width.loading {
+
+    padding-right: 0;
+
+  }
+
+  &.loading {
+
+    &:after {
+
+      // loading spinner
+      display: block;
+      transform-origin: center center;
+      -webkit-animation: rotate 1s infinite linear;
+      -moz-animation: rotate 1s infinite linear;
+      -o-animation: rotate 1s infinite linear;
+      animation: rotate 1s infinite linear;
+
+    }
+  }
+}
+
+.btn-outline {
+
+  color: $c-text;
+  background: transparent;
+  border: 1px solid $c-border-dark;
+
+  &:hover {
+
+    color: white;
+    border-color: $c-red;
+    background: $c-red;
+
+  }
+}
+
+.btn-inline {
+
+  display: inline-block;
+  margin: 0 0.2em;
+  padding: 0.1em 0.75em 0.2em;
+  color: white !important;
+  font-size: 0.8em;
+  text-decoration: none;
+
+}
+
+.btn-text {
+
+  cursor: pointer;
+  color: $c-text;
+
+  &.red {
+
+    color: $c-red;
+
+  }
+
+  &.green {
+
+    color: $c-green;
+
+  }
+}
+
+.btn-ico {
+
+  padding: 0;
+
+  svg {
+
+    width: 100%;
+    height: 100%;
+
+  }
+}

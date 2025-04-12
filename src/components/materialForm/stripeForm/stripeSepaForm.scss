@@ -1,0 +1,58 @@
+@import 'src/styles/variables';
+
+#stripe_iban_form {
+
+  .iban_inputs_wrapper{
+    display: flex;
+    margin-bottom: 10px;
+    @media screen and (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+
+    .iban_input_name {
+      width: 50%;
+      margin-right: 25px;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    .iban_input_email {
+      width: 50%;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .form-wrapper {
+    .label {
+      margin-bottom: 6px;
+      padding-left: 5px;
+      font-size: 14px;
+      line-height: 28px;
+      font-family: inherit;
+      font-weight: bold;
+      text-transform: unset;
+      color: inherit;
+    }
+
+    .iban-element {
+      padding: 15px 20px;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      color: inherit;
+      box-sizing: border-box;
+    }
+  }
+
+  .mandate-acceptance {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 10px;
+    color: #aab7c3;
+    font-family: Open Sans, sans-serif;
+    letter-spacing: 0.025em;
+  }
+}

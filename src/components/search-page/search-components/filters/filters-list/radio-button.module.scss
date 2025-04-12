@@ -1,0 +1,64 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .label {
+    display: -webkit-inline-box;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: inherit;
+    text-transform: unset;
+    color: inherit;
+  }
+
+  .input {
+    display: none;
+
+    &:checked ~ .radio {
+      border-color: $primary-color;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: auto 14px auto 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $primary-color;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      will-change: opacity;
+    }
+  }
+
+  .error {
+    width: 100%;
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $error-color;
+    box-sizing: border-box;
+  }
+}

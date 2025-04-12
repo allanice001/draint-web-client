@@ -1,0 +1,283 @@
+@import 'src/styles/variables';
+
+#dialog-subscription-wrapper {
+  .MuiDialog-paper {
+    @media screen and(max-width: 414px){
+      margin: 5px;
+    }
+  }
+  .MuiDialog-paperScrollPaper {
+    display: flex;
+    //max-height: calc(100% - 30px);
+    flex-direction: column;
+  }
+  .MuiDialog-paperWidthSm {
+    width: 100%;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #73B0F4;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
+  //.MuiButtonBase-root {
+  //  font-size: 11px;
+  //  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  //  color: #707070;
+  //}
+}
+
+#stripe-subscription {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  .payment-form {
+    width: 100%;
+    label {
+      color: #707070;
+    }
+    .creditcard {
+      border-radius: 4px;
+      transition: 500ms;
+      &:hover {
+        border-color: lighten(#707070, 20%);
+      }
+    }
+    .btn-loader {
+      transition: 500ms;
+      button {
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      }
+    }
+  }
+  .stripe-form {
+    display: flex;
+    flex-direction: column;
+    .button-wrapper {
+      //display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-basis: 100%;
+      .subscribe-button {
+        background-color: #73B0F4;
+        margin: 15px 10px;
+        padding: 10px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: none;
+        transition: 400ms;
+        &:hover {
+          background-color: white;
+          color: #73B0F4;
+          box-shadow: none;
+        }
+      }
+      .subscribe-button-subs {
+        background-color: #73B0F4;
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: none;
+        transition: 400ms;
+        &:hover {
+          background-color: white;
+          color: #73B0F4;
+          box-shadow: none;
+        }
+      }
+      .subscribe-button-disabled {
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: none;
+      }
+    }
+  }
+  .country-form {
+    label {
+      color: #707070;
+      top: 3px;
+      line-height: 12px;
+      font-size: 10px;
+    }
+
+    .MuiOutlinedInput-input {
+      //height: 10px;
+      //padding: 14px 14px 5px 14px;
+    }
+    .MuiSelect-iconOutlined {
+      right: 7px;
+      top: 17px;
+      //line-height: 15px;
+      font-size: 20px;
+    }
+
+    .MuiSelect-root {
+      //top: 5px;
+      line-height: 16px;
+      font-size: 15px;
+    }
+    width: 100%;
+    margin-bottom: 10px;
+    // border: 1px solid #f2f2f2;
+    &:hover {
+      border-color: lighten(#707070, 20%);
+    }
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    label {
+      color: #707070;
+    }
+  }
+
+  .paypal-input-email-wrapper {
+    .paypal-email-input {
+      input {
+        //height: 24px;
+        font-size: 15px;
+        color: #424770;
+      }
+      label{
+        top: 2px;
+        line-height: 15px;
+        font-size: 10px;
+      }
+      p{
+        margin: 0 0 0 2px;
+        font-size: 9px;
+      }
+      div{
+        margin-bottom: 8px;
+      }
+      fieldset {
+        legend {
+          width: 95px;
+        }
+      }
+    }
+  }
+}
+
+#sign-in-wrapper {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  #sign-up-material-wrapper {
+    padding: 0 5px 15px;
+    .empty-content{
+      height: 0;
+    }
+  }
+  label {
+    color: #707070;
+  }
+  span {
+    color: #707070;
+    margin-right: 2px;
+  }
+  input {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    border-radius: 4px;
+    transition: 500ms;
+    &:hover {
+      border-color: lighten(#707070, 20%);
+    }
+  }
+  .link {
+    text-decoration: none;
+  }
+  .form-switcher {
+    color: #007bff;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .btn {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 500ms;
+    &:hover {
+      border-color: lighten(#707070, 20%);
+    }
+  }
+  .btn-loader {
+    margin-bottom: 8px;
+    transition: 500ms;
+  }
+  .error-message {
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-top: 2px;
+    letter-spacing: 0.1px;
+  }
+  .textbox.error {
+    &:hover {
+      border-color: lighten(#d95565, 15%);
+    }
+  }
+}
+
+#sign-up-wrapper {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  #signup-steper{
+    padding-top: 0;
+  }
+  label {
+    color: #707070;
+  }
+  input {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    border-radius: 4px;
+    transition: 500ms;
+    &:hover {
+      border-color: lighten(#707070, 20%);
+    }
+  }
+  span {
+    color: #707070;
+    margin-right: 2px;
+    @media screen and(max-width: 360px) {
+      font-size: 13px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .form-switcher {
+    color: #007bff;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .btn {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 500ms;
+    &:hover {
+      border-color: lighten(#707070, 20%);
+    }
+  }
+  .btn-loader {
+    transition: 500ms;
+    margin-bottom: 8px;
+  }
+  .error-message {
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-top: 2px;
+    letter-spacing: 0.1px;
+  }
+  .textbox.error {
+    &:hover {
+      border-color: lighten(#d95565, 15%);
+    }
+  }
+}

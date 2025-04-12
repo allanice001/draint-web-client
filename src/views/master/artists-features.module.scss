@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.wrapper {
+  padding: 0 20px 6rem;
+}
+
+.master_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > * {
+    width: 100%;
+    max-width: 400px;
+    padding-top: 100px;
+    display: flex;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.form {
+  Input {
+    margin-bottom: 20px;
+  }
+
+  Textarea {
+    margin-bottom: 10px;
+  }
+
+}

@@ -1,0 +1,130 @@
+@import '../../../styles/variables';
+
+.panel {
+    padding: 0;
+    border-radius: 15px !important;
+    margin-bottom: 20px;
+    box-shadow: none !important;
+    border: 1px solid #E7E7E7;
+
+    &::before {
+        display: none;
+    }
+
+    &_selected {
+        border-color: #806BFF;
+
+        .title {
+            color: $primary-color;
+        }
+    }
+
+    &_error {
+        border-color: #F44336;
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+        
+        @media screen and (max-width: $iPhone6) {
+            font-size: 20px;
+        }
+    }
+
+    &--expanded {
+        margin-top: 0 !important;
+
+        .content {
+            margin-top: -54px;
+            opacity: 1;
+        }
+    }
+}
+
+.flag {
+    display: block;
+    margin-left: 20px;
+}
+
+.header {
+    padding: 11px 25px 11px 20px !important;
+    position: relative;
+    z-index: 1;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        transition: opacity 0.3s linear;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    &--expanded .left {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.content {
+    opacity: 0;
+    transition: opacity .1s .4s linear;
+    padding-bottom: 40px !important;
+}
+
+.sale_icon {
+    position: absolute;
+    top: -21px;
+    right: -21px;
+}
+
+.dropdown_icon {
+    color: $primary-color;
+    transition: transform 0.2s linear;
+}
+
+.rotated {
+    transform: rotateX(180deg);
+}
+
+.crossed {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.crossed::after {
+    content: '';
+    height: 1px;
+    background-color: #000000;
+    display: block;
+    width: 110%;
+    top: 0;
+    left: 0;
+    transform: rotateZ(-9deg) translateY(-12px);
+}
+
+.button {
+    align-self: flex-start;
+    margin-top: 20px;
+}

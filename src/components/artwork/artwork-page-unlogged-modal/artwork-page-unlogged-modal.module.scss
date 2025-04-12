@@ -1,0 +1,49 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  color: $font-color;
+  overflow-y: auto;
+  @include with-scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 25px;
+  display: flex!important;
+  justify-content: center;
+}
+
+.modal_footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.modal_content {
+  font-size: 22px;
+  text-align: center;
+}
+
+.button {
+  padding: 0 20px;
+  margin: 5px;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .content_text {
+    font-size: 24px;
+    line-height: 35px;
+    font: $font-Mulish;
+    text-align: center;
+
+    @include media-down($mobile) {
+      font-size: 20px;
+    }
+  }
+}

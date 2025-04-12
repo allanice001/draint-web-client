@@ -1,0 +1,85 @@
+@import 'src/styles/variables';
+
+.container {
+  display: flex;
+  position: relative;
+  max-width: 205px;
+  border-radius: 5px;
+
+  @media screen and (max-width: $desktop) {
+    min-width: 100%;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  .dropdown {
+
+
+    .icon {
+      height: 20px;
+      width: 20px;
+      z-index: 1;
+      position: absolute;
+      right: 10px;
+      top: 23px;
+    }
+  }
+
+  ::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 28px;
+    color: $font-color;
+  }
+}
+
+.selectedCountries {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: rgba(204, 196, 255, 0.5);
+  color: $primary-color;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    li {
+      margin: 5px 5px 18px 5px;
+    }
+
+    .country__label {
+      width: 100%;
+    }
+
+    .close {
+      height: 12px;
+      width: 12px;
+      margin-left: 30px;
+
+      path {
+        fill: $primary-color;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: bold;
+      text-transform: unset;
+      color: inherit;
+    }
+  }
+}

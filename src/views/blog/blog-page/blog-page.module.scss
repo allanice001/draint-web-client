@@ -1,0 +1,65 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.root {
+  padding-top: 30px;
+  padding-bottom: 6.5rem;
+
+  @include media-up($desktop) {
+    padding-bottom: 130px;
+  }
+
+  .pagination_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+
+  @include media-up($desktop) {
+    margin-bottom: 2rem;
+  }
+}
+
+.popular {
+  margin-top: 3rem;
+  flex-grow: 1;
+
+  @include media-up($desktop) {
+    margin-top: 2rem;
+  }
+}
+
+.row {
+  @include media-up($desktop) {
+    display: flex;
+  }
+}
+
+.col {
+  @include media-up($desktop) {
+    &:first-child {
+      width: 100%;
+      max-width: 60%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+  }
+}
+
+.tabs {
+  margin-top: 2rem;
+}
+
+.content {
+  margin-top: 2rem;
+
+  @include media-up($desktop) {
+    margin-top: 0;
+  }
+}

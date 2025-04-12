@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.hover-nav {
+  position: absolute;
+  top: 50%;
+  right: $scale2;
+  min-width: $scale10;
+  text-align: right;
+  color: #fff;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}

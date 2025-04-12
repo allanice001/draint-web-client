@@ -1,0 +1,65 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.total {
+  font-size: 16px;
+  font-weight: 800;
+  color: $primary-color;
+
+  @include media-up($desktop) {
+    font-size: 24px;
+  }
+}
+
+.root {
+  position: relative;
+}
+
+.footer_wrapper {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+
+    &__payment_step {
+      justify-content: center;
+      @media screen and(min-width: $mobile) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.button {
+  justify-content: space-between !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include media-up($desktop) {
+    min-width: 150px !important;
+  }
+}
+
+.shadow {
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  height: 70px;
+  top: 0px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 1;
+
+  @media screen and (min-width: $desktop) {
+    height: 70px;
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../styles/variables';
+.wrapper {
+  max-width: $desktop;
+  .section {
+    padding: 30px 0 50px 0;
+    border-bottom: 1px solid #E7E7E7;
+    &:last-child {
+      border-bottom: 0
+    }
+  }
+  .information_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .col {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+    .img_wrapper {
+      display: flex;
+      justify-content: center;
+      max-height: 320px;
+      margin-right: 10px;
+      @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      img {
+        max-width: 100%;
+        height: 320px;
+        @media screen and (max-width: $samsung) {
+          justify-content: flex-end;
+          height: auto;
+        }
+      }
+
+      &.desktop_hide {
+        @media screen and (min-width: $desktop) {
+          display: none;
+        }
+      }
+      &.mobile_hide {
+        @media screen and (max-width: $desktop) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.title {
+  width: 100%;
+  font-family: $font-Sen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  width: 100%;
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.bolder {
+    font-weight: 800;
+  }
+}
+
+.materials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    width: 250px;
+    height: 200px;
+    opacity: 0.7;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    transition: opacity .2s ease-in-out;
+    @media screen and (max-width: $gpixel) {
+      width: 160px;
+      height: 167px;
+      font-size: 12px;
+      padding: 15px;
+    }
+    @media screen and (max-width: 455px) {
+      width: 150px;
+      height: 157px;
+      font-size: 12px;
+      padding: 10px;
+      margin: 10px;
+    }
+    @media screen and (max-width: $samsung) {
+      width: 110px;
+      height: 130px;
+      font-size: 10px;
+      padding: 5px;
+      margin: 5px;
+    }
+    .img_wrapper {
+      height: 130px;
+      @media screen and (max-width: $gpixel) {
+        height: 75px;
+      }
+      img{
+        height: 100%;
+      }
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

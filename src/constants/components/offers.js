@@ -1,0 +1,11 @@
+export const ACCEPT = 'Accept';
+export const CART_URL = '/shopping-cart';
+export const CHECKOUT = 'Checkout';
+export const CHECKOUT_PURCHASE_MESSAGE = 'Go to checkout to purchase order';
+export const ORIGINAL_PRICE = 'original price is';
+export const PURCHASED = 'Purchased';
+export const UPDATE_OFFER = 'Update offer';
+export const SELLER_OFFERED = 'seller offered';
+export const WAITING_FOR_SELLER = 'Waiting for seller response';
+export const YOUR_OFFER = 'Your offer';
+export const YOU_HAVE_OFFERED = 'You have offered';

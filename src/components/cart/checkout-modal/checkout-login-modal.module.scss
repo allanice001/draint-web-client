@@ -1,0 +1,50 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.title_wrapper {
+  font-size: 22px;
+
+  .blue {
+    color: $primary-color;
+    font-weight: 600;
+  }
+}
+
+.content_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 40px 10px 40px;
+
+  .footer_content {
+    display: block;
+
+    @include media-down($mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer_title {
+      margin: 0 10px 0 0;
+      align-self: center;
+
+      @include media-down($mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 10px 10px 10px;
+        font-size: 15px;
+      }
+    }
+
+    .create_btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+@import 'src/styles/variables';
+
+.wrapper {
+    padding-bottom: 20px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 20px;
+    }
+}
+
+.section {
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 1px solid #e7e7e7;
+
+    .title {
+        margin: 30px 30px 12px;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: left;
+    }
+}
+
+.table {
+    border-spacing: 0;
+
+    &__wrapper {
+        display: none;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+        }
+    }
+
+    th {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e7e7e7;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        text-align: left;
+        color: rgba(63, 64, 65, 0.4);
+
+        &:first-child {
+            padding-left: 30px;
+        }
+    }
+
+    .preview {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        background-color: #cecece;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #fafafa;
+    }
+
+    td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+
+        &:first-child {
+            padding-left: 30px;
+        }
+    }
+
+    .status {
+        display: inline-block;
+        min-width: 120px;
+        padding: 14px 22px;
+        border-radius: 50px;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: bold;
+        text-align: center;
+
+        &.danger {
+            color: #EB5757;
+            background-color: rgba(235, 87, 87, 0.15);
+        }
+
+        &.success {
+            color: #43BF5F;
+            background-color: rgba(67, 190, 95, 0.15);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 16px;
+
+        &.active {
+            font-weight: bold;
+            background-color: $primary-color;
+            color: white;
+        }
+
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+
+        &.prev,
+        &.next {
+            border: 1px solid #e7e7e7;
+
+            &:hover:not(:disabled) {
+                background-color: $primary-color;
+
+                path {
+                    fill: white;
+                }
+            }
+
+            &:disabled {
+                opacity: .4;
+            }
+
+            svg {
+                height: 12px;
+                width: 6px;
+            }
+
+            path {
+                fill: $font-color;
+            }
+        }
+
+        &.prev {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__displaying {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        .select {
+            min-width: 60px;
+            margin-left: 12px;
+        }
+    }
+}
+
+.actions {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    .action {
+        display: flex;
+        align-items: center;
+        min-width: 120px;
+        padding: 18px 20px;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        &:disabled .icon {
+            opacity: .4;
+        }
+    }
+
+    .icon {
+        margin-right: 11px;
+
+        path {
+            fill: $font-color;
+        }
+    }
+}
+
+.popover {
+    display: block;
+    border-radius: 15px !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.button {
+    border: 1px solid #e7e7e7;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px 25px;
+
+    .icon {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,242 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 95px;
+
+  .content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  @include media-down($tablet) {
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+  }
+}
+
+.blog_title {
+  font-size: 32px;
+  line-height: 43px;
+  color: $font-color;
+  font-family: $font-Sen;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 53px;
+}
+
+.post_title {
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: $font-Sen;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 5px;
+  color: $font-color;
+
+  @include media-down($orient-laptop) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.blog_list_wrapper {
+  max-width: 450px;
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 20px;
+
+  @include media-down($orient-laptop) {
+    margin-bottom: 20px;
+    max-width: 340px;
+  }
+
+  @include media-down($desktop) {
+    margin-bottom: 13px;
+  }
+
+  @include media-down($mobile-s) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.blog_content {
+  display: flex;
+  font-family: $font-Mulish;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  p {
+      word-break: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+
+  @include media-down($orient-laptop) {
+    display: block;
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+  @include media-down($orient-laptop) {
+    display: block;
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blog_author {
+  display: flex;
+  font-family: $font-Lato;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+  color: $outline-color;
+  font-weight: 400;
+
+  @include media-down($orient-laptop) {
+    font-size: 14px;
+  }
+}
+
+  time {
+    font-family: $font-Lato;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+    color: $outline-color;
+    font-weight: 400;
+
+    @include media-down($orient-laptop) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+}
+
+.link_wrapper {
+  margin-top: 50px;
+
+  @include media-down(700) {
+    margin: 40px auto;
+  }
+}
+
+.button_link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-Sen;
+  font-weight: 700;
+  color: $font-color;
+  border: 1px solid $border-color;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: #fff;
+  min-width: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+
+  @include media-up($desktop) {
+    order: 1;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+    color: #ffff;
+  }
+}
+
+.link {
+  word-break: break-word;
+  white-space: nowrap;
+  font-family: $font-Mulish;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $primary-color;
+  padding-left: 10px;
+
+  @include media-down($orient-laptop) {
+    font-size: 14px;
+    padding-left: 0;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.divider {
+  height: 16px;
+  margin: 4px;
+  border-right: 1px solid $outline-color;
+}
+
+.icon_author {
+  margin: 2px 10px;
+}
+
+.list_wrapper {
+  margin-right: 60px;
+  padding-left: 7%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include media-down($sections) {
+    padding-left: 20px;
+  }
+
+  @include media-down($desktop) {
+    margin-right: 50px;
+  }
+
+  @include media-down(700) {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+.slider_sections {
+  flex-basis: calc(100% - 410px);
+  max-width: calc(100% - 410px);
+  height: 100%;
+
+  @include media-down(700) {
+    min-width: 100%;
+    padding-left: 27px;
+  }
+}
+
+.slider_wrapper {
+  width: 100%;
+  height: 652px;
+  padding-top: 120px;
+  padding-left: 17%;
+
+  @include media-down($samsung) {
+    padding-top: 70px;
+    height: 461px;
+  }
+}
+
+

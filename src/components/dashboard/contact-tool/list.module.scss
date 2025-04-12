@@ -1,0 +1,57 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.component_wrapper {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-up($desktop) {
+    margin-right: 40px;
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+.content {
+  @include with-scroll;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 32px;
+  padding-right: 10px;
+
+  @include media-down($tablet) {
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include media-up($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -13px 15px;
+    padding-bottom: 40px;
+
+    & > * {
+      width: calc(50% - 26px);
+      margin: 0 13px 26px;
+    }
+  }
+
+  @include media-up($desktop) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+
+    & > * {
+      width: auto;
+      margin: 0;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

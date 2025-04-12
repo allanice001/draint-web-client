@@ -1,0 +1,52 @@
+@import '../../../../styles/variables';
+
+.block {
+  padding: 0 20px;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    border-left: 1px solid #e7e7e7;
+  }
+
+  .param {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+.block_in_watchlist {
+  text-align: left;
+
+  .param_in_watchlist {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: $font-Muli;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $primary-color;
+
+    @media screen and (max-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  .description_in_watchlist {
+    font-family: $font-Muli;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: $outline-color;
+  }
+}

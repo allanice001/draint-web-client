@@ -1,0 +1,40 @@
+@import 'src/styles/variables';
+
+.sign_in_form{
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  max-width: 500px;
+  width: 500px;
+
+  @media screen and (max-width: $mobile ) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $tablet){
+    padding: 10px;
+  }
+
+  .head{
+    text-align: center;
+    &__title{
+      margin: 0 0 20px;
+    }
+  }
+  span {
+    display: block;
+    margin-top: 20px;
+  }
+  .footer{
+    a{
+      color: #806BFF !important;
+    }
+    line-height: 28px;
+  }
+  .submit_button{
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 10px;
+  }
+}

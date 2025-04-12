@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+
+.form_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  width: 100%;
+
+  @media screen and(min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
+  .profile_data {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    @media only screen and (min-width: $desktop) {
+      width: 400px;
+      margin: 0 30px 0 0;
+    }
+  }
+
+  .address_data {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 15px;
+    @media only screen and (min-width: $desktop) {
+      width: 800px;
+    }
+
+    .field {
+      .label {
+        width: 224px;
+        height: 40px;
+        font-family: $font-Muli;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 740px;
+        height: 50px;
+        padding: 20px 15px;
+        border: 1px solid #E7E7E7;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: $font-Muli;
+      }
+    }
+  }
+}
+
+.info_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .info_block {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-Muli;
+    font-style: normal;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+    .label {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 28px;
+      color: #3F4041;
+    }
+
+    .value {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+.title {
+  height: 41px;
+  font-family: $font-Sen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,162 @@
+@import '../../styles/variables';
+
+main {
+  section.card{
+    @media screen and(max-width: 650px){
+      padding: 1.5625em 0 ;
+    }
+  }
+}
+
+// .paper-content{
+//   position: relative;
+//   max-width: 1000px;
+//   margin: 0 auto;
+//   width: 100%;
+// }
+#checkout-stepper-form {
+  .paper-content {
+
+    .horizontal-stepper-wrapper{
+      .MuiStepConnector-root{
+        display: none;
+      }
+      .MuiStepLabel-iconContainer{
+        .icon-wrap{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          background-color: grey;
+          width: 30px;
+          height: 30px;
+          svg{
+            color: white;
+            font-size: 20px;
+          }
+          &.active{
+            background-color: #73b0f4;
+          }
+        }
+      }
+      .stepper {
+        .stepper-content {
+          display: flex;
+          justify-content: center;
+          min-height: 500px;
+          #checkout-material-wrapper{
+            max-height: 150px;
+          }
+          .address-change {
+            width: 60%;
+          }
+          @media screen and(max-width: 650px){
+            .MuiCardContent-root{
+              padding: 5px;
+            }
+          }
+        }
+        .stepper-button-wrapper{
+          padding: 20px;
+          display: flex;
+          justify-content: flex-end;
+          button{
+            background-color: #73b0f4;
+            color: white;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 10px;
+            &.Mui-disabled{
+              color: white;
+              background-color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .MuiStepper-root {
+    padding: 24px;
+  }
+
+  .MuiStepLabel-root {
+    .MuiStepLabel-iconContainer {
+      .MuiSvgIcon-root {
+        font-size: 18px;
+
+        .MuiStepIcon-text {
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+    .MuiStepLabel-label.MuiStepLabel-active {
+      color: rgba(0, 0, 0, 0.87);
+      font-weight: 500;
+      font-size: 15px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    }
+  }
+  .container{
+    width: 60%;
+    .form-wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+}
+
+.form-wrapper{
+  .MuiFormControl-root{
+    padding-bottom: 10px;
+    p{
+      font-size: 10px;
+    }
+    input{
+      font-size: 13px;
+    }
+    label{
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and(max-width: 650px){
+  #checkout-stepper-form {
+    height:100%;
+    .paper-content {
+      width: 100%;
+      .stepper{
+        .stepper-button-wrapper{
+          display: flex;
+          flex-direction: column-reverse;
+          button{
+            margin: 0 0 10px !important;
+            padding-top: 20px;
+          }
+        }
+        .stepper-content{
+          min-height: 0 !important;
+          #checkout-material-wrapper{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .container{
+      width: 95%;
+    }
+  }
+}
+
+.MuiPaper-elevation1 {
+  //width: 510px;
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 0 3px 0px rgba(0, 0, 0, 0.12);
+  transition: 500ms;
+
+  &:hover {
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.2), 0px 0px 8px 1px rgba(0, 0, 0, 0.14), 0px 0 3px 0px rgba(0, 0, 0, 0.12)
+  }
+}

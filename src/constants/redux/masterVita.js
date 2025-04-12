@@ -1,0 +1,4 @@
+export const GET_PROFILES_DATA = 'GET_PROFILES_DATA';
+export const GET_QUESTIONS = 'GET_QUESTIONS';
+export const SET_VITA_FILTER = 'SET_VITA_FILTER';
+export const SET_LOADING = 'SET_LOADING';

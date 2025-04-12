@@ -1,0 +1,100 @@
+@import 'src/styles/variables';
+
+.thumbsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  display: inline-flex;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.thumbInner {
+  width: 100%;
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.deleteBtnWrapper {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.deleteBtnWrapper > .deleteBtn {
+  background-color: $font-color;
+  color: #fff;
+  padding: 4px;
+  border-radius: 0.2em;
+}
+
+.img {
+  display: block;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-Mulish;
+}
+
+.title {
+  color: $font-color;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: $font-color;
+  font-size: 16px;
+}
+
+.highlight {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.description {
+  text-align: center;
+}
+
+.resultTitle {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+.dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+}
+
+.dropzone:focus {
+  border-color: #2196f3;
+}
+
+.dropzone.disabled {
+  opacity: 0.6;
+}

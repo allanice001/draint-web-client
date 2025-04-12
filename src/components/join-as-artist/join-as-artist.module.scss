@@ -1,0 +1,51 @@
+@import 'src/styles/variables';
+
+.content {
+    max-width: 915px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+}
+
+.image {
+    flex-basis: 476px;
+    margin-right: auto;
+}
+
+.description {
+    text-align: center;
+    margin-top: 28px;
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+        flex-basis: 382px;
+        margin-top: 30px;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7;
+
+    &>*:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        border-bottom: 0;
+
+        &>*:first-child {
+            margin-right: 24px;
+            margin-bottom: 0;
+        }
+    }
+}

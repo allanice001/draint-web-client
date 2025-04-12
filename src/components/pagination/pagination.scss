@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: none !important;
+}
+
+.pag-item {
+  display: inline-flex;
+  margin: 3px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.dark .pag-link {
+    background-color: #333440;
+  }
+
+  &.light .pag-link {
+    background-color: white;
+  }
+
+  &.dark.active .pag-link {
+    background-color: #73b0f4;
+  }
+
+  &.light.active .pag-link {
+    background-color: gainsboro;
+  }
+}
+
+.pag-link {
+  height: 32px;
+  width: 32px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &.dark {
+    color: white;
+  }
+  &.light {
+    color: #333440;
+  }
+}

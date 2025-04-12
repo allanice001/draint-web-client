@@ -1,0 +1,145 @@
+#blog {
+  padding: 0 50px;
+}
+
+.no-post{
+  min-height: 35vh;
+  .center-head{
+    padding-top: 70px;
+    font-size: 1.25em;
+    font-weight: 600;
+  }
+}
+
+.blog-posts-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  .MuiCardActionArea-root{
+    height: 100%;
+    .MuiCardContent-root{
+      height: 100%;
+    }
+  }
+  .blog-single-post {
+    margin: 20px;
+  }
+}
+
+.center-head{
+  text-align: center;
+}
+
+.blog-edit-dialog {
+  .MuiPaper-root{
+    z-index: 99999;
+    min-width: 800px;
+    height: 80%;
+    position: relative;
+    .img-wrap{
+      display: block;
+    }
+  }
+  .editor-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+  }
+
+  .editor-blog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    .post-form-control {
+      margin-top: 15px;
+      width: 100%;
+      padding: 0 20px;
+      min-height: 55px;
+      label{
+        left: 10px;
+        font-size: 16px;
+        text-transform: none;
+        color: rgb(107,107,107);
+      }
+      input{
+        font-size: 16px;
+      }
+    }
+    .gallery-uploader-button{
+      margin: 10px 20px;
+      .add-post-image{
+        background-color: #73B0F4;
+        font-size: 12px;
+        &:hover{
+          background-color: #4495f0;
+        }
+      }
+    }
+    .blog-content-label{
+      margin: 10px 20px 0;
+      color: rgb(107,107,107);
+      font-size: 13px;
+    }
+    .text-editor {
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 140px);
+      .ql-container{
+        overflow: auto;
+      }
+    }
+  }
+  .editor-action-wrap{
+    display: flex;
+    justify-content: space-between;
+    .post-buttons-wrap{
+      button{
+        color: white;
+        background-color: #73B0F4;
+        font-size: 12px;
+        border-radius: 20px;
+        margin-left: 10px;
+        &:hover{
+          background-color: #4495f0;
+        }
+        &.Mui-disabled{
+          background-color: grey;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 1024px) {
+  .blog-posts-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .blog-edit-dialog{
+    .MuiPaper-root{
+      min-width: 90%;
+    }
+  }
+}
+
+@media screen and ( max-width: 650px) {
+  #blog{
+    padding: 0;
+  }
+  .blog-posts-wrapper {
+    .MuiCardContent-root{
+      flex-direction: column;
+      .img-wrap{
+        display: contents !important;
+        width: 100% !important;
+        height: auto;
+        img{
+          height: auto !important;
+        }
+      }
+    }
+  }
+}
+
+
+

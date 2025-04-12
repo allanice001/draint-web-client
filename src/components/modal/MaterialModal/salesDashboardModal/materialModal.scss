@@ -1,0 +1,138 @@
+@import '../../styles/variables';
+
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(125, 125, 125, 0.3);
+
+  .paper {
+    display: block;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(136, 136, 136, 0.80);
+    border-radius: 3px;
+    padding: 2rem;
+    min-height: 300px;
+    max-height: 700px;
+    width: 1000px;
+    overflow-y: scroll;
+
+    .modal-wrapper {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+
+      .text-decorator-modal {
+        font-size: 1.9rem;
+        color: #73B0F4;
+        font-weight: 600;
+      }
+
+      .artist {
+        display: flex;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        box-shadow: 0 0 3px rgba(136, 136, 136, 0.30);
+        background-color: #F5F7FA;
+        border-radius: 3px;
+
+        .artwork-title {
+          color: #73B0F4;
+          font-weight: 600;
+        }
+      }
+
+      .artwork-wrapper {
+        display: flex;
+
+        .image-wrapper {
+          display: flex;
+          width: 100%;
+
+          .image {
+            border-radius: 3px;
+            display: flex;
+            height: auto;
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .artwork-description {
+          font-size: 1.9rem;
+          display: flex;
+          font-weight: 600;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: space-between;
+          width: 100%;
+          //box-shadow: 0 0 3px rgba(136, 136, 136, 0.44);
+          //background-color: #F5F7FA;
+          border-radius: 3px;
+
+          .description {
+            display: flex;
+            width: 100%;
+            padding-bottom: 1rem;
+            .detail-wrapper {
+              display: flex;
+              padding-left: 1rem;
+              flex-direction: column;
+              align-items: flex-start;
+              width: 50%;
+            }
+
+            .specification-wrapper {
+             display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin-left: 5rem;
+              width: 50%;
+            }
+          }
+
+          .price-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #F5F7FA;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: #F5F7FA;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(150, 150, 150, 0.37);
+      border: 0.5px solid rgba(150, 150, 150, 0.37);
+      border-radius: 3px;
+    }
+  }
+}
+
+.icon-label {
+  color: rgba(245, 247, 250, 0.72);
+
+  svg {
+    font-size: 2rem;
+  }
+}

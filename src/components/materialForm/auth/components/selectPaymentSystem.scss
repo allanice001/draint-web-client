@@ -1,0 +1,16 @@
+#select-payment-system-form {
+  .MuiFormGroup-root {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  span {
+    width: auto;
+  }
+}

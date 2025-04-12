@@ -1,0 +1,167 @@
+@import 'src/styles/variables';
+
+nav.sidebar,
+nav.mobile-slideout {
+  position: fixed;
+  width: 200px;
+  height: calc(100% - 90px);
+  z-index: 5;
+  padding: 15px;
+  background-color: $c-dark;
+  overflow-y: scroll;
+  a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    &.active {
+      color: white;
+      border-radius: $radius;
+      background-color: $c-blue;
+    }
+  }
+  @media screen and(max-width: 640px) {
+
+  }
+
+  @media screen and(max-width: 640px) {
+    height: 0 !important;
+    transition: height 1s;
+    &.mobileOpen {
+      overflow-y: scroll;
+      height: calc(100% - 60px) !important;
+    }
+    a {
+      width: 100% !important;
+      height: 50px !important;
+    }
+  }
+}
+
+nav.mobile-fixed {
+
+  // moves navigation to bottom
+  // of viewport like iOS app
+  @media screen and(max-width: 640px) {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    height: auto;
+    padding: 0;
+    background-color: $c-dark;
+    border-bottom: none;
+    .logo {
+      display: none;
+    }
+    .nav-links {
+      position: relative;
+      top: auto;
+    }
+    a {
+      float: left;
+      width: 50%;
+      margin: 0;
+      height: auto;
+      line-height: 1;
+      border: none;
+      color: white;
+      font-size: 0.9em;
+      text-align: center;
+      border: none !important;
+      &.active {
+        border-top: 3px solid $c-primary !important;
+        border-bottom: 3px solid $c-primary !important;
+        background-color: lighten($c-dark, 5%);
+      }
+    }
+  }
+
+  .btn-togglenav {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+nav.mobile-slideout {
+  @media (max-width: $mobile){
+    position: fixed;
+    width: $scale11;
+    left: -$scale11;
+    height: 100%;
+    background: $c-dark;
+    transition: all 0.2s ease-in-out;
+    .btn-togglenav {
+      display: block;
+      position: absolute !important;
+      top: 2.2em;
+      left: 100%;
+      width: 2em;
+      cursor: pointer;
+      height: 2em;
+      margin-left: $scale;
+      @media (min-width: $mobile){
+        display: none !important;
+      }
+    }
+
+    &.open {
+      left: 0;
+      + main {
+        opacity: 0.05;
+      }
+    }
+
+    .nav-links {
+      position: relative;
+      top: auto;
+      transform: none;
+    }
+    a {
+      display: block;
+      float: none;
+      color: white;
+      margin-bottom: 0.75em;
+    }
+  }
+}
+
+nav.sidebar .nav-links.nested,
+nav.mobile-slideout .nav-links.nested {
+
+  ul a {
+    color: #C2CBD9;
+    &:hover {
+      color: $c-primary;
+    }
+  }
+}
+
+.nav-links.nested {
+  a {
+    display: block;
+    &:hover {
+      color: $c-primary;
+    }
+  }
+
+  > a {
+    font-weight: 600;
+  }
+
+  // sub navs housed in ul
+  ul {
+    font-size: 0.9em;
+    margin: 0 0 $scale2 $scale;
+    a {
+      margin-bottom: 0.8em;
+    }
+  }
+}

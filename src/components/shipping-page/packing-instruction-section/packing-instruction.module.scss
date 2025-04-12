@@ -1,0 +1,94 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  background: #FAFAFA;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 110px;
+
+  @include media-down($ipadAir) {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  text-align: left;
+  margin: 20px;
+  width: 380px;
+  height: 660px;
+
+  @include media-down($ipadAir) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.card_img {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.card_img_wrapped {
+  width: 100%;
+  height: 230px;
+
+  @include media-down($ipadAir) {
+    width: 320px;
+  }
+}
+
+.title {
+  font-family: $font-Sen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 55px;
+
+  @include media-down($mobile) {
+    line-height: 28px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+}
+
+.desc {
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 2px solid #806BFF;
+  color: #806BFF;
+  font-family: $font-Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50%;
+}

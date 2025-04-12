@@ -1,0 +1,10 @@
+.countries {
+  width: 350px;
+  margin: 4px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  label {
+    font-weight: 500;
+  }
+}

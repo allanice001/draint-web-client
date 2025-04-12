@@ -1,0 +1,53 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 300px;
+  height: 46px;
+  padding: 0 15px;
+  border-radius: 50px;
+  border: 1px solid $border-color;
+}
+
+.inputWrapper > input {
+  margin-left: 15px;
+  width: 100%;
+  font-size: 16px;
+  color: $font-color;
+}
+
+.list {
+  position: absolute;
+  z-index: 6;
+  width: 90%;
+  background-color: white;
+  left: 45%;
+  transform: translateX(-50%);
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 5px 0;
+  max-height: 200px;
+  overflow-y: auto;
+
+  @include with-scroll;
+
+  &__item {
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+
+    @include text-hover-primary;
+  }
+}
+
+.alignBottom {
+  top: 120%;
+}
+
+.alignTop {
+  bottom: 120%;
+}

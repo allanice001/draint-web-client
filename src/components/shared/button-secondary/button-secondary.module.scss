@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.root {
+  @include text-caption(inherit);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $border-color;
+  background-color: #fff;
+  border-radius: 50px;
+  min-width: 60px;
+  height: 60px;
+  transition: background-color 0.4s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: darken(white, 5%);
+  }
+
+  &.active {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: white;
+  }
+
+  &.sm {
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+
+  @include media-down($desktop) {
+    height: 50px;
+    min-width: 50px;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 754px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.content {
+  text-align: center;
+  width: 75px;
+  height: 60px;
+  @media screen and (min-width: $desktop) {
+    width: 110px;
+    height: 80px;
+  }
+}
+
+.counter{
+  font-size: 32px;
+  line-height: 40px;
+
+  font-family: $font-Muli;
+  font-weight: 900;
+  color: rgba($primary-color, .45);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 58px;
+  }
+}
+
+.name {
+  line-height: 1;
+  font-family: $font-Sen;
+  font-weight: bold;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+  }
+}

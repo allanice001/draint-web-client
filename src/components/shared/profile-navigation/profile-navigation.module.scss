@@ -1,0 +1,84 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  background-color: #f6f6f6;
+
+  @include media-down($desktop) {
+    display: none;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  margin: 0 -1em;
+  overflow: auto;
+  padding: 0;
+
+  @include with-scroll;
+}
+
+.artist_collector_button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 60px;
+  padding: 0 1em;
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+  font-size: 14px;
+  @include media-down($orient-laptop) {
+    padding: 0 0.5em;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    opacity: 0;
+    border-radius: 1em;
+    height: 3px;
+    bottom: 0;
+    left: 1em;
+    right: 1em;
+    background-color: var(--primary-color, $primary-color);
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+  }
+
+  svg path {
+    transition: fill 0.2s ease-in-out;
+    will-change: fill;
+  }
+
+  &.active {
+    color: var(--primary-color, $primary-color);
+    font-weight: 800;
+
+    &::after {
+      opacity: 1;
+    }
+
+    svg path {
+      fill: var(--primary-color, $primary-color);
+    }
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+  }
+
+  &:hover {
+    color: var(--primary-color, $primary-color);
+  }
+}

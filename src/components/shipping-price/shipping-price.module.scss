@@ -1,0 +1,99 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.piece {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__label {
+    margin-right: 10px;
+    font-size: 12px;
+
+    @include media-up($desktop) {
+      font-weight: bold;
+      color: #c7c7c7;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__amount {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $font-color;
+  }
+}
+
+.price_wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  justify-content: space-between;
+
+  @media screen and (max-width: $iPhone6) {
+    width: 100%;
+  }
+
+  .piece__label {
+    @include media-up($desktop) {
+      display: none;
+    }
+  }
+}
+
+.price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  color: var(--primary-color, $primary-color);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  &_price_green {
+    color: #00c853;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: 'Sen', sans-serif;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 28px;
+      line-height: 35px;
+      font-family: 'Sen', sans-serif;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    flex-direction: row;
+  }
+}

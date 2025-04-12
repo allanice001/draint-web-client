@@ -1,0 +1,223 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.map {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: height 0.2s ease-in-out;
+
+  @include media-up($desktop) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__wrapper {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #fafafa;
+
+    @media screen and (min-width: $iPhone6) {
+      align-items: normal;
+    }
+
+    @include media-up($desktop) {
+      margin-top: 30px;
+      margin-bottom: 0;
+      padding-bottom: 25px;
+      padding-top: 40px;
+      min-height: 230px;
+    }
+  }
+
+  @include media-down($tablet) {
+    &.collapsed {
+      overflow: hidden;
+    }
+  }
+}
+
+.step {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: center;
+    position: relative;
+  }
+
+  .icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    @include media-up($desktop) {
+      width: 34px;
+      height: 34px;
+    }
+
+    path {
+      fill: $font-color;
+    }
+
+    &__wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #f5eded;
+      border-radius: 50%;
+      background-color: #fff;
+      flex-shrink: 0;
+
+      @include media-up($desktop) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  &.completed {
+    .icon {
+      &__wrapper {
+        background-color: var(--primary-color, $primary-color);
+      }
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  &.declined {
+    .icon {
+      &__wrapper {
+        background-color: $error-color;
+      }
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-up($desktop) {
+      margin-left: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      padding: 1rem 0 0 0;
+      transform: translateY(100%) translateX(-50%);
+    }
+  }
+
+  .label {
+    min-width: 140px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $font-Lato;
+    font-weight: normal;
+
+    @include media-up($desktop) {
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+    }
+
+    &.completed {
+      color: var(--primary-color, $primary-color);
+      font-weight: 900;
+    }
+
+    &.declined {
+      color: $error-color;
+      font-weight: 900;
+    }
+  }
+
+  .time {
+    font-size: 14px;
+    font-family: $font-Lato;
+    width: 149px;
+
+    span {
+      word-wrap: break-word;
+    }
+  }
+}
+
+.delimeter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  width: 20px;
+  height: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  transform: rotate(90deg);
+  flex-shrink: 0;
+
+  @include media-up($desktop) {
+    width: auto;
+    height: auto;
+    transform: rotate(0deg);
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 50px;
+  }
+
+  & > * {
+    width: 4px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgba(218, 218, 218, 0.5);
+
+    @include media-up($desktop) {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  &.completed > * {
+    background-color: var(--primary-color, $primary-color);
+  }
+}
+
+.actions {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-bottom: -25px;
+
+  @include media-up($tablet) {
+    display: none;
+  }
+
+  &.collapsed {
+    border-top: 1px solid #f5eded;
+  }
+
+  button {
+    padding: 0.5em 0;
+
+    svg {
+      transform: rotate(180deg);
+    }
+
+    &.collapsed svg {
+      transform: rotate(0);
+    }
+  }
+}

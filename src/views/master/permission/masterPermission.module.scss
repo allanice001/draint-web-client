@@ -1,0 +1,63 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  padding: 0 30px;
+
+  .filters {
+    display: flex;
+    margin: 15px auto;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+    .form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+
+      &.invites {
+        flex-direction: column;
+      }
+
+      .filter {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+
+        .selector {
+          margin-top: 27.5px;
+        }
+      }
+
+      .inviteSubmit {
+        background-color: rgba(128, 107, 255, 0.39);
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+
+      .filterSubmit {
+        color: #806BFF;
+        padding: 34px 10px 0 10px;
+
+        @media screen and (max-width: $desktop) {
+          width: 20%;
+          margin: 0;
+          height: auto;
+        }
+
+        .icon:hover {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,62 @@
+@import 'src/styles/variables';
+
+.mapToggle {
+  position: absolute;
+  right: 0;
+  top: -6px;
+
+  @media screen and (max-width: $container) {
+    top: -59px
+  }
+}
+
+.map__button {
+  display: none;
+  align-items: center;
+  padding: 13px 16px;
+  border-radius: 50px;
+  border: 1px solid #e7e7e7;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  @media screen and (min-width: $desktop) {
+    display: inline-flex;
+    min-width: 175px;
+    margin-left: auto;
+  }
+
+  .icon {
+    path {
+      transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  &.open {
+    background-color: $primary-color;
+    color: #fff;
+
+    .arrow {
+      transform: rotateZ(180deg);
+      transform-origin: center;
+
+      path {
+        stroke: #fff;
+      }
+    }
+
+    .map__icon path {
+      fill: #fff;
+    }
+  }
+}

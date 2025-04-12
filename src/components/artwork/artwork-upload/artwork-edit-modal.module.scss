@@ -1,0 +1,37 @@
+.upload_modal {
+  &__content {
+    max-width: 850px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    &__inner {
+      margin-bottom: 20px !important;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    button:first-child {
+      margin-right: 20px;
+    }
+
+    button {
+      min-width: 112px;
+    }
+  }
+}
+
+.instructions {
+  flex-shrink: unset;
+}
+
+.upload_image{
+  min-height: 400px !important;
+  &__small_image_wrap {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  &__small_images {
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,101 @@
+@import '../../styles/variables';
+
+.emoji_wrapper {
+  .emoji_title {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .emoji_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    .emoji {
+      width: 50px;
+      height: 50px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 24px 35px;
+      .emoji {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+}
+
+.form {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 30px;
+  .title {
+    font-size: 18px;
+  }
+}
+
+.wrapper {
+  margin-top: 5rem;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .title {
+      font-family: $font-Sen;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    .subtitle {
+      font-family: $font-Mulish;
+      font-size: 20px;
+      line-height: 38px;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      &.image {
+        display: none;
+        @media screen and (min-width: $tablet) {
+          display: flex;
+          margin-left: 50px;
+        }
+      }
+      @media screen and (min-width: $tablet) {
+        width: 50%;
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+      align-items: flex-end;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__wrapper {
+    margin: 30px 0;
+  }
+}

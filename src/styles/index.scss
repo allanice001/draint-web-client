@@ -1,0 +1,39 @@
+@import './variables';
+@import './typography';
+@import './redesign';
+@import './google-place';
+@import './intl-tel-input';
+@import './transform-component';
+@import './animation';
+@import './utilities';
+
+@import './components';
+
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+div.google-visualization-tooltip {
+  width: 180px !important;
+  margin-left: 125px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  padding: 16px 20px 10px 20px !important;
+}
+
+div.google-visualization-tooltip ul,
+div.google-visualization-tooltip ul li {
+  margin: 0 0 7px 0 !important;
+}
+
+div.google-visualization-tooltip .google-visualization-tooltip-item span {
+  font-weight: 400 !important;
+}
+
+div.google-visualization-tooltip
+  .google-visualization-tooltip-item:first-child
+  span {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}

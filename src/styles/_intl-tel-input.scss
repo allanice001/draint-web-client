@@ -1,0 +1,84 @@
+@import '~react-intl-tel-input/dist/main.css';
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.flag-dropdown {
+  //display: flex;
+  //width: 100%;
+  //flex-grow: 1;
+  //input {
+  //  border-left: none !important;
+  //  border-radius: 0 5px 5px 0 !important;
+  //  padding-left: 10px !important;
+  //}
+  //.flag-container  {
+  //  border: 1px solid #e7e7e7;
+  //  border-right: none;
+  //  border-radius: 5px 0 0 5px;
+  //  position: unset;
+  //  flex-basis: 40px;
+  //
+  //  .selected-flag {
+  //    display: flex !important;
+  //    align-items: center;
+  //    justify-content: center;
+  //    padding-left: 15px;
+  //    padding-right: 5px;
+  //    width: 100% !important;
+  //    .selected-dial-code {
+  //      padding-left: 10px !important;
+  //    }
+  //  }
+    .country-list {
+      //position: absolute;
+      //width: 100%;
+      margin-top: 8px;
+      border-radius: 5px;
+      border-top: 6px solid #fff;
+      border-bottom: 6px solid #fff;
+      background-color: #fff;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      z-index: 3;
+      max-height: 200px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: unset !important;
+
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 28px;
+      color: inherit;
+
+      @include with-scroll();
+
+      .country{
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+        position: relative;
+        -webkit-transform: translate3d(0,0,0);
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        padding: 0 0.5em;
+        width: calc(100% - 1em);
+        font-family: $font-Mulish;
+        background-color: #fff;
+        z-index: 2;
+
+        input.search-box {
+          position: absolute;
+          margin: 0;
+          padding-left: 2em;
+          z-index: -1;
+        }
+
+        .search-emoji {
+          margin-left: 0.4em;
+        }
+      }
+    }
+
+
+  //}
+}

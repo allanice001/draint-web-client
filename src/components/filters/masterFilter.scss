@@ -1,0 +1,101 @@
+@import 'src/styles/variables';
+
+$card-margin: 4px;
+
+.MuiSvgIcon-root {
+  width: 24px;
+  height: 24px;
+}
+
+.filters {
+  padding: 0.5em;
+
+  &-wrapper {
+    margin: 0.5em 0.25em;
+  }
+
+  .total {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.54);
+    line-height: 1.5;
+
+    b {
+      color: $font-color;
+    }
+  }
+
+  &:not(.column) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > *:not(:last-child) {
+      margin-right: 2em;
+    }
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  .MuiFormGroup-root {
+    .MuiFormControlLabel-root {
+      margin-bottom: 0;
+      margin-right: 9px;
+    }
+  }
+
+  .MuiCard-root {
+    margin: $card-margin;
+    min-height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .total-count {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    text-transform: uppercase;
+    padding: 0 10px 0;
+    text-align: center;
+    max-width: 100px;
+    flex-grow: 1;
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-left: $card-margin;
+    }
+
+    &:not(:last-child) {
+      margin-right: $card-margin;
+    }
+
+    &__wrapper {
+      margin: $card-margin;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filters-social {
+  display: flex;
+  padding: 1em;
+  flex-direction: row !important;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+}

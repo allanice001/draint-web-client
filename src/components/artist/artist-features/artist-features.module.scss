@@ -1,0 +1,126 @@
+@import '../../../styles/variables';
+
+.carousel {
+
+    &__wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 430px;
+        padding: 34px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 4px solid transparent;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+
+        &:not(:last-child) {
+
+            @media screen and (min-width: $desktop) {
+                margin: 0 20px;
+            }
+        }
+
+        &:hover {
+            border-color: $primary-color;
+            box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.07);
+        }
+
+        img {
+            width: 34px;
+            height: 34px;
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $primary-color;
+        }
+
+        .label {
+            margin-bottom: 20px;
+            font-family: $font-Sen;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 600;
+
+            @media screen and (min-width: $desktop) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.content {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 14px;
+        }
+    }
+
+    &__wrapper {
+        padding-bottom: 44px;
+        border-bottom: 1px solid #e7e7e7;
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            padding: 0 56px;
+            border-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    .laptop {
+        display: none;
+        flex-shrink: 0;
+
+        @media screen and (min-width: $desktop) {
+            display: block;
+            margin-right: 40px;
+        }
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+
+    &>*:not(:last-child) {
+        margin-right: 20px;
+    }
+}

@@ -1,0 +1,162 @@
+@import './variables';
+
+@mixin reset-btn {
+  border: none;
+  font-family: $font-Muli;
+  background-color: transparent;
+}
+
+@mixin link-hover {
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+
+  &:not(:disabled):hover {
+    color: $primary-color;
+  }
+}
+
+@mixin link-icon-hover {
+  path {
+    transition: fill 0.2s ease-in-out;
+    will-change: fill;
+  }
+
+  &:not(:disabled):hover {
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
+@mixin hover-primary {
+  transition: background-color 0.2s ease-in-out;
+  will-change: background-color;
+
+  &:not(:disabled):hover {
+    background-color: darken($primary-color, 5);
+  }
+}
+
+@mixin text-hover-primary {
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+
+  &:not(:disabled):hover {
+    color: darken($primary-color, 5);
+  }
+}
+
+@mixin with-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #e7e7e7;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #e7e7e7;
+  }
+}
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@mixin title-2() {
+  font-size: 28px;
+  line-height: 40px;
+  font-family: $font-Sen;
+  font-weight: 400;
+  margin: 0;
+}
+
+@mixin subtitle-2() {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: $font-Mulish;
+  margin-bottom: 0;
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin image-circle($width) {
+  width: $width;
+  height: $width;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+
+@mixin ellipsis($max-width: 100%) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  max-width: $max-width;
+}
+
+@mixin ellipsis-rows($rows) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+}
+
+@mixin text-caption($color: $caption-color) {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 700;
+  font-family: $font-Mulish;
+  color: $color;
+}
+
+@mixin text-title {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  font-family: $font-Mulish;
+  color: $font-color;
+}
+
+@mixin text {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: $font-Mulish;
+  color: $font-color;
+}
+
+@mixin border-bottom {
+  &::after {
+    height: 1px;
+    background-color: $border-color;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    position: absolute;
+    content: '';
+  }
+}

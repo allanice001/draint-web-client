@@ -1,0 +1,39 @@
+@use "sass:math";
+@import '../../../styles/variables';
+
+.actions {
+
+  text-align: right;
+
+  a, button {
+
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    opacity: 0.7;
+    font-size: 1em;
+    white-space: nowrap;
+    margin-right: math.div($scale, 2);
+    background-color: transparent;
+    transition: opacity 0.2s ease-in-out;
+
+    &:last-child {
+
+      margin-right: 0;
+
+    }
+
+    .ico {
+
+      width: 1.1em;
+      height: 1.1em;
+
+    }
+
+    &:hover {
+
+      opacity: 1;
+
+    }
+  }
+}

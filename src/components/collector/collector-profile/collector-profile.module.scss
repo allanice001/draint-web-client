@@ -1,0 +1,49 @@
+@import 'src/styles/variables';
+
+.setting {
+    margin-top: 28px !important;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 46px !important;
+    }
+
+    .row {
+
+        &>* {
+            margin-bottom: 30px;
+
+            @media screen and (min-width: $desktop) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            flex-grow: 2;
+
+            &>* {
+                flex: 1;
+            }
+
+            &>*:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    .column {
+
+
+        @media screen and (min-width: $desktop) {
+            flex: 1;
+        }
+    }
+
+    .column>* {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 45px;
+        }
+    }
+}

@@ -1,0 +1,226 @@
+{
+    "signinForm": {
+        "email": {
+            "label": "Email",
+            "type": "email",
+            "required": true
+        },
+        "password": {
+            "label": "Password",
+            "type": "password",
+            "required": true
+        },
+        "forgotpassword": {
+            "type": "link",
+            "url": "/forgotpassword",
+            "text": "Forgot your password?"
+        }
+    },
+    "signupPricingForm": {
+        "first_name": {
+            "label": "First Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your first name"
+        },
+        "last_name": {
+            "label": "Last Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your last name"
+        },
+        "email": {
+            "label": "Email",
+            "value": "",
+            "type": "email",
+            "required": true
+        },
+        "password": {
+            "label": "Password",
+            "type": "password",
+            "required": false
+        },
+        "username": {
+            "label": "Draint Profile Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your preferred Profile Name"
+        }
+    },
+    "signupForm": {
+        "first_name": {
+            "label": "First Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your first name"
+        },
+        "last_name": {
+            "label": "Last Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your first name"
+        },
+        "username": {
+            "label": "Draint Profile Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your preferred Profile Name"
+        },
+        "email": {
+            "label": "Email",
+            "value": "",
+            "type": "email",
+            "required": true
+        },
+        "password": {
+            "label": "Password",
+            "type": "password",
+            "required": true
+        },
+        "plan": {
+            "label": "Plan",
+            "type": "select",
+            "options": [],
+            "required": true
+        },
+        "token": {
+            "label": "Credit Card",
+            "type": "creditcard",
+            "required": true
+        }
+    },
+    "userSignUpForm": {
+        "first_name": {
+            "label": "First Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your first name"
+        },
+        "last_name": {
+            "label": "Last Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your first name"
+        },
+        "username": {
+            "label": "Draint Profile Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "Please enter your preferred Profile Name"
+        },
+        "email": {
+            "label": "Email",
+            "value": "",
+            "type": "email",
+            "required": true
+        },
+        "password": {
+            "label": "Password",
+            "type": "password",
+            "required": true
+        },
+        "token": {
+            "label": "Credit Card",
+            "type": "creditcard",
+            "required": true
+        },
+        "inviteId": {
+            "type": "hidden",
+            "value": ""
+        }
+    },
+    "checkoutForm": {
+        "first_name": {
+            "label": "First Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the first name of receiver"
+        },
+        "last_name": {
+            "label": "Last Name",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the last name of receiver"
+        },
+        "country": {
+            "label": "Country",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the country of receiver"
+        },
+        "region": {
+            "label": "Region",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the region of receiver"
+        },
+        "city": {
+            "label": "City",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the city of receiver"
+        },
+        "street": {
+            "label": "Street",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the street of receiver"
+        },
+        "building": {
+            "label": "Building",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the building of receiver"
+        },
+        "unit": {
+            "label": "Unit",
+            "value": "",
+            "type": "text",
+            "required": false,
+            "errorMessage": "You have to specifiy the unit of receiver"
+        },
+        "number": {
+            "label": "Number",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the number of receiver"
+        },
+        "zipcode": {
+            "label": "Zip code",
+            "value": "",
+            "type": "text",
+            "required": true,
+            "errorMessage": "You have to specifiy the zip code of receiver"
+        },
+        "artworks": {
+            "type": "hidden",
+            "value": []
+        },
+        "buyer": {
+            "type": "hidden",
+            "value": ""
+        },
+        "token": {
+            "label": "Credit Card",
+            "type": "creditcard",
+            "required": true
+        }
+    }
+}

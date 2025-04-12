@@ -1,0 +1,25 @@
+
+#master-newsletter{
+    .MuiTableContainer-root {
+        overflow: hidden;
+        .newsletter-table .MuiTableHead-root th{
+            font-size: 1em;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-top: 1rem;
+            border-right: 1px solid rgba(224, 224, 224, 1);
+        }
+
+        .newsletter-table td{
+            font-size: 1em;
+            border-right: 1px solid rgba(224, 224, 224, 1);
+        }
+    }
+    .filter-item{
+        .MuiFormGroup-root{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+  
+}

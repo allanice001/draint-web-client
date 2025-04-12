@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.contentWrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+    }
+    .instagramUploader {
+        width: 100%;
+        @media screen and (min-width: $tablet) {
+            width: calc(40% - 10px);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc(33% - 10px);
+        }
+    }
+    .instagramFeed {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        font-family: $font-Sen;
+        &Title {
+            font-weight: normal;
+            margin-block: 10px;
+        }
+        &Subtitle {
+          font-weight: bold;
+        }
+        &Placeholder {
+            height: 90vh;
+            width: 100%;
+            padding: 15px;
+        }
+        @media screen and (min-width: $tablet) {
+            width: calc(60% - 10px);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc(66% - 10px);
+        }
+    }
+}

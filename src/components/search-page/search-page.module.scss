@@ -1,0 +1,380 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+@import 'src/styles/tabs.scss';
+
+.root {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $desktop){
+        margin-bottom: 14px;
+    }
+}
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: $font-Lato;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include link-hover;
+    @include link-icon-hover;
+
+    &__icon {
+        margin-right: 11px;
+    }
+}
+
+.tabs__button {
+    color: $font-color !important;
+    opacity: 1 !important;
+    padding-bottom: 25px !important;
+
+    @media screen and (max-width: $desktop) {
+        padding-bottom: 16px !important;
+    }
+
+    &[aria-selected="true"] {
+        font-weight: 800;
+        color: $primary-color !important;
+
+        .counter {
+            font-weight: inherit;
+        }
+    }
+
+    .counter {
+        font-weight: normal;
+
+        @media screen and (min-width: $iPhone5) {
+            font-size: 10px;
+            line-height: 12px;
+            text-align: left;
+        }
+
+        @media screen and (min-width: $mobile) {
+            font-size: 12px ;
+            line-height: 14px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 16px ;
+            line-height: 28px;
+        }
+    }
+}
+
+.tab__title {
+    font-weight: 700;
+
+    @media screen and (min-width: $iPhone5) {
+        font-size: 10px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 16px ;
+        line-height: 28px;
+    }
+}
+
+.indicator {
+    background: $primary-color !important;
+}
+
+.list {
+    max-height: 700px;
+    margin-bottom: 20px;
+    font-family: $font-Lato;
+    overflow-y: auto;
+
+    @include with-scroll;
+
+    @include media-down($tablet) {
+      overflow-y: hidden;
+      max-height: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        border-bottom: .5px solid #e7e7e7;
+        cursor: pointer;
+        @media screen and (min-width: $tablet) {
+            flex-wrap: nowrap;
+        }
+        @media screen and (max-width: 425px) {
+            display: block;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+        .text {
+            .name {
+                font-size: 20px;
+                line-height: 24px;
+                word-break: break-all;
+            }
+            .description {
+                font-size: 12px;
+                line-height: 16px;
+                text-transform: capitalize;
+            }
+
+            @media screen and (max-width: 425px) {
+                text-align: center;
+            }
+        }
+        .images {
+            display: flex;
+            justify-content: right;
+            width: 240px;
+
+            @media screen and (max-width: 425px) {
+                margin: 0 auto;
+                justify-content: center;
+            }
+
+            img {
+                width: 49px;
+                height: 49px;
+                object-fit: cover;
+                margin: 0 3px;
+                border-radius: 6px;
+
+                @media screen and (max-width: 425px) {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+.mobile__header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .country__button {
+        font-family: $font-Mulish;
+        color: #ffffff;
+        background-color: $primary-color;
+        border: 1px solid #E7E7E7;
+        border-radius: 50px;
+        font-weight: 700;
+        padding: 7px 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon__map {
+        margin-right: 10px;
+
+        path {
+            fill: #ffffff;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+
+    &__wrapper {
+        padding: 40px 0;
+
+        @media screen and (max-width: $desktop) {
+            padding: 14px 0 13px 0;
+        }
+    }
+
+    .message {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: normal;
+        font-family: $font-Sen;
+
+        @media screen and (min-width: $iPhone5) {
+            font-size: 14px;
+            margin-bottom: 0;
+            margin-left: 0;
+            line-height: 16px;
+        }
+
+        @media screen and (min-width: $mobile) {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+}
+
+.map {
+    min-height: 400px;
+    flex-basis: calc(100% - 315px);
+    margin-left: auto;
+
+    &__wrapper {
+        display: flex;
+        padding-bottom: 20px !important;
+        margin-bottom: 40px !important;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    &__description {
+        flex-basis: 205px;
+    }
+
+    &__label {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: bold;
+        text-transform: unset;
+        color: inherit;
+    }
+}
+
+.tabs {
+    position: relative;
+
+    :not(:last-child) button {
+        @media screen and (min-width: $iPhone5) {
+            margin-right: 0 !important;
+        }
+
+        @media screen and (min-width: 410px) {
+            margin-right: 9px !important;
+        }
+
+        @media screen and (min-width: 425px) {
+            margin-right: 12px !important;
+        }
+
+        @media screen and (min-width: $tablet) {
+            margin-right: 55px !important;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-right: 19px !important;
+        }
+    }
+
+}
+
+.etc {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: .25rem;
+}
+
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    // flex-grow: 1;
+    // width: 100%;
+
+    label {
+        display: none;
+
+        @media screen and (min-width: $desktop) {
+            display: inline;
+            margin-bottom: 0;
+            margin-right: 10px;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: unset;
+            color: inherit;
+        }
+    }
+}
+
+.toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    min-width: 260px;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #f6f6f6;
+
+    .button {
+        @include reset-btn;
+        display: inline-block;
+        flex-grow: 1;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 20px;
+        // transition: background-color .2s ease-in-out;
+
+        @media screen {}
+
+        &.active {
+            font-weight: bold;
+            color: $primary-color;
+            background-color: #fff;
+        }
+    }
+}
+
+// Filters
+.filter {
+  margin-bottom: 20px;
+
+  input {
+    padding: 11px 35px 11px 7px !important;
+  }
+
+  ::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 28px;
+    color: $font-color;
+  }
+}
+
+.select {
+  padding: 11px 35px 11px 7px !important;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 15px !important;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 23px;
+  right: 22px;
+  z-index: 2;
+}
+
+.icon path {
+  fill: $primary-color;
+}

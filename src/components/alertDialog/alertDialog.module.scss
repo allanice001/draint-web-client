@@ -1,0 +1,15 @@
+@import 'src/styles/variables';
+.customWidth {
+  max-width: 540px!important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.action {
+  min-width: 120px;
+}

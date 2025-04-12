@@ -1,0 +1,89 @@
+.MuiPickersModal-dialog {
+  .MuiPickersBasePicker-container {
+    .MuiPickersToolbar-toolbar {
+      background-color: #806BFF;
+
+      //head year
+      .MuiPickersToolbarText-toolbarTxt {
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+      }
+
+      //heard day, month
+      .MuiPickersToolbarText-toolbarBtnSelected {
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+      }
+    }
+
+    .MuiPickersBasePicker-pickerView {
+      // selected title moth
+      .MuiPickersCalendarHeader-transitionContainer {
+        height: 18px;
+      }
+      // selected title moth
+      .MuiTypography-body1 {
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+      }
+      // calendar days
+      .MuiTypography-caption {
+        font-family: Sen, serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+      }
+
+      .MuiPickersCalendar-week {
+        // current day
+        .MuiPickersDay-current {
+          color: #806BFF;
+        }
+
+        // selected day
+        .MuiPickersDay-daySelected {
+          background-color: #806BFF;
+          color: white;
+          font-family: Sen, serif;
+          font-style: normal;
+          font-weight: normal;
+        }
+
+        .MuiButtonBase-root {
+          .MuiIconButton-label {
+            // days
+            .MuiTypography-root {
+              font-family: Sen, serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiDialogActions-spacing {
+  .MuiButton-textPrimary {
+    color: #806BFF;
+    &:hover {
+      background-color: transparent;
+    }
+
+    .MuiButton-label {
+      font-family: Sen, serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+    }
+  }
+}
+

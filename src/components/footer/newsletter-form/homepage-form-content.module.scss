@@ -1,0 +1,50 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.form_field {
+  width: 100%;
+
+  @include media-down($gpixel) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  input {
+    height: 52px;
+    width: 456px!important;
+    border-radius: 50px 50px 50px 50px!important;
+    padding: 11px 110px 11px 20px!important;
+
+    @include media-down($gpixel) {
+      width: 100%!important;
+      margin-bottom: 8px;
+    }
+  }
+
+  & > div > label {
+    display: none;
+  }
+
+  .input_button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 169px;
+    height: 52px;
+    left: 290px;
+    border-radius: 50px 50px 50px 50px;
+    font-family: $font-Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+
+    @include media-down($gpixel) {
+      position: relative;
+      width: 100%!important;
+      left: 0;
+    }
+  }
+
+}

@@ -1,0 +1,73 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  max-width: 1100px;
+  color: $font-color;
+  overflow-y: auto;
+  @include with-scroll;
+}
+
+.footer {
+  &__wrapper {
+    padding: 0;
+  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .button {
+    margin: 10px
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: flex-end;
+  }
+}
+
+
+.preview {
+  height: 330px;
+  background: linear-gradient(270deg, rgba(128, 107, 255, 0.4) 0%, rgba(217, 211, 255, 0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    padding: 0 30px 10px 30px;
+    font-family: $font-Sen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+  }
+  p {
+    padding: 0 30px;
+    font-family: $font-Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    width: 385px;
+    color: $font-color;
+  }
+  img {
+    padding-right: 80px;
+    height: 100%;
+  }
+  @media screen and (max-width: $desktop) {
+    background: none;
+    height: auto;
+    h1 {
+      width: 100%;
+      font-size: 26px;
+      line-height: 40px;
+    }
+    p {
+      width: 100%;
+    }
+    img {
+      display: none;
+    }
+  }
+}

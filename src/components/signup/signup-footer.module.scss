@@ -1,0 +1,52 @@
+@import 'src/styles/variables';
+
+.button {
+  width: 100px;
+  height: 50px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px !important;
+  line-height: 20px;
+  margin: 0 !important;
+
+  &__wrapper {
+    height: 70px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_hide {
+      @media screen and (max-width: $desktop) {
+        display: none !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    min-width: 140px;
+    height: 60px;
+    font-size: 18px !important;
+    line-height: 23px !important;
+
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.finish {
+  background-color: #49DF88 !important;
+
+  &::after {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5em;
+
+  .list_block {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    .list_header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px;
+      .list_header_btn {
+        width: 220px;
+        margin: 0 5px;
+      }
+      @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .form_block {
+    padding: 0.7em;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1em;
+
+      @include media-up($desktop) {
+        margin-right: 1em;
+      }
+    }
+
+    @include media-up($desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.list_wrapper {
+  @include media-up($desktop) {
+    display: flex;
+
+    & > *:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}
+
+.list_content {
+  width: 100%;
+}
+
+.filter {
+  max-width: 260px;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+.title {
+  padding-left: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+.form_block__preview {
+  margin-bottom: 1em;
+}

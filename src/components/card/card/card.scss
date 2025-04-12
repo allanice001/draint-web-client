@@ -1,0 +1,70 @@
+@import '../../../styles/variables';
+
+.card {
+
+  position: relative;
+  padding: $scale2;
+  margin-bottom: $scale2;
+  background: white;
+  overflow: scroll;
+  z-index: 1;
+
+  header + .loader {
+
+    margin-top: $scale2;
+
+  }
+
+  &.loading {
+
+    min-height: $scale14;
+
+  }
+
+  &:last-of-type {
+
+    margin-bottom: 0;
+
+  }
+
+  &.hide {
+
+    display: none;
+
+  }
+
+  header {
+
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    color: $c-text;
+    padding-bottom: $scale1;
+    margin-bottom: $scale3;
+    background-color: white;
+    border-bottom: 1px dotted $c-border;
+
+    h1 {
+
+      float: left;
+      margin: 0;
+      font-size: $scale1;
+      font-weight: 600;
+
+    }
+
+    a {
+
+      float: right;
+      margin-top: 0.2em;
+      font-size: 0.9em;
+
+    }
+
+    &.hide {
+
+      display: none;
+
+    }
+  }
+}

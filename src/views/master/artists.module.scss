@@ -1,0 +1,25 @@
+.wrapper {
+  .name {
+    text-transform: capitalize;
+  }
+
+  .filters {
+    &__row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search {
+    margin-bottom: 1em;
+  }
+}
+
+.hidden {
+  display: none;
+}

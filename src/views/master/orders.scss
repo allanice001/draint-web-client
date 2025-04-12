@@ -1,0 +1,116 @@
+@import '../../styles/mixins';
+
+.orders-actions-bar {
+  margin-bottom: 1em;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  .search-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .filter-block {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.orders-content {
+  padding: 1em;
+
+  @include media-up($desktop) {
+    display: flex;
+    align-items: flex-start;
+
+    & > *:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}
+
+.orders-list-container {
+  width: 100%;
+  padding: 1em;
+  margin: -1em;
+  box-sizing: content-box;
+  margin-top: 1em;
+
+  @include media-up($desktop) {
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-top: -1em;
+  }
+
+  .expansion-panel {
+    .summary-panel {
+      .title-panel {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .title-item {
+          flex: 0 1 25%;
+        }
+      }
+    }
+    .details-panel {
+      flex-direction: column;
+      .info-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 0 1 100%;
+        .info-item {
+          display: flex;
+          flex-direction: column;
+          flex: 0 1 25%;
+          img {
+            max-height: 100px;
+            object-fit: contain;
+          }
+        }
+      }
+      .options-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 0 1 100%;
+        @media screen and (max-width: 520px) {
+          flex-wrap: wrap;
+          .details-item {
+            flex: 0 1 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .pending {
+    color: $pending-color;
+  }
+
+  .declined {
+    color: $error-color;
+  }
+
+  .verified {
+    color: $success-color;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filter-block {
+  margin-bottom: 1em;
+  min-width: 200px;
+}

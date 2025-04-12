@@ -1,0 +1,90 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$size: 60px;
+$desktop-size: 100px;
+
+.gallery {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+
+    .image {
+        width: $size;
+        height: $size;
+        border-radius: 5px;
+        background-color: #c4c4c4;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @media screen and (min-width: $desktop) {
+            width: $desktop-size;
+            height: $desktop-size;
+        }
+
+        &__wrapper {
+            position: relative;
+            width: $size;
+            height: $size;
+            flex-shrink: 0;
+            // margin-bottom: 20px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+
+                @media screen and (min-width: $desktop) {
+                    margin-right: 20px;
+                }
+            }
+
+            @media screen and (min-width: $desktop) {
+                width: $desktop-size;
+                height: $desktop-size;
+            }
+        }
+
+        &__default {
+            box-shadow: 0 0 0 4px $primary-color;
+            border-radius: 5px;
+        }
+
+        &__count {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 28px;
+            line-height: 35px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(5, 5, 5, 0.5);
+        }
+    }
+
+    .qrcode {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+}

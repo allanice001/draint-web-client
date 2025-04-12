@@ -1,0 +1,116 @@
+@import '../../../styles/variables';
+
+.standard-wrapper {
+  .MuiSnackbar-anchorOriginTopCenter {
+    top: 0;
+    width: 100%;
+  }
+
+  .MuiSnackbarContent-root {
+    width: 100%;
+  }
+}
+
+.search-empty-home {
+
+  .MuiPaper-elevation6 {
+    box-shadow: 10px 6px 7px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .MuiSnackbarContent-root {
+    background-color: #556CB6;
+    //box-shadow: 0 0 5px rgb(63, 63, 63);
+
+    .MuiSnackbarContent-message {
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.success {
+  .MuiSnackbarContent-root {
+    background-color: rgb(140, 197, 125) !important;
+
+    .MuiSnackbarContent-message {
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.error {
+  .MuiSnackbarContent-root {
+    background-color: #f44336 !important;
+
+    .MuiSnackbarContent-message {
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.artwork-empty {
+  .MuiPaper-elevation6 {
+    box-shadow: 10px 6px 7px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .MuiSnackbarContent-root {
+    background-color: #556CB6;
+    //box-shadow: 0 0 5px rgb(63, 63, 63);
+
+    .MuiSnackbarContent-message {
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.snack-wrapper {
+  .MuiSnackbar-anchorOriginTopCenter {
+    top: 235px;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      top: 230px
+    }
+    @media only screen and (max-width: 667px) {
+      top: 265px
+    }
+    @media only screen and (max-width: 568px) {
+      top: 255px;
+      left: 0;
+    }
+    @media only screen and (max-width: 414px) {
+      top: 240px;
+    }
+  }
+
+  .MuiSnackbarContent-root {
+    width: 100%;
+  }
+
+  .search-empty {
+
+    .MuiPaper-elevation6 {
+      box-shadow: 10px 6px 7px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .MuiSnackbarContent-root {
+      background-color: #556CB6;
+      //box-shadow: 0 0 5px rgb(63, 63, 63);
+
+      .MuiSnackbarContent-message {
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+

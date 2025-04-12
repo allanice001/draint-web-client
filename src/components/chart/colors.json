@@ -1,0 +1,8 @@
+{
+  "primary": { "main": "#806BFF", "lighten": "#D9D3FF" },
+  "danger": { "main": "#F44336", "lighten": "#ed958e" },
+  "success": { "main": "#43BF5F", "lighten": "#97bfa0" }, 
+  "verified": { "main": "#3f51b5", "lighten": "#99a3db" },
+  "unverified": { "main": "#f50057", "lighten": "#ff9ec0" },
+  "default": {"main": "#737578", "lighten": "#a4a6a8" }
+}

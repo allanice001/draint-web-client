@@ -1,0 +1,77 @@
+@import 'src/styles/variables';
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.5em;
+
+  & > *:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  .MuiPaper-elevation1 {
+    box-shadow: none;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+
+    -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+    transition: 1s;
+    @media only screen and (max-width: 1024px) {
+      width: 20%;
+    }
+    @media only screen and (max-width: 667px) {
+      width: 40%;
+    }
+    @media only screen and (max-width: 414px) {
+      width: 50%;
+    }
+
+    &:hover {
+      width: 20%;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 0 10px 0 rgba(0, 0, 0, 0.19);
+      border-left: none;
+      @media only screen and (max-width: 1440px) {
+        width: 20%;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 25%;
+      }
+      @media only screen and (max-width: 823px) {
+        width: 30%;
+      }
+      @media only screen and (max-width: 823px) {
+        width: 35%;
+      }
+      @media only screen and (max-width: 823px) {
+        width: 60%;
+      }
+      @media only screen and (max-width: 414px) {
+        width: 70%;
+      }
+      .MuiSvgIcon-root {
+        opacity: 80%;
+      }
+    }
+
+    .MuiInputBase-input {
+      padding: 10px 15px;
+      font-size: 15px;
+      color: #707070;
+      font-weight: 600;
+      font-family: 'Source Sans Pro', helvetica, arial, sans-serif;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 22px;
+      color: #707070;
+      opacity: 40%;
+      margin-left: 8px;
+      -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+      transition: 1s;
+    }
+  }
+}

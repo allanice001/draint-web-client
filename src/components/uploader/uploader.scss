@@ -1,0 +1,90 @@
+.container {
+  margin: 2rem 0;
+
+  .uploader-wrapper {
+
+    .upload-input {
+      display: none;
+    }
+
+    .progress-circular {
+      position: absolute;
+      top: 13px;
+    }
+
+    .upload-button {
+      position: relative;
+      width: 205px;
+      margin-top: 8px;
+      font-size: 13px;
+      height: 50px;
+    }
+  }
+
+  .save-button-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .file-name {
+      font-size: 10px;
+      margin: 0 0 3px 0;
+    }
+  }
+
+  #artwork-upload, #background-upload, #verification-upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+      font-weight: 700;
+      background-color: #e1e7f0;
+      display: inline-block;
+      cursor: pointer;
+      transition: .2s ease-in;
+      padding: 2rem;
+      border-radius: 8px;
+
+      &.active {
+        color: white;
+        background-color: #00c853;
+
+        &:hover {
+          background-color: #009624;
+        }
+      }
+    }
+
+    &:focus + label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+
+      & * {
+        pointer-events: none;
+      }
+    }
+
+    &:focus + label, & + label:hover {
+      color: white;
+      background-color: #73B0F4;
+    }
+
+    @media screen and (max-width: 599px) {
+      & + label {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .form-group {
+    //@media screen and (max-width: 568px) {
+    //  margin: 0 15px;
+    //}
+  }
+}
+
+

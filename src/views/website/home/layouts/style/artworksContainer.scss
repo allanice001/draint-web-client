@@ -1,0 +1,813 @@
+@import '../../styles/variables';
+
+.filtered-header-sale {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: 800;
+  margin: 30px 0 10px 0;
+  font-size: 20px;
+  color: #73b0f4;
+
+}
+
+.artworks-wrapper-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+
+  .card {
+    width: 560px;
+    padding: 0;
+    margin: 5px;
+    @media screen and(max-width: 1769px) {
+      width: 560px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1739px) {
+      width: 550px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1709px) {
+      width: 540px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1679px) {
+      width: 530px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1649px) {
+      width: 520px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1619px) {
+      width: 510px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1589px) {
+      width: 500px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1559px) {
+      width: 490px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1529px) {
+      width: 480px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1499px) {
+      width: 470px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1469px) {
+      width: 460px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1440px) {
+      width: 450px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1409px) {
+      width: 440px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1379px) {
+      width: 430px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1366px) {
+      width: 435px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1365px) {
+      width: 380px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1199px) {
+      width: 370px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1169px) {
+      width: 350px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1109px) {
+      width: 340px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1079px) {
+      width: 330px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1049px) {
+      width: 320px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 667px) {
+      width: 310px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 640px) {
+      width: 290px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 568px) {
+      width: 260px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 414px) {
+      width: 185px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 375px) {
+      width: 165px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 360px) {
+      width: 160px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 320px) {
+      width: 140px;
+      height: auto;
+      margin: 10px;
+    }
+  }
+
+  .artworks-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 3px;
+    @media only screen and (max-width: 568px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+
+    .art-name {
+      margin-right: 5px;
+    }
+
+    .info-status-no-sale {
+      color: lighten(#707070, 15%);
+      text-transform: uppercase;
+    }
+
+    .info-status-sale {
+      color: #8CC57D;
+      text-transform: uppercase;
+    }
+
+    .info-status-sold {
+      color: red;
+      text-transform: uppercase;
+    }
+  }
+
+  .artist-name {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 600;
+    @media screen and(max-width: 667px) {
+      font-size: 10px;
+    }
+  }
+
+  .MuiCardContent-root {
+    @media screen and(max-width: 667px) {
+      padding: 5px 5px 5px 5px;
+    }
+  }
+
+  .artworks-country-name {
+    font-size: 14px;
+    color: #707070;
+    font-weight: 600;
+    @media screen and(max-width: 667px) {
+      font-size: 10px;
+    }
+  }
+
+  .artworks-img {
+    width: 100%;
+    height: 430px;
+    object-fit: contain;
+    border-radius: 2px;
+    @media screen and(max-width: 667px) {
+      height: 210px
+    }
+    @media screen and(max-width: 1440px) {
+      height: 340px
+    }
+    @media screen and(max-width: 1366px) {
+      height: 325px
+    }
+    @media screen and(max-width: 1024px) {
+      height: 240px
+    }
+    @media screen and(max-width: 414px) {
+      height: 135px
+    }
+  }
+
+  .MuiButton-textPrimary {
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  .empty-flag {
+    height: 47px;
+    width: 288px;
+  }
+
+  .detail-button {
+
+  }
+
+  .MuiButton-textSizeLarge {
+    padding: 20px 11px;
+    font-size: 0.9375rem;
+  }
+}
+
+
+.artworks-wrapper-container-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card {
+    width: 560px;
+    padding: 0;
+    margin: 5px;
+    @media screen and(max-width: 1769px) {
+      width: 560px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1739px) {
+      width: 550px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1709px) {
+      width: 540px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1679px) {
+      width: 530px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1649px) {
+      width: 520px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1619px) {
+      width: 510px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1589px) {
+      width: 500px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1559px) {
+      width: 490px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1529px) {
+      width: 480px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1499px) {
+      width: 470px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1469px) {
+      width: 460px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1440px) {
+      width: 450px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1409px) {
+      width: 440px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1379px) {
+      width: 430px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1366px) {
+      width: 435px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1365px) {
+      width: 380px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1199px) {
+      width: 370px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1169px) {
+      width: 350px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1109px) {
+      width: 340px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1079px) {
+      width: 330px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1049px) {
+      width: 320px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 667px) {
+      width: 310px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 640px) {
+      width: 290px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 568px) {
+      width: 260px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 414px) {
+      width: 185px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 375px) {
+      width: 165px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 360px) {
+      width: 160px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 320px) {
+      width: 140px;
+      height: auto;
+      margin: 10px;
+    }
+  }
+
+  .artworks-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 3px;
+    @media only screen and (max-width: 568px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+
+    .art-name {
+      margin-right: 5px;
+    }
+
+    .info-status-no-sale {
+      color: lighten(#707070, 15%);
+      text-transform: uppercase;
+    }
+
+    .info-status-sale {
+      color: #8CC57D;
+      text-transform: uppercase;
+    }
+
+    .info-status-sold {
+      color: red;
+      text-transform: uppercase;
+    }
+  }
+
+  .name-link {
+    text-decoration: none;
+  }
+
+  .artist-name {
+    font-size: 20px;
+    color: #707070;
+    margin-bottom: 3px;
+    font-weight: 600;
+    transition: 300ms;
+    
+    @media screen and(max-width: 667px){
+      font-size: 12px;
+    }
+    @media screen and(max-width: 320px) {
+      font-size: 10px;      
+    }
+  }
+  .hovered {
+    color: #73b0f5 !important;
+    &:hover {
+      color: #3f51b5 !important;
+    }
+  }
+  
+  .artist-card {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    @media screen and(max-width: 667px) {
+      min-height: 130px;
+    }
+  }
+  .artist-card-body {
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 3px;
+    font-weight: 600;
+    transition: 300ms;    
+    @media screen and(max-width: 667px) {
+      font-size: 10px;
+      margin-bottom: 1px;
+    }
+    @media screen and(max-width: 320px) {
+      font-size: 9px;      
+    }
+  }
+
+  .artist-card-price {
+    font-size: 20px;
+    color: #707070;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row-reverse;
+    @media screen and(max-width: 667px) {
+      font-size: 16px;
+      margin-bottom: 1px;
+      margin-top: 1px;
+    }
+    @media screen and(max-width: 320px) {
+      font-size: 12px;      
+    }
+  }
+
+  .artist-card-country {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px; 
+  }
+
+  .MuiCardContent-root {
+    @media screen and(max-width: 667px) {
+      padding: 10px 5px 5px 5px;
+    }
+  }
+
+  .artworks-country-name {
+    font-size: 14px;
+    color: #707070;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-weight: 600;
+    @media screen and(max-width: 667px){
+      font-size: 10px;
+    }
+  }
+
+  .artworks-img {
+    width: 100%;
+    height: 430px;
+    object-fit: contain;
+    border-radius: 2px;
+    @media screen and(max-width: 1440px) {
+      height: 340px
+    }
+    @media screen and(max-width: 1366px) {
+      height: 325px
+    }
+    @media screen and(max-width: 1024px) {
+      height: 240px
+    }
+    @media screen and(max-width: 667px) {
+      height: 210px
+    }
+    @media screen and(max-width: 414px) {
+      height: 125px
+    }
+  }
+
+  .MuiButton-textPrimary {
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  .empty-flag {
+    height: 24px;
+    width: 288px;
+  }
+
+  .detail-button {
+
+  }
+
+  .MuiButton-textSizeLarge {
+    padding: 20px 11px;
+    font-size: 0.9375rem;
+  }
+}
+
+.artworks-wrapper-container-sold {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+
+  .card {
+    width: 560px;
+    padding: 0;
+    margin: 5px;
+    @media screen and(max-width: 1769px) {
+      width: 560px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1739px) {
+      width: 550px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1709px) {
+      width: 540px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1679px) {
+      width: 530px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1649px) {
+      width: 520px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1619px) {
+      width: 510px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1589px) {
+      width: 500px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1559px) {
+      width: 490px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1529px) {
+      width: 480px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1499px) {
+      width: 470px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1469px) {
+      width: 460px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1440px) {
+      width: 450px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1409px) {
+      width: 440px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1379px) {
+      width: 430px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1366px) {
+      width: 435px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1365px) {
+      width: 380px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1199px) {
+      width: 370px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1169px) {
+      width: 350px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1109px) {
+      width: 340px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1079px) {
+      width: 330px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 1049px) {
+      width: 320px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 414px) {
+      width: 185px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 375px) {
+      width: 165px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 360px) {
+      width: 160px;
+      height: auto;
+      margin: 10px;
+    }
+    @media screen and(max-width: 320px) {
+      width: 140px;
+      height: auto;
+      margin: 10px;
+    }
+  }
+
+  .artworks-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 3px;
+    @media only screen and (max-width: 568px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+
+    .art-name {
+      margin-right: 5px;
+    }
+
+    .info-status-no-sale {
+      color: lighten(#707070, 15%);
+      text-transform: uppercase;
+    }
+
+    .info-status-sale {
+      color: #8CC57D;
+      text-transform: uppercase;
+    }
+
+    .info-status-sold {
+      color: red;
+      text-transform: uppercase;
+    }
+  }
+
+  .artist-name {
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 3px;
+  }
+
+  .artworks-country-name {
+    font-size: 14px;
+    color: #707070;
+    margin-top: 3px;
+    
+  }
+
+  .artworks-img {
+    width: 100%;
+    height: 490px;
+    object-fit: scale-down;
+    border-radius: 2px;
+    @media screen and(max-width: 1440px) {
+      height: 340px
+    }
+    @media screen and(max-width: 1366px) {
+      height: 325px
+    }
+    @media screen and(max-width: 1024px) {
+      height: 240px
+    }
+    @media screen and(max-width: 414px) {
+      height: 210px
+    }
+  }
+
+  .MuiButton-textPrimary {
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  .empty-flag {
+    height: 47px;
+    width: 288px;
+  }
+
+  .detail-button {
+
+  }
+
+  .MuiButton-textSizeLarge {
+    padding: 20px 11px;
+    font-size: 0.9375rem;
+  }
+
+  .MuiCardContent-root {
+    padding: 0;
+  }
+}

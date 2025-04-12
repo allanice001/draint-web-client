@@ -1,0 +1,49 @@
+.auth_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  @media screen and (max-width: 550px) {
+    padding: 50px 0;
+  }
+  .form{
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e7e7e7;
+    max-width: 500px;
+    width: 500px;
+    .head{
+      text-align: center;
+      &__title{
+        margin: 0;
+      }
+    }
+    .submit_button{
+      display: flex;
+      justify-content: center;
+      padding: 25px 0 10px;
+    }
+    span {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  .footer{
+    padding-top: 25px;
+    line-height: 28px;
+    span{
+      margin: 0;
+      text-align: left;
+    }
+    a{
+      text-decoration: none;
+      font-weight: 600;
+      color: #806BFF;
+    }
+    .middle_link{
+      padding-left: 5px;
+    }
+
+  }
+
+}

@@ -1,0 +1,204 @@
+@import 'src/styles/variables';
+
+.status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 0 20px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    @media screen and (max-width: $mobile) {
+        justify-content: center;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .content {
+        text-align: center;
+        margin: 15px 0;
+        @media screen and (min-width: $mobile) {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+    }
+
+    .circle {
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        margin-right: 9px;
+        border-radius: 50%;
+        background-color: $success-color;
+
+        @media screen and (min-width: $desktop) {
+            width: 28px;
+            height: 28px;
+            margin-right: 18px;
+        }
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+
+        @media screen and (min-width: $desktop) {
+            width: 28px;
+            height: 28px;
+        }
+
+        &.incoming {
+            margin-right: 9px;
+            transform: rotate(90deg);
+
+            @media screen and (min-width: $desktop) {
+                margin-right: 18px;
+            }
+        }
+
+        &.outcoming {
+            margin-right: 9px;
+
+            @media screen and (min-width: $desktop) {
+                margin-right: 18px;
+
+            }
+        }
+
+        &.accepted {
+            width: 10px;
+            height: 7px;
+
+            @media screen and (min-width: $desktop) {
+                width: 12px;
+                height: 9px;
+            }
+        }
+    }
+
+    .price {
+        font-weight: 800;
+        color: var(--primary-color, $primary-color);
+    }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+
+    &__text {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $mobile) {
+      flex-direction: row;
+      &__text {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+
+        .button:not(:last-child) {
+            margin-right: 15px;
+        }
+        @media screen and (min-width: $mobile) {
+            margin-left: 18px;
+        }
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 110px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        font-style: normal;
+        background-color: var(--primary-color, $primary-color);;
+
+        &__verification{
+            display: inline-block;
+            min-width: 120px;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+
+            &__accepted{
+                color: var(--primary-color, $primary-color);
+                background-color: lighten($color: $primary-color, $amount: 25);
+            }
+
+            &__canceled{
+                color: $error-color;
+                background-color: lighten($color: $error-color, $amount: 35);
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &.accept {
+            background-color: $success-color;
+        }
+
+        &.decline {
+            background-color: $error-color;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+
+    .button:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .offer_button {
+        margin: 0;
+        height: 50px;
+
+        @media screen and (max-width: $desktop) {
+            height: 46px;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 15px;
+    }
+}

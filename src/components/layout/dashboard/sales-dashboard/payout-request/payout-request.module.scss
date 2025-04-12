@@ -1,0 +1,48 @@
+@import '../../../../../styles/variables';
+
+.wrapper {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    font-family: "Sen", sans-serif;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .amount {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    color: $success-color;
+    font-family: "Sen", sans-serif;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .column {
+    margin-bottom: 10px;
+
+    .row {
+      margin-bottom: 15px;
+    }
+
+    .btn_wrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: 18px;
+    }
+  }
+}

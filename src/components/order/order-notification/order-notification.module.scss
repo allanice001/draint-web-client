@@ -1,0 +1,103 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.wrapper {
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 100%;
+  background-color: #fafafa;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 22px;
+  }
+}
+
+.sent_wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .info_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    & > * {
+      margin: 1rem 1rem 1rem 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      justify-content: flex-start;
+      & > * {
+        text-align: start;
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+}
+
+.actions {
+  display: flex;
+
+  & > * {
+    flex-shrink: 0;
+    min-width: 120px !important;
+    padding: 0 1rem;
+  }
+
+  & > *:not(:last-child) {
+    margin: 0 1rem 0 1rem;
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--primary-color, $primary-color)!important;
+
+  &.incoming {
+    transform: rotateZ(90deg);
+    transform-origin: center;
+  }
+}
+
+.load {
+  animation-name: loadTrack;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.link {
+  padding-left: 0.5rem;
+  font-weight: 800;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  color: var(--primary-color, $primary-color);
+
+  &:hover {
+    color: var(--primary-color, $primary-color);
+    text-decoration: underline;
+  }
+}
+
+@keyframes loadTrack {
+  0% {
+    background-color: $success-color;
+  }
+  50% {
+    background-color: lighten($success-color, 15%);
+  }
+  100% {
+    background-color: $success-color;
+  }
+}

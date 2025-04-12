@@ -1,0 +1,23 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  padding: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font-family: $font-Sen, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: $font-color;
+}
+
+.count {
+  @include text-caption;
+}

@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+.content {
+    border-bottom: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $desktop) {
+        border-bottom: 0;
+    }
+}
+
+.title {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+
+    padding-top: 38px;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 0;
+    }
+}
+
+.list {
+    display: flex;
+    padding: 16px 0;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &>* {
+        margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: inherit;
+    }
+
+
+    @media screen and (min-width: $desktop) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: $desktop - 1) {
+        &>* {
+            margin-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        &>* {
+            margin-bottom: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin-left: 15px;
+        //margin-right: 15px;
+    }
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px;
+
+    :last-child {
+        margin-left: 24px;
+    }
+
+    :first-child {
+        margin-left: 0
+    }
+}
+
+.button {
+    &__more {
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+
+        background-color: #fff;
+        color: $primary-color;
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+}
+
+//@media screen and (min-width: $desktop) {
+//    .more__card {
+//        display: none;
+//    }
+//}
+//
+//@media screen and (max-width: $desktop) {
+//    .more {
+//        display: none !important;
+//    }
+//}

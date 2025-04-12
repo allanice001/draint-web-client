@@ -1,0 +1,77 @@
+@import 'src/styles/variables';
+
+$width: 23px;
+$height: 2px;
+
+.humberger {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  height: $height;
+  width: $width;
+  background-color: var(--primary-color, $primary-color);
+  border-radius: 1px;
+  transition: background-color 0.3s linear;
+  will-change: backgroud-color;
+
+  &.opened {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0;
+      will-change: transform;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: $height;
+    background-color: var(--primary-color, $primary-color);
+    width: $width;
+    border-radius: 1px;
+    transition: all 0.3s linear;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    bottom: -6px;
+  }
+}
+
+.loop {
+  width: 28px;
+  height: 28px;
+  path {
+    fill: $primary-color;
+  }
+}
+
+.button {
+  position: relative;
+  padding: 12px 20px;
+  margin: 2px 0;
+  margin-left: -20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+
+  &:active {
+    outline: none;
+  }
+}

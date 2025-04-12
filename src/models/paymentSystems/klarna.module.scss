@@ -1,0 +1,37 @@
+@import "src/styles/variables";
+
+.name_wrap {
+    display: flex;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    & > div{
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.radio_wrap{
+    flex-direction: row;
+    margin-top: 25px;
+    align-items: center;
+    & > div {
+        align-items: center;
+        flex-direction: row;
+        label {
+            justify-content: center;
+            cursor: pointer;
+            @media screen and (max-width: $mobile) {
+                flex-direction: column;
+                span {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

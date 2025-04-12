@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.class-root {
+  .MuiLinearProgress-root {
+    height: 20px;
+    border-radius: 10px;
+
+    .MuiLinearProgress-barColorSecondary {
+      background-color: #73B0F4;
+      border-radius: 10px;
+    }
+  }
+
+  .MuiLinearProgress-colorSecondary {
+    background-color: lighten(#73B0F4, 24%);
+    border-radius: 10px;
+  }
+}

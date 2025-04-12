@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.form_wrapper {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 10px 0;
+  .content_img {
+    padding: 10px;
+    border-radius: 15px;
+    .img {
+      border-radius: 15px;
+    }
+  }
+  .content_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    .date {
+      font-family: $font-Sen;
+      font-style: italic;
+    }
+    .status {
+      color: $font-color;
+      text-transform: uppercase;
+      &.verified {
+        color: $primary-color;
+        text-transform: uppercase;
+      }
+      &.unverified {
+        color: $error-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .delete_btn {
+    min-width: 120px;
+    height: 30px;
+  }
+}

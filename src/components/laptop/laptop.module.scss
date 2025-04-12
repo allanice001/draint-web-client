@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.laptop {
+    display: none;
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        width: 585px;
+        height: 406px;
+    }
+
+    .view {
+        width: 429px;
+        height: 257px;
+        transform: translate(78px, 26px);
+        animation: fade-in 1s;
+
+        @media screen and (min-width: $desktop) {
+            width: 429px;
+            height: 257px;
+            transform: translate(78px, 26px);
+        }
+
+        &__feature {
+            position: absolute;
+            opacity: 0;
+            animation: fade-in 1s .5s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        color: white;
+        background-color: $primary-color;
+        z-index: 1;
+    }
+
+    .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(271.55deg, #FFFFFF 1.44%, rgba(255, 255, 255, 0) 98.81%);
+        opacity: .5;
+        z-index: 1;
+        transform: translate(292px, -35px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

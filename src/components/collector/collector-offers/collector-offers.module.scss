@@ -1,0 +1,33 @@
+@import 'src/styles/variables';
+
+.wrapper {
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 5rem;
+    padding-bottom: 20px;
+  }
+
+  .title {
+    margin-top: 0;
+    border-bottom: 1px solid #e7e7e7;
+    text-align: left;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: $desktop) {
+      margin-bottom: 20px;
+      padding-bottom: 0;
+
+    }
+  }
+
+  .offer {
+    border-bottom: 1px solid #e7e7e7;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      border-bottom: none;
+    }
+  }
+}

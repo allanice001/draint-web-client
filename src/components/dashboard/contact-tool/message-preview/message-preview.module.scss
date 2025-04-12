@@ -1,0 +1,109 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  width: 100%;
+  min-height: 660px;
+  border: 1px solid $border-color;
+  border-radius: 15px;
+  padding: 26px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  @include media-up($desktop) {
+    margin-top: 0;
+  }
+}
+
+.field {
+  padding: 16px 0;
+
+  &.has_list {
+    padding-bottom: 6px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 28px;
+  color: $caption-color;
+  font-family: $font-Mulish;
+  font-weight: 700;
+  margin-bottom: 11px;
+  text-transform: unset;
+}
+
+.subject {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 28px;
+  overflow-y: auto;
+}
+
+.recipient {
+  height: 40px;
+  font-size: 16px;
+  line-height: 28px;
+  color: $primary-color;
+  background-color: $primary-25;
+  border-radius: 30px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+  @include media-up($desktop) {
+    margin-top: -10px;
+  }
+}
+
+.delete,
+.save,
+.delete {
+  color: $delete-color;
+  margin-right: auto;
+
+  @include media-up($desktop) {
+    min-width: 88px;
+  }
+}
+
+.forward {
+  min-width: 150px;
+  margin-top: 5px;
+}
+
+.template_wrapper {
+  overflow-y: scroll;
+  height: 390px;
+
+  @include with-scroll;
+}
+.subject_wrapper {
+  overflow-y: auto;
+  height: 80px;
+  margin-bottom: 15px;
+}

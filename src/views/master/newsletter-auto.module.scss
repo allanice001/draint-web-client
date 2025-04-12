@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  &__form {
+    padding: 5px;
+    width: 100%;
+  }
+  &__preview {
+    padding: 5px;
+    width: 100%;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__form {
+      width: 40%;
+    }
+    &__preview {
+      width: 60%;
+    }
+  }
+}

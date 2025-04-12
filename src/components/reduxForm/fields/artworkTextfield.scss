@@ -1,0 +1,36 @@
+.text-field-form-wrapper {
+  .MuiFormControl-root {
+    width: 100%;
+    margin: 10px 0;
+    .MuiFormHelperText-root.Mui-error {
+      font-size: 10px;
+      margin: 5px 0 0 0;
+    }
+    .MuiSvgIcon-root {
+      top: 8px
+    }
+    .MuiInputBase-root {
+      height: 33px;
+    }
+    .MuiSelect-selectMenu.MuiSelect-selectMenu {
+      padding: 10px 14px;
+      background-color: transparent;
+    }
+    .MuiFormLabel-filled.MuiInputLabel-root {
+      top: 0;
+      background-color: transparent;
+    }
+    .Mui-focused.MuiInputLabel-root {
+      top: 0;
+    }
+    .MuiInputLabel-root {
+      top: -7px
+    }
+  }
+}
+.text-area-form-wrapper {
+  .MuiFormControl-root {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+
+.tabs {
+
+  overflow: hidden;
+
+  button {
+
+    position: relative;
+    float: left;
+    color: $c-text;
+    padding: $scale $scale5 $scale;
+    color: lighten($c-text, 15%);
+    outline: none;
+    color: white;
+    font-size: 0.85em;
+    background-color: lighten($c-blue, 5%);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+
+      transition: all 0.2s ease-in-out;
+
+    }
+  }
+
+  .active {
+
+    color: $c-text;
+    background-color: white;
+
+    &:before {
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: lighten($c-blue, 5%);
+
+    }
+  }
+
+  @media (max-width: $mobile){
+
+    border-bottom: 1px solid $c-border;
+
+    button {
+
+      width: 100%;
+      color: $c-text;
+      padding: $scale $scale2;
+      background-color: white;
+      border-bottom: 1px solid $c-border;
+
+      &:last-child {
+
+        border-bottom: none;
+
+      }
+
+      &.active {
+
+        color: white;
+        border-bottom: none;
+        background-color: $c-blue;
+
+      }
+
+      &:before {
+
+        display: none;
+
+      }
+    }
+  }
+}

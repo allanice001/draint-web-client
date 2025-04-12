@@ -1,0 +1,411 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+$artist-avatar-size: 36px;
+
+.card {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e7e7e7;
+
+  .wrapper_nav {
+    position: relative;
+
+    .artwork_card_hover {
+      display: flex;
+      opacity: 0;
+      transition: .3s;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    &.addHover {
+      &:hover {
+        .artwork_card_hover {
+          opacity: 1;
+          z-index: 3;
+        }
+      }
+    }
+
+    .button__add {
+      max-width: 260px;
+      max-height: 60px;
+      font-weight: 800;
+      font-family: $font-Muli;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 30px;
+
+      .icon {
+        width: 24px;
+        height: 26px;
+        margin-right: 20px;
+        fill: white;
+        z-index: 1;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        max-height: 60px;
+        width: 60px;
+        border-radius: 50px 0 0 50px;
+        background-color: #6a53f8;
+        z-index: 1;
+      }
+    }
+  }
+
+  &:not(.fluid) {
+    min-height: 280px;
+
+    .image {
+      min-height: 280px;
+    }
+  }
+
+  @include media-up(700px) {
+    width: 100%;
+  }
+
+  &.carousel {
+    width: 280px;
+
+    .image {
+      max-height: 280px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: 280px;
+      flex-shrink: 1;
+    }
+  }
+
+  &.showMore {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    flex-basis: unset;
+    height: auto;
+
+    @include media-up($tablet) {
+      min-height: 320px;
+      width: calc(50% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @include media-up($desktop) {
+      min-height: 380px;
+      width: calc(25% - 40px);
+    }
+  }
+
+  &.fluid:not(.carousel) {
+    .image {
+      width: 100%;
+      height: auto;
+
+      @media screen and (min-width: $tablet) {
+        max-height: 230px;
+        width: 100%;
+      }
+
+      &__height {
+        @media screen and (min-width: $tablet) {
+          height: 230px;
+          width: auto;
+        }
+      }
+      &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #f8f8f8;
+        border-radius: 3px;
+        padding: 10px;
+
+        @media screen and (min-width: $tablet) {
+          height: 250px;
+        }
+
+        &__height {
+          @media screen and (min-width: $tablet) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &.carousel {
+    @include media-up(700px) {
+      .image__wrapper {
+        flex-grow: 1;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      &.fluid .image__wrapper {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &.fluid {
+    max-width: none;
+
+    .image {
+      max-width: none;
+    }
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  background-color: #f8f8f8;
+  z-index: 2;
+  object-fit: cover;
+
+  @include media-up(700px) {
+    height: 280px;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-bottom: 23px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 280px;
+
+    &__wrapper {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.title {
+  @include ellipsis;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-family: $font-Lato;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  margin-top: 10px;
+}
+
+.artist {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 800;
+
+  &__name {
+    @include ellipsis;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font-Lato;
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    order: 0;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+    @media screen and (min-width: $desktop) {
+      width: $artist-avatar-size;
+      height: $artist-avatar-size;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  margin-left: auto;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+
+  .img_link {
+    cursor: pointer;
+  }
+}
+
+.price {
+  margin-top: auto;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: $font-Lato;
+  font-weight: bold;
+  color: $primary-color;
+  order: 1;
+}
+
+.artistpopup {
+  &__wrapper {
+    text-align: center;
+    padding: 0 20px 20px;
+
+    .country {
+      display: inline-flex;
+      font-size: 16px;
+      line-height: 24px;
+      font-style: italic;
+    }
+  }
+
+  &__artworks {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+
+    & > *:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    & .img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      object-position: center;
+      background-color: #e7e7e7;
+
+      &__wrapper {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .count {
+          position: absolute;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: bold;
+          color: #fff;
+          background: linear-gradient(
+            0deg,
+            rgba(128, 107, 255, 0.6),
+            rgba(128, 107, 255, 0.6)
+          );
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #e7e7e7;
+    box-shadow: 0 0 0 5px white;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-family: $font-Sen;
+    font-weight: bold;
+  }
+
+  &__description {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font-Lato;
+    text-align: center;
+    word-break: break-word;
+  }
+}
+
+.paper {
+  max-width: 500px;
+  border-radius: 10px !important;
+  border: 1px solid #e4e4e4;
+  box-shadow: none !important;
+}
+
+.history {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px dashed #e7e7e7;
+  font-size: 12px;
+  line-height: 24px;
+  font-family: $font-Lato;
+  text-align: right;
+
+  .chart {
+    margin-left: -40px;
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .right {
+    margin-left: auto;
+  }
+
+  .price {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: $font-Lato;
+    color: $primary-color;
+  }
+}
+
+.artwork__details {
+  @include ellipsis;
+}

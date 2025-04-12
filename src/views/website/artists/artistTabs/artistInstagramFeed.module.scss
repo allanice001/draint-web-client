@@ -1,0 +1,43 @@
+@import '../../../../styles/variables';
+
+.instagram_feed_container {
+  display: inline-block;
+  min-height: 35vh;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  .title {
+    margin-top: 20px;
+    font-family: $font-Sen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .tips {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Muli, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 38px;
+  }
+}

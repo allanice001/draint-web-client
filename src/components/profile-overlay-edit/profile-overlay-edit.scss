@@ -1,0 +1,88 @@
+.info-icon {
+  display: flex;
+  flex-direction: row-reverse;
+} 
+
+.adjust-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+
+  .button-tool {
+    height: 25px;
+    margin-bottom: 15px;
+    .MuiButton-containedPrimary {
+      padding: 10px;
+    }
+    .MuiButton-root {
+      min-width: 35px;
+    }
+    .title {
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+
+  .adjust-block {
+    @media screen and (max-width: 640px) {
+      padding: 0 10px;
+    }
+    //@media screen and (max-width: 568px) {
+    //  padding: 0 20px;
+    //}
+    margin-bottom: 1em;
+
+    .artwork-select {
+      min-width: 320px;
+    }
+  }
+
+  .adjust-block-form{
+    .MuiFormControl-root{
+      width: 100%;
+      padding-bottom: 15px;
+    }
+  }
+
+  .MuiSelect-iconOutlined {
+    top: 17px;
+  }
+
+  .MuiButton-fullWidth {
+    //@media screen and (max-width: 1440px) {
+    //  margin: 0 0;
+    //}
+    //@media screen and (max-width: 568px) {
+    //  margin: 0 15px;
+    //}
+    //@media screen and (max-width: 411px) {
+    //  margin: 0 0;
+    //}
+  }
+}
+@media screen and (max-width: 414px) {
+  .adjust-container .adjust-block .artwork-select {
+    min-width: 347px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .adjust-container .adjust-block .artwork-select {
+    min-width: 310px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .adjust-container .adjust-block .artwork-select {
+    min-width: 395px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .adjust-container .adjust-block .artwork-select {
+    min-width: 255px;
+  }
+}
+
+
+
+

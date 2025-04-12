@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+.root {
+  position: relative;
+  border: 1px solid $border-color;
+  padding: 20px;
+  padding-bottom: 24px;
+  border-radius: 15px;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover,
+  &.active {
+    border-color: $primary-color;
+  }
+}

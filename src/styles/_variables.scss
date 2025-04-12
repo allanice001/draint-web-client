@@ -1,0 +1,111 @@
+//Colors
+$c-bg: #f5f7fa;
+$c-bg_white: #fafafa;
+$c-bg_dark: #E3E3E3;
+$c-text: #707070;
+$c-text-light: lighten($c-text, 20%);
+$c-border: darken(white, 5%);
+$c-border-dark: lighten($c-text, 52%);
+$c-primary: #73b0f4;
+$c-dark: #333440;
+$c-facebook: #3b5998;
+$c-twitter: #55acee;
+$c-instagram: #405de6;
+$c-youtube: #cd201f;
+$c-pinterest: #bd081c;
+$c-linkedin: #0077b5;
+$c-red: #d95565;
+$c-green: #8cc57d;
+$c-blue: #73b0f4;
+$c-darkblue: #3a4488;
+$c-orange: #f0aa61;
+$c-tint: #fbfbff;
+$c-purple: #546db7;
+$c-darkpurple: #556cb6;
+
+$primary-color: #806bff;
+$primary-rgba-color: rgba(128, 107, 255, 1);
+$primary-blurred-rgba-color: rgba(128, 107, 255, 0.1);
+$primary-25: rgba(128, 107, 255, 0.25);
+$secondary-color: #d9d3ff;
+$error-color: #f44336;
+$success-color: #43bf5f;
+$verified-color: #3f51b5;
+$unverified-color: #f50057;
+$pending-color: #f7af11;
+$black-font: #3f4041;
+$disabled-text: #b1b2b2;
+$disabled-color: rgba(63, 64, 65, 0.3);
+$disabled-input: #eee;
+$disabled-c-button: #ac9eff;
+$secondary-color: rgba(128, 107, 255, 0.45);
+$font-color-light: #b2b3b3;
+$border-color: #e7e7e7;
+$outline-color: #c7c7c7;
+$caption-color: rgba(63, 64, 65, 0.4);
+$description-color: #cac9ce;
+$delete-color: #d80027;
+$link-color: #0078dc;
+
+// Fonts
+$font-Muli: 'Muli', sans-serif;
+$font-Mulish: 'Mulish', sans-serif;
+$font-Sen: 'Sen', sans-serif;
+$font-Lato: 'Lato', sans-serif;
+$font-Montserrat: 'Montserrat', sans-serif;
+$font-color: #3f4041;
+
+$font-title: $font-Sen;
+
+// Breakpoints
+$mobile: 550px;
+$mobile-s: 360px;
+$iPhone6: 375px;
+$iPhone5: 320px;
+$samsung: 420px;
+$gpixel: 640px;
+$ipadAir: 821px;
+$tablet: 768px;
+$desktop: 960px;
+$orient-laptop: 1025px;
+$container: 1280px;
+$iPadPro: 1366px;
+$max-width: 1000px;
+$home-shipment-section: 1140px;
+$sections: 1440px;
+
+// Scale
+$scale-4: 0.4096em;
+$scale-3: 0.512em;
+$scale-2: 0.64em;
+$scale-1: 0.8em;
+$scale: 1em;
+$scale1: 1.25em;
+$scale2: 1.5625em;
+$scale3: 1.953125em;
+$scale4: 2.44140625em;
+$scale5: 3.0517578125em;
+$scale6: 3.8146972656em;
+$scale7: 4.768371582em;
+$scale8: 5.9604644775em;
+$scale9: 7.4505805969em;
+$scale10: 9.3132257462em;
+$scale11: 12.6415321827em;
+$scale12: 14.5519152284em;
+$scale13: 18.1898940355em;
+$scale14: 22.7373675443em;
+$scale15: 28.4217094304em;
+$scale16: 35.527136788em;
+$scale17: 44.408920985em;
+$scale18: 55.5111512313em;
+$scale19: 69.3889390391em;
+$scale20: 86.7361737988em;
+
+// Radius
+$radius: 2px;
+
+// Scrollbar
+$scrollbar-width: 6px;
+
+// box-shadow
+$box-shadow-default: 0 4px 4px rgba(0, 0, 0, 0.05)

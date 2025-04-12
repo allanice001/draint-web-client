@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+.map {
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    height: auto;
+  }
+  path {
+    stroke-width: 1px;
+  }
+  svg > g:last-child > g:last-child { pointer-events: none }
+  div.google-visualization-tooltip { pointer-events: none }
+}

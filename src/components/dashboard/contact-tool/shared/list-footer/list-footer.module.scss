@@ -1,0 +1,53 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.root {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+
+  & > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  @include media-down($mobile) {
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include media-up($tablet) {
+    justify-content: flex-end;
+  }
+
+  @include media-up($desktop) {
+    justify-content: space-between;
+  }
+}
+
+.add_button {
+  width: 200px;
+
+  @include media-up($desktop) {
+    width: 240px;
+  }
+}
+
+.history_button {
+  width: 140px;
+
+  &.active {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.contacts_button {
+  width: 180px;
+
+  &.active {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
