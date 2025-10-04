@@ -78,7 +78,7 @@
     "react-zoom-pan-pinch": "^1.6.1",
     "reactstrap": "^8.1.1",
     "redux": "^4.0.0",
-    "redux-devtools-extension": "^2.13.8",
+    "@redux-devtools/extension": "^3.0.0",
     "redux-form": "^8.3.6",
     "redux-thunk": "^2.3.0",
     "sass": "1.42.0",
